@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Golden Sans';
+    src: url('GoldenSans-Bold.eot');
+    src: local('Golden Sans Bold'), local('GoldenSans-Bold'),
+        url('GoldenSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GoldenSans-Bold.woff2') format('woff2'),
+        url('GoldenSans-Bold.woff') format('woff'),
+        url('GoldenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golden Sans';
+    src: url('GoldenSans-Medium.eot');
+    src: local('Golden Sans Medium'), local('GoldenSans-Medium'),
+        url('GoldenSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('GoldenSans-Medium.woff2') format('woff2'),
+        url('GoldenSans-Medium.woff') format('woff'),
+        url('GoldenSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golden Sans';
+    src: url('GoldenSans-Thin.eot');
+    src: local('Golden Sans Thin'), local('GoldenSans-Thin'),
+        url('GoldenSans-Thin.eot?#iefix') format('embedded-opentype'),
+        url('GoldenSans-Thin.woff2') format('woff2'),
+        url('GoldenSans-Thin.woff') format('woff'),
+        url('GoldenSans-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golden Sans';
+    src: url('GoldenSans-Light.eot');
+    src: local('Golden Sans Light'), local('GoldenSans-Light'),
+        url('GoldenSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('GoldenSans-Light.woff2') format('woff2'),
+        url('GoldenSans-Light.woff') format('woff'),
+        url('GoldenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golden Sans';
+    src: url('GoldenSans-Black.eot');
+    src: local('Golden Sans Black'), local('GoldenSans-Black'),
+        url('GoldenSans-Black.eot?#iefix') format('embedded-opentype'),
+        url('GoldenSans-Black.woff2') format('woff2'),
+        url('GoldenSans-Black.woff') format('woff'),
+        url('GoldenSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golden Sans';
+    src: url('GoldenSans-UltraLight.eot');
+    src: local('Golden Sans UltraLight'), local('GoldenSans-UltraLight'),
+        url('GoldenSans-UltraLight.eot?#iefix') format('embedded-opentype'),
+        url('GoldenSans-UltraLight.woff2') format('woff2'),
+        url('GoldenSans-UltraLight.woff') format('woff'),
+        url('GoldenSans-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Golden Sans';
+    src: url('GoldenSans-Regular.eot');
+    src: local('Golden Sans Regular'), local('GoldenSans-Regular'),
+        url('GoldenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('GoldenSans-Regular.woff2') format('woff2'),
+        url('GoldenSans-Regular.woff') format('woff'),
+        url('GoldenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
