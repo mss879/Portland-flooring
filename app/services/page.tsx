@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function ServicesPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -194,14 +195,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Minimal Footer */}
-      <footer className="relative z-20 w-full pt-16 pb-8 bg-[#110804] border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto px-8 text-center flex flex-col items-center">
-           <p className="text-[#fce8d5]/40 text-sm font-medium">
-             &copy; {new Date().getFullYear()} Portland Flooring. All rights reserved.
-           </p>
-        </div>
-      </footer>
+      {/* Global Footer */}
+      <Footer />
     </main>
   );
 }

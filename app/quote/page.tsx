@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function QuotePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -194,17 +195,8 @@ export default function QuotePage() {
         </motion.div>
       </section>
 
-      {/* Minimal Footer */}
-      <footer className="relative z-20 w-full pt-16 pb-12 bg-[#110804] border-t border-white/10">
-        <div className="max-w-[1400px] mx-auto px-8 text-center flex flex-col items-center">
-           <div className="w-10 h-10 rounded-full bg-[#8c5430] flex items-center justify-center shadow-[0_0_15px_rgba(140,84,48,0.5)] mb-6">
-             <Image src="/logo.png" alt="Portland Flooring Logo" width={24} height={24} className="brightness-0 invert" />
-           </div>
-           <p className="text-[#fce8d5]/40 text-sm font-medium uppercase tracking-widest">
-             &copy; {new Date().getFullYear()} Portland Flooring. All rights reserved.
-           </p>
-        </div>
-      </footer>
+      {/* Global Footer */}
+      <Footer />
     </main>
   );
 }

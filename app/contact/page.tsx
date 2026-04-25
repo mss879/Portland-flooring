@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FAQ from "../components/FAQ";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(true);
@@ -61,9 +62,6 @@ export default function Contact() {
             <h1 className="text-6xl md:text-8xl text-white tracking-widest leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] stagger-1 uppercase" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>
               Let's Connect
             </h1>
-            <p className="mt-4 text-xl text-white/90 font-medium tracking-[0.3em] uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] stagger-2">
-              Start your transformation today
-            </p>
           </div>
         </div>
       </section>
@@ -228,71 +226,8 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Premium Footer (Dark) */}
-      <footer className="relative z-20 w-full pt-16 pb-8 border-t border-white/5 bg-[#110804]">
-        <div className="max-w-[1400px] mx-auto px-8 md:px-12 lg:px-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
-            <div className="flex flex-col gap-6 lg:col-span-1">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#8c5430] flex items-center justify-center shadow-[0_0_15px_rgba(140,84,48,0.5)]">
-                  <Image src="/logo.png" alt="Portland Flooring Logo" width={24} height={24} className="brightness-0 invert" />
-                </div>
-                <span className="text-2xl font-extrabold tracking-tight text-white" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>PORTLAND</span>
-              </div>
-              <p className="text-[#fce8d5]/50 text-sm leading-relaxed font-medium">
-                Elevating spaces with timeless craftsmanship and sustainable materials. Masterfully installed flooring that defines your home.
-              </p>
-            </div>
-            <div className="flex flex-col gap-6">
-              <h4 className="text-white font-bold tracking-widest uppercase text-xs">Collections</h4>
-              <ul className="flex flex-col gap-4">
-                <li><a href="#" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">European Oak</a></li>
-                <li><a href="#" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">Luxury Vinyl</a></li>
-                <li><a href="#" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">Sustainable Bamboo</a></li>
-                <li><a href="#" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">Hybrid Hardwood</a></li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-6">
-              <h4 className="text-white font-bold tracking-widest uppercase text-xs">Company</h4>
-              <ul className="flex flex-col gap-4">
-                <li><a href="#" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">Our Legacy</a></li>
-                <li><a href="#" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">Master Craftsmanship</a></li>
-                <li><a href="#" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">Sustainability</a></li>
-                <li><Link href="/contact" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">Contact Us</Link></li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-6">
-              <h4 className="text-white font-bold tracking-widest uppercase text-xs">Get in Touch</h4>
-              <ul className="flex flex-col gap-4">
-                <li className="flex items-start gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-[#8c5430] shrink-0 mt-0.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                  </svg>
-                  <span className="text-[#fce8d5]/60 text-sm leading-relaxed">2B Venture Way, Pakenham<br />VIC, Australia, Victoria</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-[#8c5430] shrink-0">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.25-3.95-6.847-6.847l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                  </svg>
-                  <span className="text-[#fce8d5]/60 text-sm">+61 420 608 608</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-[#8c5430] shrink-0">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                  </svg>
-                  <span className="text-[#fce8d5]/60 text-sm">sales@portlands.com.au</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-[#fce8d5]/40 text-xs font-medium">
-              &copy; {new Date().getFullYear()} Portland Flooring. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      {/* Global Footer */}
+      <Footer />
     </main>
   );
 }
