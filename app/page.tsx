@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -210,14 +211,19 @@ export default function Home() {
               </div>
 
               <div className="relative z-10 flex items-center gap-8">
-                {['Home', 'About', 'Products', 'Contact Us'].map((item) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase().replace(' ', '-')}`}
+                {[
+                  { name: 'Home', href: '/' },
+                  { name: 'About', href: '/#about' },
+                  { name: 'Products', href: '/fusion-hybrid' },
+                  { name: 'Contact Us', href: '/#contact' }
+                ].map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
                     className="text-[#4a2810] font-bold tracking-wide hover:text-[#8c5430] transition-colors drop-shadow-sm text-base uppercase"
                   >
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 ))}
 
                 <button
