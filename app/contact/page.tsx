@@ -69,70 +69,61 @@ export default function Contact() {
       {/* Main Content Area (Bento Grid) */}
       <section className="relative z-20 w-full max-w-[1400px] mx-auto px-8 py-16 flex flex-col lg:flex-row gap-8" id="contact-form">
         
-        {/* Left Side: Contact Cards (Bento) */}
-        <div className="flex-1 flex flex-col gap-8">
+        {/* Left Side: Streamlined Contact Information */}
+        <div className="flex-1 flex flex-col justify-center py-12 lg:pr-12 stagger-2">
           
-          {/* Main Info Card */}
-          <div className="bg-white rounded-[2rem] p-10 relative overflow-hidden group stagger-2 shadow-xl border border-[#8c5430]/10">
-            <div className="absolute -right-20 -top-20 w-64 h-64 bg-[#fce8d5] rounded-full blur-[80px] opacity-50 group-hover:opacity-80 transition-opacity duration-700 pointer-events-none" />
-            <h2 className="text-xs font-bold tracking-widest text-[#8c5430] uppercase mb-4">Direct Access</h2>
-            <h3 className="text-4xl text-[#251208] mb-6 leading-tight" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>
-              Reach Out To Our Experts
-            </h3>
-            <p className="text-[#6b3e21] text-lg leading-relaxed font-medium">
-              Whether you need to request a premium sample box, require a custom architectural quote, or simply want to explore our collections, our specialists are ready to guide you.
-            </p>
-          </div>
+          <h2 className="text-sm font-bold tracking-[0.3em] text-[#8c5430] uppercase mb-6">
+            Direct Access
+          </h2>
+          
+          <h3 className="text-5xl lg:text-6xl text-[#251208] mb-8 leading-[1.1]" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>
+            Reach Out To Our Experts
+          </h3>
+          
+          <p className="text-[#6b3e21] text-lg leading-relaxed font-medium mb-12 max-w-md">
+            Whether you need to request a premium sample box, require a custom architectural quote, or simply want to explore our collections, our specialists are ready to guide you.
+          </p>
 
-          {/* Grid of smaller cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            {/* Showroom Card */}
-            <div className="bg-gradient-to-br from-white/90 to-white/50 backdrop-blur-xl rounded-[2rem] p-8 flex flex-col justify-between stagger-3 hover:-translate-y-2 transition-all duration-500 group cursor-pointer shadow-[inset_0_1px_1px_rgba(255,255,255,1),0_12px_40px_rgba(140,84,48,0.1)] border border-white/60">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#8c5430] to-[#6b3e21] flex items-center justify-center mb-6 transition-transform duration-500 border border-white/80 shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),inset_0_-2px_4px_rgba(0,0,0,0.2),0_8px_16px_rgba(140,84,48,0.3)] relative overflow-hidden group-hover:scale-110">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7 text-white transition-colors relative z-10 drop-shadow-sm">
+          <div className="flex flex-col gap-8">
+            {/* Showroom */}
+            <div className="flex items-start gap-6 pt-8 border-t border-[#8c5430]/20">
+              <div className="w-12 h-12 rounded-full bg-[#8c5430]/10 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#8c5430]">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>
               </div>
               <div>
-                <h4 className="text-xl font-bold text-[#251208] mb-2 drop-shadow-sm">Showroom</h4>
-                <p className="text-[#6b3e21] text-base leading-relaxed font-medium">2B Venture Way, Pakenham<br />VIC, Australia, Victoria</p>
+                <h4 className="font-bold text-[#251208] mb-2 tracking-wide uppercase text-sm">Showroom</h4>
+                <p className="text-[#6b3e21] leading-relaxed font-medium">2B Venture Way, Pakenham<br />VIC, Australia, Victoria</p>
               </div>
             </div>
 
-            {/* Contact Details Column */}
-            <div className="flex flex-col gap-6">
-              {/* Phone Card */}
-              <div className="bg-gradient-to-br from-white/90 to-white/50 backdrop-blur-xl rounded-3xl p-6 flex items-center gap-6 stagger-4 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(140,84,48,0.15)] transition-all duration-300 group cursor-pointer shadow-[inset_0_1px_1px_rgba(255,255,255,1),0_8px_24px_rgba(140,84,48,0.08)] border border-white/60">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#8c5430] to-[#6b3e21] flex items-center justify-center border border-white/80 group-hover:scale-110 transition-all duration-500 shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),inset_0_-2px_4px_rgba(0,0,0,0.2),0_6px_12px_rgba(140,84,48,0.3)] relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-white transition-colors relative z-10 drop-shadow-sm">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.25-3.95-6.847-6.847l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-[#251208] mb-1 drop-shadow-sm">Call Us</h4>
-                  <p className="text-[#8c5430] font-medium text-base drop-shadow-sm">+61 420 608 608</p>
-                </div>
+            {/* Phone */}
+            <div className="flex items-start gap-6 pt-8 border-t border-[#8c5430]/20">
+              <div className="w-12 h-12 rounded-full bg-[#8c5430]/10 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#8c5430]">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.25-3.95-6.847-6.847l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>
               </div>
-              
-              {/* Email Card */}
-              <div className="bg-gradient-to-br from-white/90 to-white/50 backdrop-blur-xl rounded-3xl p-6 flex items-center gap-6 stagger-4 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(140,84,48,0.15)] transition-all duration-300 group cursor-pointer shadow-[inset_0_1px_1px_rgba(255,255,255,1),0_8px_24px_rgba(140,84,48,0.08)] border border-white/60" style={{ animationDelay: '0.8s' }}>
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#8c5430] to-[#6b3e21] flex items-center justify-center border border-white/80 group-hover:scale-110 transition-all duration-500 shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),inset_0_-2px_4px_rgba(0,0,0,0.2),0_6px_12px_rgba(140,84,48,0.3)] relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-white transition-colors relative z-10 drop-shadow-sm">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-[#251208] mb-1 drop-shadow-sm">Email Us</h4>
-                  <p className="text-[#8c5430] font-medium text-base drop-shadow-sm">sales@portlands.com.au</p>
-                </div>
+              <div>
+                <h4 className="font-bold text-[#251208] mb-2 tracking-wide uppercase text-sm">Direct Line</h4>
+                <p className="text-[#8c5430] text-lg font-bold hover:text-[#6b3e21] transition-colors cursor-pointer">+61 420 608 608</p>
               </div>
             </div>
-            
+
+            {/* Email */}
+            <div className="flex items-start gap-6 pt-8 border-t border-[#8c5430]/20">
+              <div className="w-12 h-12 rounded-full bg-[#8c5430]/10 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#8c5430]">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="font-bold text-[#251208] mb-2 tracking-wide uppercase text-sm">Email Inquiries</h4>
+                <p className="text-[#8c5430] text-lg font-bold hover:text-[#6b3e21] transition-colors cursor-pointer">sales@portlands.com.au</p>
+              </div>
+            </div>
           </div>
         </div>
 
