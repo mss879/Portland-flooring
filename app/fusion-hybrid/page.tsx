@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 
 export default function FusionHybrid() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -30,25 +31,8 @@ export default function FusionHybrid() {
         }
         `}</style>
 
-        {/* Global Navigation - Minimal */}
-        <nav className="absolute top-8 right-12 z-50 flex items-center rounded-lg px-8 py-3 shadow-[0_15px_30px_-10px_rgba(0,0,0,0.3)] border-t border-white/20 border-b-2 border-[#8c5430]/30 animate-slide-in-up">
-          <div
-            className="absolute inset-0 rounded-lg z-[-2]"
-            style={{
-              backgroundImage: 'url(/light-wood-texture.png)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          />
-          <div className="absolute inset-0 rounded-lg bg-[#8c5430]/10 mix-blend-multiply z-[-1]" />
-          
-          <div className="relative z-10 flex items-center gap-8">
-            <Link href="/" className="text-[#4a2810] font-bold tracking-wide hover:text-[#8c5430] transition-colors drop-shadow-sm text-base uppercase">Home</Link>
-            <Link href="/#about" className="text-[#4a2810] font-bold tracking-wide hover:text-[#8c5430] transition-colors drop-shadow-sm text-base uppercase">About</Link>
-            <Link href="/fusion-hybrid" className="text-[#8c5430] font-bold tracking-wide drop-shadow-sm text-base uppercase border-b-2 border-[#8c5430]">Products</Link>
-            <Link href="/#contact" className="text-[#4a2810] font-bold tracking-wide hover:text-[#8c5430] transition-colors drop-shadow-sm text-base uppercase">Contact Us</Link>
-          </div>
-        </nav>
+        {/* Global Navigation */}
+        <Navbar isLoading={!isLoaded} />
 
         {/* Hero Section */}
         <section className="relative w-full h-[50vh] min-h-[400px] flex flex-col justify-center items-center bg-[#110804] overflow-hidden px-8">
@@ -57,14 +41,6 @@ export default function FusionHybrid() {
              <div className="absolute inset-0 bg-gradient-to-t from-[#110804] via-[#110804]/80 to-[#110804]/30" />
           </div>
           
-          {/* Logo */}
-          <div className="absolute top-8 left-12 z-50 flex items-center">
-            <Link href="/">
-              <div className="relative w-20 h-20 overflow-hidden rounded-full border-2 border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-transform hover:scale-105 duration-300 bg-white">
-                <Image src="/logo.png" alt="Portland Flooring Logo" fill className="object-cover p-2" priority />
-              </div>
-            </Link>
-          </div>
 
           <div className={`relative z-10 text-center flex flex-col items-center gap-4 ${isLoaded ? 'animate-slide-in-up' : 'opacity-0'}`}>
 
@@ -364,7 +340,7 @@ export default function FusionHybrid() {
                 <li><Link href="#" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">Our Legacy</Link></li>
                 <li><Link href="#" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">Master Craftsmanship</Link></li>
                 <li><Link href="#" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">Sustainability</Link></li>
-                <li><Link href="#" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">Contact Us</Link></li>
+                <li><Link href="/contact" className="text-[#fce8d5]/60 hover:text-[#fdf2e9] text-sm font-medium transition-colors hover:translate-x-1 inline-block transform duration-300">Contact Us</Link></li>
               </ul>
             </div>
 
@@ -377,19 +353,19 @@ export default function FusionHybrid() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                   </svg>
-                  <span className="text-[#fce8d5]/60 text-sm leading-relaxed">123 Artisan Way, Suite 400<br />Portland, OR 97204</span>
+                  <span className="text-[#fce8d5]/60 text-sm leading-relaxed">2B Venture Way, Pakenham<br />VIC, Australia, Victoria</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-[#8c5430] shrink-0">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.25-3.95-6.847-6.847l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                   </svg>
-                  <span className="text-[#fce8d5]/60 text-sm">(503) 555-0198</span>
+                  <span className="text-[#fce8d5]/60 text-sm">+61 420 608 608</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-[#8c5430] shrink-0">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                   </svg>
-                  <span className="text-[#fce8d5]/60 text-sm">hello@portlandflooring.com</span>
+                  <span className="text-[#fce8d5]/60 text-sm">sales@portlands.com.au</span>
                 </li>
               </ul>
             </div>
