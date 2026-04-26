@@ -90,7 +90,7 @@ export default function ServicesPage() {
           className="relative z-10 text-center max-w-4xl mx-auto"
         >
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-wider drop-shadow-2xl mb-8" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white uppercase tracking-wider drop-shadow-2xl mb-8" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8c5430] to-[#b56b3a]">Services</span>
           </h1>
         </motion.div>
@@ -122,7 +122,7 @@ export default function ServicesPage() {
                     />
                   </div>
                   {/* Decorative Number */}
-                  <div className={`absolute top-1/2 -translate-y-1/2 ${isEven ? '-right-10' : '-left-10'} text-9xl font-black text-[#8c5430]/5 hidden lg:block select-none pointer-events-none font-mono tracking-tighter z-0 transition-transform duration-700 group-hover:scale-110 group-hover:text-[#8c5430]/10`}>
+                  <div className={`absolute top-1/2 -translate-y-1/2 ${isEven ? '-right-10' : '-left-10'} text-9xl font-bold text-[#8c5430]/5 hidden lg:block select-none pointer-events-none font-mono tracking-tighter z-0 transition-transform duration-700 group-hover:scale-110 group-hover:text-[#8c5430]/10`}>
                     {(index + 1).toString().padStart(2, '0')}
                   </div>
                 </motion.div>
@@ -139,7 +139,7 @@ export default function ServicesPage() {
                     <span className="w-12 h-px bg-[#8c5430]" />
                     <span className="text-[#8c5430] font-bold tracking-[0.2em] uppercase text-sm">Service {(index + 1).toString().padStart(2, '0')}</span>
                   </div>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#251208] leading-tight mb-8" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#251208] leading-tight mb-8" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
                     {service.title}
                   </h2>
                   <p className="text-lg text-[#6b3e21] leading-relaxed font-medium mb-10">
@@ -177,7 +177,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-4xl mx-auto relative z-10 flex flex-col items-center"
           >
-            <h3 className="text-3xl md:text-5xl text-white font-black leading-tight mb-8" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+            <h3 className="text-3xl md:text-5xl text-white font-bold leading-tight mb-8" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
               Ready to transform your space? Let’s bring your vision to life.
             </h3>
             

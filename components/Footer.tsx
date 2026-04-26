@@ -16,7 +16,7 @@ export default function Footer() {
         {/* Statement Header */}
         <div className="flex flex-col items-center text-center border-b border-[#8c5430]/20 pb-16">
           <span className="text-[#8c5430] text-sm font-bold tracking-[0.4em] uppercase mb-6">Portland Flooring</span>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-[#251208] uppercase tracking-wider drop-shadow-sm" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#251208] uppercase tracking-wider drop-shadow-sm" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
             Precision in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8c5430] to-[#b56b3a]">Every Step.</span>
           </h2>
         </div>

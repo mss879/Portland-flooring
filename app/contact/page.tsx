@@ -59,7 +59,7 @@ export default function Contact() {
 
           {/* Hero Title */}
           <div className="relative z-20 text-center mt-12">
-            <h1 className="text-6xl md:text-8xl text-white tracking-widest leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] stagger-1 uppercase" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+            <h1 className="text-6xl md:text-8xl text-white tracking-widest leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] stagger-1 uppercase" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
               Let's Connect
             </h1>
           </div>
@@ -76,7 +76,7 @@ export default function Contact() {
             Direct Access
           </h2>
           
-          <h3 className="text-5xl lg:text-6xl text-[#251208] mb-8 leading-[1.1]" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+          <h3 className="text-5xl lg:text-6xl text-[#251208] mb-8 leading-[1.1]" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
             Reach Out To Our Experts
           </h3>
           
@@ -135,7 +135,7 @@ export default function Contact() {
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-[#fce8d5]/40 to-transparent rounded-full blur-[60px] pointer-events-none -translate-y-1/3 translate-x-1/3" />
             
             <div className="relative z-10">
-              <h3 className="text-3xl text-[#251208] mb-2" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>Send an Inquiry</h3>
+              <h3 className="text-3xl text-[#251208] mb-2" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>Send an Inquiry</h3>
               <p className="text-[#6b3e21] font-medium text-sm mb-10">Fill out the form below and our design consultants will get back to you within 24 hours.</p>
               
               <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>

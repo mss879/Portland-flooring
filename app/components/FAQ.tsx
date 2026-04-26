@@ -55,7 +55,7 @@ export default function FAQ({ theme = "light" }: FAQProps) {
           <h2 className={`text-xs font-bold tracking-widest uppercase mb-4 ${isLight ? 'text-[#8c5430]' : 'text-[#b56b3a]'}`}>
             Support & Inquiries
           </h2>
-          <h3 className={`text-4xl md:text-5xl lg:text-6xl leading-tight ${isLight ? 'text-[#251208]' : 'text-white'}`} style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+          <h3 className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight ${isLight ? 'text-[#251208]' : 'text-white'}`} style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
             Frequently Asked Questions
           </h3>
         </motion.div>

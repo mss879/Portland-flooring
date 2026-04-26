@@ -46,7 +46,7 @@ export default function QuotePage() {
 
           <div className="mb-16 text-center relative z-10">
             <span className="text-[#8c5430] text-sm font-bold tracking-[0.3em] uppercase mb-4 block">// Project Specification</span>
-            <h1 className="text-4xl md:text-6xl font-black text-[#251208] mb-6 uppercase tracking-wider" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+            <h1 className="text-4xl md:text-6xl font-bold text-[#251208] mb-6 uppercase tracking-wider" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
               Request an <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8c5430] to-[#b56b3a]">Estimate</span>
             </h1>
             <p className="text-[#6b3e21] text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">

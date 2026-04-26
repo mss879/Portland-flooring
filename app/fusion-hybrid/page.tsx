@@ -45,7 +45,7 @@ export default function FusionHybrid() {
 
           <div className={`relative z-10 text-center flex flex-col items-center gap-4 ${isLoaded ? 'animate-slide-in-up' : 'opacity-0'}`}>
 
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-wider leading-tight drop-shadow-lg" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-wider leading-tight drop-shadow-lg" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
               Fusion Hybrid
             </h1>
           </div>
@@ -65,7 +65,7 @@ export default function FusionHybrid() {
                 <svg className="w-8 h-8 text-[#8c5430]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
               </div>
               
-              <h3 className="relative z-10 text-3xl font-black text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>Eco-Friendly</h3>
+              <h3 className="relative z-10 text-3xl font-bold text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>Eco-Friendly</h3>
               <p className="relative z-10 text-[#6b3e21]/90 leading-relaxed font-medium">The Fusion Hybrid SPC Flooring product range does not contain heavy metals, phthalate, methanol or other harmful substances. It does no harm to the human body or the environment.</p>
             </div>
 
@@ -79,7 +79,7 @@ export default function FusionHybrid() {
                 <svg className="w-8 h-8 text-[#8c5430]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
               </div>
               
-              <h3 className="relative z-10 text-3xl font-black text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>CE Certified</h3>
+              <h3 className="relative z-10 text-3xl font-bold text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>CE Certified</h3>
               <p className="relative z-10 text-[#6b3e21]/90 leading-relaxed font-medium">Fusion Hybrid SPC Flooring product range is CE certified, meeting requirements for safety, environmental protection, health and consumer protection. Quality assured.</p>
             </div>
 
@@ -93,7 +93,7 @@ export default function FusionHybrid() {
                 <svg className="w-8 h-8 text-[#8c5430]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
               </div>
               
-              <h3 className="relative z-10 text-3xl font-black text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>Floorscore Certified</h3>
+              <h3 className="relative z-10 text-3xl font-bold text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>Floorscore Certified</h3>
               <p className="relative z-10 text-[#6b3e21]/90 leading-relaxed font-medium">Fusion Hybrid SPC floors are waterproof and stain resistant. It only requires regular vacuuming or sweeping and occasional mopping for a more intense clean.</p>
             </div>
 
@@ -105,7 +105,7 @@ export default function FusionHybrid() {
           <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center gap-16">
             <div className="flex-1 space-y-6">
               <h2 className="text-xs font-bold tracking-widest text-[#8c5430] uppercase">Fusion Hybrid</h2>
-              <h3 className="text-4xl md:text-5xl font-black text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+              <h3 className="text-4xl md:text-5xl font-bold text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
                 What is Hybrid Flooring and its Benefits?
               </h3>
               <p className="text-[#6b3e21] text-lg leading-relaxed font-medium">
@@ -122,7 +122,7 @@ export default function FusionHybrid() {
         <section className="py-20 px-8 md:px-12 lg:px-24 bg-white">
           <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row-reverse items-center gap-16">
             <div className="flex-1 space-y-6">
-              <h3 className="text-4xl md:text-5xl font-black text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+              <h3 className="text-4xl md:text-5xl font-bold text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
                 What are they made of?
               </h3>
               <p className="text-[#6b3e21] text-lg leading-relaxed font-medium">
@@ -143,7 +143,7 @@ export default function FusionHybrid() {
           <div className="max-w-[1400px] mx-auto flex flex-col items-center">
             <div className="text-center mb-16 space-y-4">
               <h2 className="text-xs font-bold tracking-widest text-[#fce8d5] uppercase drop-shadow-sm">The Architecture</h2>
-              <h3 className="text-4xl md:text-6xl font-extrabold text-white" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+              <h3 className="text-4xl md:text-6xl font-bold text-white" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
                 The Structure of Fusion Hybrid
               </h3>
             </div>
@@ -159,7 +159,7 @@ export default function FusionHybrid() {
           <div className="max-w-[1400px] mx-auto">
             <div className="flex flex-col md:items-center text-center gap-4 mb-16">
               <h2 className="text-xs font-bold tracking-widest text-[#8c5430] uppercase">Our Materials</h2>
-              <h3 className="text-4xl md:text-5xl font-black text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+              <h3 className="text-4xl md:text-5xl font-bold text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
                 Choose The Best Material For Your Floor
               </h3>
             </div>
@@ -177,7 +177,7 @@ export default function FusionHybrid() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                     
                     <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <h4 className="text-lg md:text-xl lg:text-3xl font-extrabold text-white mb-2 leading-tight whitespace-nowrap" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>{item.name}</h4>
+                      <h4 className="text-lg md:text-xl lg:text-3xl font-bold text-white mb-2 leading-tight whitespace-nowrap" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>{item.name}</h4>
                     </div>
                   </div>
                 ))}
@@ -195,7 +195,7 @@ export default function FusionHybrid() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                     
                     <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <h4 className="text-lg md:text-xl lg:text-3xl font-extrabold text-white mb-2 leading-tight whitespace-nowrap" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>{item.name}</h4>
+                      <h4 className="text-lg md:text-xl lg:text-3xl font-bold text-white mb-2 leading-tight whitespace-nowrap" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>{item.name}</h4>
                     </div>
                   </div>
                 ))}
@@ -207,7 +207,7 @@ export default function FusionHybrid() {
         {/* Benefits Section */}
         <section className="py-20 px-8 md:px-12 lg:px-24 bg-white border-y border-[#8c5430]/10">
           <div className="max-w-[1400px] mx-auto text-center">
-            <h3 className="text-3xl md:text-4xl font-extrabold text-[#251208] mb-6" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+            <h3 className="text-3xl md:text-4xl font-bold text-[#251208] mb-6" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
               Hybrid flooring mimics the look and feel of real timber
             </h3>
             <p className="text-[#6b3e21] text-lg max-w-2xl mx-auto mb-16">
@@ -240,7 +240,7 @@ export default function FusionHybrid() {
         {/* Why Hybrid Flooring Details */}
         <section className="py-24 px-8 md:px-12 lg:px-24 bg-[#faf6f3]">
           <div className="max-w-[1400px] mx-auto">
-            <h3 className="text-4xl md:text-5xl font-black text-[#251208] text-center mb-16" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+            <h3 className="text-4xl md:text-5xl font-bold text-[#251208] text-center mb-16" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
               Why Hybrid flooring?
             </h3>
             
@@ -287,7 +287,7 @@ export default function FusionHybrid() {
         <section className="py-24 px-8 md:px-12 lg:px-24 bg-[#fbf5f0]">
           <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center gap-16">
             <div className="flex-1 space-y-6">
-              <h3 className="text-4xl font-black text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+              <h3 className="text-4xl font-bold text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
                 What you should be aware of when considering hybrid flooring?
               </h3>
               <p className="text-[#6b3e21] text-lg leading-relaxed font-medium">
