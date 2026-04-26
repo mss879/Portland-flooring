@@ -80,7 +80,7 @@ export default function AboutUs() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="relative z-20 text-center mt-12 px-4"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white tracking-widest leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] uppercase" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white tracking-widest leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] uppercase" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
               Crafting Elegance
             </h1>
             <p className="mt-4 text-xl md:text-2xl text-white/90 font-bold tracking-[0.3em] uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
@@ -100,7 +100,7 @@ export default function AboutUs() {
           className="max-w-4xl mx-auto text-center"
         >
           <div className="w-16 h-1 bg-[#8c5430] mx-auto mb-10 rounded-full" />
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#251208] leading-tight mb-8 flex flex-wrap justify-center" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 700 }}>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#251208] leading-tight mb-8 flex flex-wrap justify-center" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
             {"At Portland Flooring, we specialize in delivering premium flooring solutions tailored to every space, from modern homes to commercial interiors.".split(" ").map((word, index) => (
               <motion.span
                 key={index}
@@ -131,7 +131,7 @@ export default function AboutUs() {
                 <span className="text-[#8c5430] text-2xl font-bold">//</span>
                 <span className="text-[#251208] font-bold tracking-[0.2em] uppercase text-sm">Our Expertise</span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-[#251208]" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-[#251208]" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
                 Specialized Flooring<br />Solutions.
               </h2>
               <p className="text-lg md:text-xl text-[#6b3e21] leading-relaxed font-medium">
@@ -161,7 +161,7 @@ export default function AboutUs() {
                     </span>
                   </div>
                   <div className="space-y-4">
-                    <h3 className="text-2xl md:text-3xl font-black tracking-tight text-[#251208] group-hover:text-[#8c5430] transition-colors duration-300" style={{ fontFamily: "'Golden Sans', sans-serif" }}>
+                    <h3 className="text-2xl md:text-3xl font-black tracking-tight text-[#251208] group-hover:text-[#8c5430] transition-colors duration-300" style={{ fontFamily: "'Tomorrow', sans-serif" }}>
                       {spec.title}
                     </h3>
                     <p className="text-[#6b3e21]/80 text-lg leading-relaxed max-w-lg font-medium">
@@ -191,7 +191,7 @@ export default function AboutUs() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-4xl mx-auto relative z-10 flex flex-col items-center"
           >
-            <h3 className="text-3xl md:text-5xl text-white font-black leading-tight mb-8" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>
+            <h3 className="text-3xl md:text-5xl text-white font-black leading-tight mb-8" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
               Whether you’re upgrading your home or transforming your workspace, Portland Flooring delivers precision, beauty, and reliability.
             </h3>
             <p className="text-xl text-[#fce8d5]/80 font-bold tracking-widest uppercase mb-12 drop-shadow-sm">

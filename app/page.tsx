@@ -195,7 +195,7 @@ export default function Home() {
 
             {/* Hero Text - Bottom Left */}
             <div className={`absolute bottom-52 left-12 z-20 flex flex-col items-start ${!isLoading ? 'animate-slide-in-left' : 'opacity-0'}`}>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl text-white tracking-wider leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl text-white tracking-wider leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
                 The Art of Hybrid <br /> Flooring
               </h1>
               <p className="mt-8 text-xl md:text-2xl text-white font-medium tracking-widest drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] uppercase" style={{ wordSpacing: '0.2em' }}>
@@ -330,7 +330,7 @@ export default function Home() {
 
             {/* Section Header */}
             <div className="flex flex-col gap-3 md:items-center md:text-center">
-              <h3 className="text-4xl md:text-6xl font-extrabold text-[#251208]" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 700 }}>
+              <h3 className="text-4xl md:text-6xl font-extrabold text-[#251208]" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
                 Crafting Floors That <br className="hidden md:block" /> Define Your Space
               </h3>
             </div>
@@ -349,8 +349,8 @@ export default function Home() {
                 <div className="absolute right-0 top-0 w-96 h-96 bg-gradient-to-bl from-[#fdf2e9] to-transparent rounded-full blur-3xl opacity-40 group-hover:opacity-70 group-hover:scale-125 transition-all duration-1000 ease-out pointer-events-none" />
 
                 <div className="relative z-10 transform group-hover:translate-x-2 transition-transform duration-700 ease-out">
-                  <h4 className="text-3xl md:text-4xl lg:text-[3rem] font-black text-[#251208] mb-6 leading-[1.1] uppercase group-hover:text-[#1a0d07] transition-colors duration-500" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>
-                    Elevating Spaces With <br className="hidden md:block" /> Timeless Craftsmanship
+                  <h4 className="text-3xl md:text-4xl lg:text-[2.5rem] xl:text-[2.75rem] font-black text-[#251208] mb-6 leading-[1.15] uppercase group-hover:text-[#1a0d07] transition-colors duration-500 tracking-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
+                    Elevating Spaces <br className="hidden md:block" /> With Timeless <br className="hidden md:block" /> Craftsmanship
                   </h4>
                   <p className="text-[#6b3e21]/90 text-lg md:text-xl max-w-3xl leading-relaxed font-medium group-hover:text-[#4a2810] transition-colors duration-500">
                     Portland Flooring delivers elegant, durable, and sustainable flooring solutions. We bring your vision to life with materials that stand the test of time, blending aesthetic beauty with uncompromising quality.
@@ -374,7 +374,7 @@ export default function Home() {
 
                 <div className="relative z-10 flex flex-col items-center scale-110">
                   {/* 15+ Using geometric blocky text similar to the image */}
-                  <span className="text-7xl md:text-8xl font-black text-[#6b3e21] mb-3 tracking-tighter drop-shadow-md" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>15+</span>
+                  <span className="text-7xl md:text-8xl font-black text-[#6b3e21] mb-3 tracking-tighter drop-shadow-md" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>15+</span>
                   <span className="text-sm md:text-base text-[#251208] uppercase tracking-[0.25em] font-bold text-center">Years of<br />Excellence</span>
                 </div>
               </div>
@@ -464,8 +464,7 @@ export default function Home() {
 
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
               <div className="flex flex-col gap-4">
-                <h2 className="text-xs font-bold tracking-widest text-[#8c5430] uppercase drop-shadow-sm">The Archives</h2>
-                <h3 className="text-5xl md:text-7xl font-black text-[#251208] leading-tight uppercase tracking-normal" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>
+                <h3 className="text-5xl md:text-7xl font-black text-[#251208] leading-tight uppercase tracking-normal" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
                   Curated <br /> Collections
                 </h3>
               </div>
@@ -492,7 +491,7 @@ export default function Home() {
                         <div className="w-8 h-[2px] bg-[#8c5430] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700 delay-300" />
                         <span className="text-[#fdf2e9] text-xs font-bold tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300">0{index + 1}</span>
                       </div>
-                      <h4 className="text-lg md:text-xl lg:text-3xl font-extrabold text-white mb-2 leading-tight whitespace-nowrap" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 700 }}>{item.name}</h4>
+                      <h4 className="text-lg md:text-xl lg:text-3xl font-extrabold text-white mb-2 leading-tight whitespace-nowrap" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>{item.name}</h4>
                       <p className="text-white/80 text-xs lg:text-sm max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 hidden md:block h-10 lg:h-12">
                         {item.desc}
                       </p>
@@ -517,7 +516,7 @@ export default function Home() {
                         <div className="w-8 h-[2px] bg-[#8c5430] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700 delay-300" />
                         <span className="text-[#fdf2e9] text-xs font-bold tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300">0{index + 4}</span>
                       </div>
-                      <h4 className="text-lg md:text-xl lg:text-3xl font-extrabold text-white mb-2 leading-tight whitespace-nowrap" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 700 }}>{item.name}</h4>
+                      <h4 className="text-lg md:text-xl lg:text-3xl font-extrabold text-white mb-2 leading-tight whitespace-nowrap" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>{item.name}</h4>
                       <p className="text-white/80 text-xs lg:text-sm max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 hidden md:block h-10 lg:h-12">
                         {item.desc}
                       </p>
@@ -545,7 +544,7 @@ export default function Home() {
               </svg>
               <h2 className="text-xs font-bold tracking-widest text-[#8c5430] uppercase drop-shadow-sm">Client Reviews</h2>
             </div>
-            <h3 className="text-4xl md:text-6xl font-extrabold text-[#251208] mb-6 leading-tight" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>
+            <h3 className="text-4xl md:text-6xl font-extrabold text-[#251208] mb-6 leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
               Loved by <br className="md:hidden" /> Portland
             </h3>
             <p className="text-[#6b3e21] max-w-2xl text-lg font-medium">
@@ -579,7 +578,7 @@ export default function Home() {
 
           <div className="max-w-[1200px] w-full px-8 md:px-12 flex flex-col items-center text-center mb-16 relative z-10">
             <h2 className="text-xs font-bold tracking-widest text-[#8c5430] uppercase drop-shadow-sm mb-4">The Transformation</h2>
-            <h3 className="text-4xl md:text-6xl font-extrabold text-[#251208] mb-6" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 700 }}>
+            <h3 className="text-4xl md:text-6xl font-extrabold text-[#251208] mb-6" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
               Seeing is Believing
             </h3>
             <p className="text-[#6b3e21] max-w-2xl text-lg font-medium">
@@ -630,7 +629,7 @@ export default function Home() {
             <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#8c5430] rounded-full blur-[100px] opacity-30 pointer-events-none" />
 
             <div className="flex flex-col gap-6 relative z-10 max-w-xl text-center lg:text-left">
-              <h3 className="text-4xl md:text-5xl font-black text-white uppercase leading-tight tracking-wide" style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>
+              <h3 className="text-4xl md:text-5xl font-black text-white uppercase leading-tight tracking-wide" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
                 Experience The <br className="hidden md:block" /> Quality At Home
               </h3>
               <p className="text-[#fce8d5]/80 text-lg md:text-xl font-medium leading-relaxed">

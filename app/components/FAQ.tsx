@@ -55,7 +55,7 @@ export default function FAQ({ theme = "light" }: FAQProps) {
           <h2 className={`text-xs font-bold tracking-widest uppercase mb-4 ${isLight ? 'text-[#8c5430]' : 'text-[#b56b3a]'}`}>
             Support & Inquiries
           </h2>
-          <h3 className={`text-4xl md:text-5xl lg:text-6xl leading-tight ${isLight ? 'text-[#251208]' : 'text-white'}`} style={{ fontFamily: "'Golden Sans', sans-serif", fontWeight: 900 }}>
+          <h3 className={`text-4xl md:text-5xl lg:text-6xl leading-tight ${isLight ? 'text-[#251208]' : 'text-white'}`} style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 900 }}>
             Frequently Asked Questions
           </h3>
         </motion.div>
@@ -71,20 +71,22 @@ export default function FAQ({ theme = "light" }: FAQProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-                className={`rounded-[1.5rem] border transition-colors duration-500 overflow-hidden ${
+                className={`rounded-[1.5rem] border transition-colors duration-500 overflow-hidden backdrop-blur-xl ${
                   isLight 
-                    ? `bg-white/60 border-[#8c5430]/10 ${isOpen ? 'shadow-xl bg-white/95' : 'hover:bg-white/80'}`
-                    : `bg-[#1a0d07]/40 border-white/5 ${isOpen ? 'bg-[#1a0d07]/90 border-white/10 shadow-2xl' : 'hover:bg-[#1a0d07]/70'}`
-                } backdrop-blur-xl`}
+                    ? `border-[#8c5430]/10 ${isOpen ? 'shadow-xl bg-white' : 'bg-white/60 hover:bg-white/80'}`
+                    : `border-white/5 ${isOpen ? 'bg-white border-transparent shadow-2xl' : 'bg-[#1a0d07]/40 hover:bg-[#1a0d07]/70'}`
+                }`}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none group"
                 >
                   <span className={`text-lg md:text-xl lg:text-2xl font-bold transition-colors duration-300 pr-8 ${
-                    isLight 
-                      ? `${isOpen ? 'text-[#8c5430]' : 'text-[#251208] group-hover:text-[#8c5430]'}`
-                      : `${isOpen ? 'text-[#fce8d5]' : 'text-white group-hover:text-[#fce8d5]'}`
+                    isOpen 
+                      ? 'text-[#8c5430]' // Always warm dark when open (since bg is white)
+                      : isLight 
+                        ? 'text-[#251208] group-hover:text-[#8c5430]' 
+                        : 'text-white group-hover:text-[#fce8d5]'
                   }`}>
                     {faq.question}
                   </span>
@@ -92,7 +94,13 @@ export default function FAQ({ theme = "light" }: FAQProps) {
                   <motion.div 
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                    className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-[#8c5430] text-white shadow-md' : isLight ? 'bg-[#fdfaf6] text-[#8c5430] group-hover:bg-[#8c5430] group-hover:text-white' : 'bg-white/10 text-white group-hover:bg-white/20'}`}
+                    className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 ${
+                      isOpen 
+                        ? 'bg-[#8c5430] text-white shadow-md' 
+                        : isLight 
+                          ? 'bg-[#fdfaf6] text-[#8c5430] group-hover:bg-[#8c5430] group-hover:text-white' 
+                          : 'bg-white/10 text-white group-hover:bg-white/20'
+                    }`}
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -108,7 +116,7 @@ export default function FAQ({ theme = "light" }: FAQProps) {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ type: "spring", stiffness: 200, damping: 25 }}
                     >
-                      <div className={`p-6 md:p-8 pt-0 text-base md:text-lg leading-relaxed font-medium ${isLight ? 'text-[#6b3e21]' : 'text-[#fce8d5]/70'}`}>
+                      <div className="p-6 md:p-8 pt-0 text-base md:text-lg leading-relaxed font-medium text-[#6b3e21]">
                         {faq.answer}
                       </div>
                     </motion.div>

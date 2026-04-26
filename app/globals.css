@@ -1,51 +1,73 @@
 @import "tailwindcss";
 
-/* Golden Sans Font Family */
+/* Tomorrow Font Family */
 @font-face {
-  font-family: 'Golden Sans';
-  src: url('/golden-sans/GoldenSans-Medium.woff2') format('woff2'),
-       url('/golden-sans/GoldenSans-Medium.woff') format('woff'),
-       url('/golden-sans/GoldenSans-Medium.ttf') format('truetype');
-  font-weight: 500;
+  font-family: 'Tomorrow';
+  src: url('/Tomorrow/Tomorrow-Thin.ttf') format('truetype');
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Golden Sans';
-  src: url('/golden-sans/GoldenSans-Regular.woff2') format('woff2'),
-       url('/golden-sans/GoldenSans-Regular.woff') format('woff'),
-       url('/golden-sans/GoldenSans-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'Tomorrow';
+  src: url('/Tomorrow/Tomorrow-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Golden Sans';
-  src: url('/golden-sans/GoldenSans-Bold.woff2') format('woff2'),
-       url('/golden-sans/GoldenSans-Bold.woff') format('woff'),
-       url('/golden-sans/GoldenSans-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Golden Sans';
-  src: url('/golden-sans/GoldenSans-Light.woff2') format('woff2'),
-       url('/golden-sans/GoldenSans-Light.woff') format('woff'),
-       url('/golden-sans/GoldenSans-Light.ttf') format('truetype');
+  font-family: 'Tomorrow';
+  src: url('/Tomorrow/Tomorrow-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Golden Sans';
-  src: url('/golden-sans/GoldenSans-Black.woff2') format('woff2'),
-       url('/golden-sans/GoldenSans-Black.woff') format('woff'),
-       url('/golden-sans/GoldenSans-Black.ttf') format('truetype');
+  font-family: 'Tomorrow';
+  src: url('/Tomorrow/Tomorrow-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tomorrow';
+  src: url('/Tomorrow/Tomorrow-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tomorrow';
+  src: url('/Tomorrow/Tomorrow-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tomorrow';
+  src: url('/Tomorrow/Tomorrow-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tomorrow';
+  src: url('/Tomorrow/Tomorrow-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tomorrow';
+  src: url('/Tomorrow/Tomorrow-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -59,8 +81,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: 'Golden Sans', Arial, Helvetica, sans-serif;
-  --font-mono: 'Golden Sans', monospace;
+  --font-sans: 'Tomorrow', Arial, Helvetica, sans-serif;
+  --font-mono: 'Tomorrow', monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -73,7 +95,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Golden Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Tomorrow', Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
 
