@@ -30,7 +30,7 @@ export default function Footer() {
               <div className="w-14 h-14 rounded-full bg-[#8c5430] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                 <Image src="/logo.png" alt="Portland Flooring Logo" width={32} height={32} className="brightness-0 invert" />
               </div>
-              <span className="text-[#251208] font-black tracking-widest uppercase text-base group-hover:text-[#8c5430] transition-colors">Portland</span>
+              <span className="text-[#251208] font-bold tracking-widest uppercase text-base group-hover:text-[#8c5430] transition-colors">Portland</span>
             </Link>
             <p className="text-[#6b3e21] text-base leading-relaxed font-medium">
               Elevating spaces through masterful craftsmanship and uncompromising quality. From bespoke hardwood to ultra-durable hybrid solutions, we bring architectural visions to life.
@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Column 2: Navigation */}
           <div className="flex flex-col gap-6 lg:ml-8">
-            <h4 className="text-[#251208] font-black tracking-widest uppercase text-base border-l-2 border-[#8c5430] pl-3">Explore</h4>
+            <h4 className="text-[#251208] font-bold tracking-widest uppercase text-base border-l-2 border-[#8c5430] pl-3">Explore</h4>
             <ul className="flex flex-col gap-5">
               {[
                 { name: 'Home', href: '/' },
@@ -60,23 +60,23 @@ export default function Footer() {
 
           {/* Column 3: Contact Details */}
           <div className="flex flex-col gap-6">
-            <h4 className="text-[#251208] font-black tracking-widest uppercase text-base border-l-2 border-[#8c5430] pl-3">Contact</h4>
+            <h4 className="text-[#251208] font-bold tracking-widest uppercase text-base border-l-2 border-[#8c5430] pl-3">Contact</h4>
             <ul className="flex flex-col gap-6">
               <li className="flex flex-col gap-2">
-                <span className="text-[#8c5430] text-xs font-black uppercase tracking-widest">Showroom</span>
+                <span className="text-[#8c5430] text-xs font-bold uppercase tracking-widest">Showroom</span>
                 <span className="text-[#6b3e21] text-base font-bold leading-relaxed">
                   2B Venture Way, Pakenham<br />
                   VIC, Australia, Victoria
                 </span>
               </li>
               <li className="flex flex-col gap-2">
-                <span className="text-[#8c5430] text-xs font-black uppercase tracking-widest">Direct Line</span>
+                <span className="text-[#8c5430] text-xs font-bold uppercase tracking-widest">Direct Line</span>
                 <a href="tel:+61420608608" className="text-[#6b3e21] hover:text-[#8c5430] text-base font-bold transition-colors">
                   +61 420 608 608
                 </a>
               </li>
               <li className="flex flex-col gap-2">
-                <span className="text-[#8c5430] text-xs font-black uppercase tracking-widest">Email</span>
+                <span className="text-[#8c5430] text-xs font-bold uppercase tracking-widest">Email</span>
                 <a href="mailto:sales@portlands.com.au" className="text-[#6b3e21] hover:text-[#8c5430] text-base font-bold transition-colors">
                   sales@portlands.com.au
                 </a>
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Column 4: Newsletter / Socials */}
           <div className="flex flex-col gap-6">
-            <h4 className="text-[#251208] font-black tracking-widest uppercase text-base border-l-2 border-[#8c5430] pl-3">Connect</h4>
+            <h4 className="text-[#251208] font-bold tracking-widest uppercase text-base border-l-2 border-[#8c5430] pl-3">Connect</h4>
             <p className="text-[#6b3e21] text-base font-medium">Subscribe for exclusive architectural insights and material updates.</p>
             
             <form className="relative group mt-2" onSubmit={(e) => e.preventDefault()}>
