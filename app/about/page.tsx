@@ -114,9 +114,7 @@ export default function AboutUs() {
               </motion.span>
             ))}
           </h2>
-          <p className="text-lg md:text-xl text-[#6b3e21] leading-relaxed font-medium">
-            With a commitment to quality, design, and craftsmanship, our team ensures every floor we create reflects lasting elegance and durability. We believe your foundation sets the tone for your entire space, and we dedicate ourselves to perfecting that foundation.
-          </p>
+
         </motion.div>
       </section>
 
