@@ -244,38 +244,49 @@ export default function FusionHybrid() {
               Why Hybrid flooring?
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-              <div className="space-y-8">
-                <div>
-                  <h4 className="text-xl font-bold text-[#251208] mb-2 uppercase tracking-wide">Water-Proof</h4>
-                  <p className="text-[#6b3e21] leading-relaxed">Fusion Hybrid flooring is 100% water proof and stands up to all spills and can be installed in wet areas such as bathrooms.</p>
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-[#251208] mb-2 uppercase tracking-wide">Low Maintenance</h4>
-                  <p className="text-[#6b3e21] leading-relaxed">Our surface coating technology ensures no need for additional surface treatments following installation.</p>
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-[#251208] mb-2 uppercase tracking-wide">Environmentally Conscious</h4>
-                  <p className="text-[#6b3e21] leading-relaxed">Being 100% physically, energetically and chemically recyclable or re-usable.</p>
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-[#251208] mb-2 uppercase tracking-wide">Acoustic Qualities</h4>
-                  <p className="text-[#6b3e21] leading-relaxed">Excellent noise reduction properties and does not require additional underlay. Industry leading, 6 Star rated.</p>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 auto-rows-fr">
+              {/* Row 1: 3 Items (Span 2 columns each on large screens) */}
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-2">
+                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>01</div>
+                <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Water-Proof</h4>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Fusion Hybrid flooring is 100% water proof and stands up to all spills and can be installed in wet areas such as bathrooms.</p>
               </div>
-              <div className="space-y-8">
-                <div>
-                  <h4 className="text-xl font-bold text-[#251208] mb-2 uppercase tracking-wide">Durable</h4>
-                  <p className="text-[#6b3e21] leading-relaxed">Fusion Hybrid boards are extremely hard wearing and have HIGH IMPACT RESISTANCE, unlike wood or stone, Fusion Hybrid does not splinter, warp or crack. Quick and Easy to Install over most existing hard floors with the Uniclic 2G click system.</p>
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-[#251208] mb-2 uppercase tracking-wide">Comfort</h4>
-                  <p className="text-[#6b3e21] leading-relaxed">Softer and warmer under foot than natural wood or stone flooring. Additional cushioning in the backing helps make Fusion Hybrid extremely comfortable even to sensitive feet.</p>
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-[#251208] mb-2 uppercase tracking-wide">Pet Friendly</h4>
-                  <p className="text-[#6b3e21] leading-relaxed">From muddy paws to 'accidents' - Fusion Hybrid repels anything your pet can throw at it, making life much easier to clean.</p>
-                </div>
+
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-2">
+                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>02</div>
+                <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Low Maintenance</h4>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Our surface coating technology ensures no need for additional surface treatments following installation.</p>
+              </div>
+
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-2">
+                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>03</div>
+                <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Environmentally Conscious</h4>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Being 100% physically, energetically and chemically recyclable or re-usable.</p>
+              </div>
+
+              {/* Row 2 & 3: 4 Items (Span 3 columns each on large screens) */}
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-3">
+                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>04</div>
+                <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Acoustic Qualities</h4>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Excellent noise reduction properties and does not require additional underlay. Industry leading, 6 Star rated.</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#251208] to-[#1a0d07] rounded-[2rem] p-8 md:p-10 shadow-md border border-[#8c5430]/20 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-3">
+                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-white/[0.03] group-hover:text-white/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>05</div>
+                <h4 className="text-xl md:text-2xl font-bold text-white mb-4 uppercase tracking-wide group-hover:text-[#fce8d5] transition-colors duration-300 relative z-10">Durable</h4>
+                <p className="text-[#fce8d5]/80 leading-relaxed relative z-10 font-medium text-lg">Fusion Hybrid boards are extremely hard wearing and have HIGH IMPACT RESISTANCE, unlike wood or stone, Fusion Hybrid does not splinter, warp or crack. Quick and Easy to Install over most existing hard floors with the Uniclic 2G click system.</p>
+              </div>
+
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-3">
+                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>06</div>
+                <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Comfort</h4>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium text-lg">Softer and warmer under foot than natural wood or stone flooring. Additional cushioning in the backing helps make Fusion Hybrid extremely comfortable even to sensitive feet.</p>
+              </div>
+
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-3">
+                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>07</div>
+                <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Pet Friendly</h4>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">From muddy paws to 'accidents' - Fusion Hybrid repels anything your pet can throw at it, making life much easier to clean.</p>
               </div>
             </div>
           </div>
