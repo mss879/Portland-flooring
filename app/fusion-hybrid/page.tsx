@@ -215,23 +215,23 @@ export default function FusionHybrid() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center gap-4">
-                <div className="w-24 h-24 rounded-full bg-[#fbf5f0] flex items-center justify-center text-[#8c5430]">
-                  <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" /></svg>
+              <div className="flex flex-col items-center gap-6 group">
+                <div className="w-full max-w-[300px] aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden relative shadow-xl border border-[#8c5430]/10 group-hover:-translate-y-2 transition-all duration-500">
+                  <Image src="/kid-friendly.png" alt="Kid Friendly Flooring" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
-                <h4 className="text-2xl font-bold text-[#251208]">Kid Friendly</h4>
+                <h4 className="text-2xl font-bold text-[#251208] group-hover:text-[#8c5430] transition-colors duration-300">Kid Friendly</h4>
               </div>
-              <div className="flex flex-col items-center gap-4">
-                <div className="w-24 h-24 rounded-full bg-[#fbf5f0] flex items-center justify-center text-[#8c5430]">
-                  <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+              <div className="flex flex-col items-center gap-6 group">
+                <div className="w-full max-w-[300px] aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden relative shadow-xl border border-[#8c5430]/10 group-hover:-translate-y-2 transition-all duration-500">
+                  <Image src="/pet-friendly.png" alt="Pet Friendly Flooring" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
-                <h4 className="text-2xl font-bold text-[#251208]">Pet Friendly</h4>
+                <h4 className="text-2xl font-bold text-[#251208] group-hover:text-[#8c5430] transition-colors duration-300">Pet Friendly</h4>
               </div>
-              <div className="flex flex-col items-center gap-4">
-                <div className="w-24 h-24 rounded-full bg-[#fbf5f0] flex items-center justify-center text-[#8c5430]">
-                  <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+              <div className="flex flex-col items-center gap-6 group">
+                <div className="w-full max-w-[300px] aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden relative shadow-xl border border-[#8c5430]/10 group-hover:-translate-y-2 transition-all duration-500">
+                  <Image src="/waterproof.png" alt="Waterproof Flooring" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
-                <h4 className="text-2xl font-bold text-[#251208]">Waterproof (Oops!)</h4>
+                <h4 className="text-2xl font-bold text-[#251208] group-hover:text-[#8c5430] transition-colors duration-300">Waterproof (Oops!)</h4>
               </div>
             </div>
           </div>
