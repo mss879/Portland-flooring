@@ -350,7 +350,7 @@ export default function Home() {
 
                 <div className="relative z-10 transform group-hover:translate-x-2 transition-transform duration-700 ease-out">
                   <h4 className="text-3xl md:text-4xl lg:text-[2.5rem] xl:text-[2.75rem] font-bold text-[#251208] mb-6 leading-[1.15] group-hover:text-[#1a0d07] transition-colors duration-500 tracking-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
-                    Elevating Spaces <br className="hidden md:block" /> With Timeless <br className="hidden md:block" /> Craftsmanship
+                    Elevating Spaces With Timeless Craftsmanship
                   </h4>
                   <p className="text-[#6b3e21]/90 text-lg md:text-xl max-w-3xl leading-relaxed font-medium group-hover:text-[#4a2810] transition-colors duration-500">
                     Portland Flooring delivers elegant, durable, and sustainable flooring solutions. We bring your vision to life with materials that stand the test of time, blending aesthetic beauty with uncompromising quality.
