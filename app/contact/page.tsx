@@ -5,14 +5,59 @@ import Link from "next/link";
 import FAQ from "../components/FAQ";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Toast from "../components/Toast";
+import { createClient } from "@/lib/supabase";
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(true);
+  const supabase = createClient();
+
+  // Form state
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [toast, setToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 500);
     return () => clearTimeout(timer);
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!firstName.trim() || !lastName.trim() || !phone.trim()) {
+      setToast({ message: "Please fill in all required fields.", type: "error" });
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const { error } = await supabase.from("inquiries").insert({
+        first_name: firstName.trim(),
+        last_name: lastName.trim(),
+        email: email.trim(),
+        phone: phone.trim(),
+        message: message.trim(),
+      });
+
+      if (error) throw error;
+
+      setToast({ message: "Inquiry submitted successfully! We'll get back to you within 24 hours.", type: "success" });
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+    } catch (err) {
+      console.error("Error submitting inquiry:", err);
+      setToast({ message: "Something went wrong. Please try again or call us directly.", type: "error" });
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <main className="flex flex-col min-h-screen w-full bg-[#fbf5f0] overflow-hidden">
@@ -138,36 +183,50 @@ export default function Contact() {
               <h3 className="text-3xl text-[#251208] mb-2" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>Send an Inquiry</h3>
               <p className="text-[#6b3e21] font-medium text-sm mb-10">Fill out the form below and our design consultants will get back to you within 24 hours.</p>
               
-              <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex-1 group">
-                    <label className="block text-xs font-bold tracking-widest text-[#8c5430] uppercase mb-2 group-focus-within:text-[#6b3e21] transition-colors">First Name</label>
-                    <input type="text" className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208]" />
+                    <label className="block text-xs font-bold tracking-widest text-[#8c5430] uppercase mb-2 group-focus-within:text-[#6b3e21] transition-colors">First Name *</label>
+                    <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208]" />
                   </div>
                   <div className="flex-1 group">
-                    <label className="block text-xs font-bold tracking-widest text-[#8c5430] uppercase mb-2 group-focus-within:text-[#6b3e21] transition-colors">Last Name</label>
-                    <input type="text" className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208]" />
+                    <label className="block text-xs font-bold tracking-widest text-[#8c5430] uppercase mb-2 group-focus-within:text-[#6b3e21] transition-colors">Last Name *</label>
+                    <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} required className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208]" />
                   </div>
                 </div>
 
                 <div className="group">
-                  <label className="block text-xs font-bold tracking-widest text-[#8c5430] uppercase mb-2 group-focus-within:text-[#6b3e21] transition-colors">Phone Number</label>
-                  <input type="tel" className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208]" />
+                  <label className="block text-xs font-bold tracking-widest text-[#8c5430] uppercase mb-2 group-focus-within:text-[#6b3e21] transition-colors">Email</label>
+                  <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208]" />
+                </div>
+
+                <div className="group">
+                  <label className="block text-xs font-bold tracking-widest text-[#8c5430] uppercase mb-2 group-focus-within:text-[#6b3e21] transition-colors">Phone Number *</label>
+                  <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} required className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208]" />
                 </div>
 
                 <div className="group">
                   <label className="block text-xs font-bold tracking-widest text-[#8c5430] uppercase mb-2 group-focus-within:text-[#6b3e21] transition-colors">Project Details / Message</label>
-                  <textarea rows={4} className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] resize-none" />
+                  <textarea rows={4} value={message} onChange={(e) => setMessage(e.target.value)} className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] resize-none" />
                 </div>
 
-                <button type="button" className="w-full relative overflow-hidden rounded-xl py-5 font-bold text-white uppercase tracking-widest shadow-md hover:shadow-xl transition-all hover:-translate-y-1 active:translate-y-0 mt-6 group">
+                <button type="submit" disabled={submitting} className="w-full relative overflow-hidden rounded-xl py-5 font-bold text-white uppercase tracking-widest shadow-md hover:shadow-xl transition-all hover:-translate-y-1 active:translate-y-0 mt-6 group disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0">
                   <div className="absolute inset-0 z-[-2] transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/wood-texture.png)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
                   <div className="absolute inset-0 bg-gradient-to-b from-[#b56b3a]/90 to-[#6b3e21] mix-blend-multiply z-[-1]" />
                   <span className="relative z-10 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] flex items-center justify-center gap-3">
-                    Submit Inquiry
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 group-hover:translate-x-1 transition-transform">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                    </svg>
+                    {submitting ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        Submitting...
+                      </>
+                    ) : (
+                      <>
+                        Submit Inquiry
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 group-hover:translate-x-1 transition-transform">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                      </>
+                    )}
                   </span>
                 </button>
               </form>
@@ -219,6 +278,9 @@ export default function Contact() {
 
       {/* Global Footer */}
       <Footer />
+
+      {/* Toast */}
+      {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </main>
   );
 }

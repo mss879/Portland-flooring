@@ -6,14 +6,71 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Toast from "../components/Toast";
+import { createClient } from "@/lib/supabase";
 
 export default function QuotePage() {
   const [isLoading, setIsLoading] = useState(true);
+  const supabase = createClient();
+
+  // Form state
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [projectType, setProjectType] = useState("Residential");
+  const [serviceRequired, setServiceRequired] = useState("");
+  const [materialPreference, setMaterialPreference] = useState("");
+  const [estimatedArea, setEstimatedArea] = useState("");
+  const [projectTimeline, setProjectTimeline] = useState("");
+  const [additionalRequirements, setAdditionalRequirements] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [toast, setToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 500);
     return () => clearTimeout(timer);
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!fullName.trim() || !phone.trim()) {
+      setToast({ message: "Please fill in your name and phone number.", type: "error" });
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const { error } = await supabase.from("request_quotes").insert({
+        full_name: fullName.trim(),
+        email: email.trim(),
+        phone: phone.trim(),
+        project_type: projectType,
+        service_required: serviceRequired || null,
+        material_preference: materialPreference || null,
+        estimated_area: estimatedArea.trim() || null,
+        project_timeline: projectTimeline || null,
+        additional_requirements: additionalRequirements.trim() || null,
+      });
+
+      if (error) throw error;
+
+      setToast({ message: "Quote request submitted! Our team will prepare your custom estimate.", type: "success" });
+      setFullName("");
+      setEmail("");
+      setPhone("");
+      setProjectType("Residential");
+      setServiceRequired("");
+      setMaterialPreference("");
+      setEstimatedArea("");
+      setProjectTimeline("");
+      setAdditionalRequirements("");
+    } catch (err) {
+      console.error("Error submitting quote:", err);
+      setToast({ message: "Something went wrong. Please try again or contact us directly.", type: "error" });
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   if (isLoading) {
     return (
@@ -54,7 +111,7 @@ export default function QuotePage() {
             </p>
           </div>
 
-          <form className="flex flex-col gap-10 w-full relative z-10" onSubmit={(e) => e.preventDefault()}>
+          <form className="flex flex-col gap-10 w-full relative z-10" onSubmit={handleSubmit}>
             
             {/* Section 1: Contact Details */}
             <div className="flex flex-col gap-8">
@@ -64,18 +121,18 @@ export default function QuotePage() {
               </div>
               
               <div className="group">
-                <label className="block text-xs font-bold tracking-[0.2em] text-[#8c5430] uppercase mb-3 transition-colors group-focus-within:text-[#b56b3a]">Full Name</label>
-                <input type="text" placeholder="John Doe" className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] placeholder-[#8c5430]/40" />
+                <label className="block text-xs font-bold tracking-[0.2em] text-[#8c5430] uppercase mb-3 transition-colors group-focus-within:text-[#b56b3a]">Full Name *</label>
+                <input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder="John Doe" required className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] placeholder-[#8c5430]/40" />
               </div>
               
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-1 group">
                   <label className="block text-xs font-bold tracking-[0.2em] text-[#8c5430] uppercase mb-3 transition-colors group-focus-within:text-[#b56b3a]">Email Address</label>
-                  <input type="email" placeholder="john@example.com" className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] placeholder-[#8c5430]/40" />
+                  <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="john@example.com" className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] placeholder-[#8c5430]/40" />
                 </div>
                 <div className="flex-1 group">
-                  <label className="block text-xs font-bold tracking-[0.2em] text-[#8c5430] uppercase mb-3 transition-colors group-focus-within:text-[#b56b3a]">Phone Number</label>
-                  <input type="tel" placeholder="+61 400 000 000" className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] placeholder-[#8c5430]/40" />
+                  <label className="block text-xs font-bold tracking-[0.2em] text-[#8c5430] uppercase mb-3 transition-colors group-focus-within:text-[#b56b3a]">Phone Number *</label>
+                  <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+61 400 000 000" required className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] placeholder-[#8c5430]/40" />
                 </div>
               </div>
             </div>
@@ -91,14 +148,14 @@ export default function QuotePage() {
                 <label className="block text-xs font-bold tracking-[0.2em] text-[#8c5430] uppercase mb-4">Project Type</label>
                 <div className="flex flex-col sm:flex-row gap-6">
                   <label className="flex-1 relative cursor-pointer group/radio">
-                    <input type="radio" name="projectType" value="Residential" className="peer sr-only" defaultChecked />
+                    <input type="radio" name="projectType" value="Residential" checked={projectType === "Residential"} onChange={(e) => setProjectType(e.target.value)} className="peer sr-only" />
                     <div className="w-full flex items-center justify-center gap-3 px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl peer-checked:bg-[#8c5430]/10 peer-checked:border-[#8c5430] transition-all">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-[#8c5430]/40 peer-checked:text-[#8c5430] transition-colors"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>
                       <span className="font-bold text-[#6b3e21] group-hover/radio:text-[#8c5430] peer-checked:text-[#8c5430] uppercase tracking-widest text-sm transition-colors">Residential</span>
                     </div>
                   </label>
                   <label className="flex-1 relative cursor-pointer group/radio">
-                    <input type="radio" name="projectType" value="Commercial" className="peer sr-only" />
+                    <input type="radio" name="projectType" value="Commercial" checked={projectType === "Commercial"} onChange={(e) => setProjectType(e.target.value)} className="peer sr-only" />
                     <div className="w-full flex items-center justify-center gap-3 px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl peer-checked:bg-[#8c5430]/10 peer-checked:border-[#8c5430] transition-all">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-[#8c5430]/40 peer-checked:text-[#8c5430] transition-colors"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" /></svg>
                       <span className="font-bold text-[#6b3e21] group-hover/radio:text-[#8c5430] peer-checked:text-[#8c5430] uppercase tracking-widest text-sm transition-colors">Commercial</span>
@@ -111,12 +168,12 @@ export default function QuotePage() {
                 <div className="flex-1 group">
                   <label className="block text-xs font-bold tracking-[0.2em] text-[#8c5430] uppercase mb-3 transition-colors group-focus-within:text-[#b56b3a]">Service Required</label>
                   <div className="relative">
-                    <select className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] appearance-none cursor-pointer">
-                      <option value="" disabled selected>Select service...</option>
+                    <select value={serviceRequired} onChange={(e) => setServiceRequired(e.target.value)} className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] appearance-none cursor-pointer">
+                      <option value="" disabled>Select service...</option>
                       <option value="New Installation">New Installation</option>
                       <option value="Restoration / Refinishing">Restoration / Refinishing</option>
                       <option value="Repairs">Repairs</option>
-                      <option value="Waterproofing">Waterproofing & Coating</option>
+                      <option value="Waterproofing">Waterproofing &amp; Coating</option>
                       <option value="Other">Other</option>
                     </select>
                     <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-[#8c5430]">
@@ -128,8 +185,8 @@ export default function QuotePage() {
                 <div className="flex-1 group">
                   <label className="block text-xs font-bold tracking-[0.2em] text-[#8c5430] uppercase mb-3 transition-colors group-focus-within:text-[#b56b3a]">Material Preference</label>
                   <div className="relative">
-                    <select className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] appearance-none cursor-pointer">
-                      <option value="" disabled selected>Select material...</option>
+                    <select value={materialPreference} onChange={(e) => setMaterialPreference(e.target.value)} className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] appearance-none cursor-pointer">
+                      <option value="" disabled>Select material...</option>
                       <option value="Hardwood">Hardwood</option>
                       <option value="Engineered Wood">Engineered Wood</option>
                       <option value="Vinyl / LVT">Vinyl / LVT</option>
@@ -148,13 +205,13 @@ export default function QuotePage() {
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-1 group">
                   <label className="block text-xs font-bold tracking-[0.2em] text-[#8c5430] uppercase mb-3 transition-colors group-focus-within:text-[#b56b3a]">Estimated Area</label>
-                  <input type="text" placeholder="e.g. 150 sq meters" className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] placeholder-[#8c5430]/40" />
+                  <input type="text" value={estimatedArea} onChange={(e) => setEstimatedArea(e.target.value)} placeholder="e.g. 150 sq meters" className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] placeholder-[#8c5430]/40" />
                 </div>
                 <div className="flex-1 group">
                   <label className="block text-xs font-bold tracking-[0.2em] text-[#8c5430] uppercase mb-3 transition-colors group-focus-within:text-[#b56b3a]">Project Timeline</label>
                   <div className="relative">
-                    <select className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] appearance-none cursor-pointer">
-                      <option value="" disabled selected>Select timeline...</option>
+                    <select value={projectTimeline} onChange={(e) => setProjectTimeline(e.target.value)} className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] appearance-none cursor-pointer">
+                      <option value="" disabled>Select timeline...</option>
                       <option value="ASAP">As Soon As Possible</option>
                       <option value="1-3 Months">1 to 3 Months</option>
                       <option value="3-6 Months">3 to 6 Months</option>
@@ -169,19 +226,28 @@ export default function QuotePage() {
 
               <div className="group">
                 <label className="block text-xs font-bold tracking-[0.2em] text-[#8c5430] uppercase mb-3 transition-colors group-focus-within:text-[#b56b3a]">Additional Requirements</label>
-                <textarea rows={5} placeholder="Describe existing flooring, access details, or specific design goals..." className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] placeholder-[#8c5430]/40 resize-none" />
+                <textarea rows={5} value={additionalRequirements} onChange={(e) => setAdditionalRequirements(e.target.value)} placeholder="Describe existing flooring, access details, or specific design goals..." className="w-full px-6 py-5 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208] placeholder-[#8c5430]/40 resize-none" />
               </div>
             </div>
 
             <div className="mt-8 pt-8 border-t border-[#8c5430]/10">
-              <button type="button" className="w-full relative overflow-hidden rounded-xl py-6 font-bold text-white uppercase tracking-[0.3em] shadow-[0_8px_30px_rgba(140,84,48,0.4)] hover:shadow-[0_12px_40px_rgba(140,84,48,0.6)] transition-all hover:-translate-y-1 active:translate-y-0 group">
+              <button type="submit" disabled={submitting} className="w-full relative overflow-hidden rounded-xl py-6 font-bold text-white uppercase tracking-[0.3em] shadow-[0_8px_30px_rgba(140,84,48,0.4)] hover:shadow-[0_12px_40px_rgba(140,84,48,0.6)] transition-all hover:-translate-y-1 active:translate-y-0 group disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0">
                 <div className="absolute inset-0 z-[-2] transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/wood-texture.png)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
                 <div className="absolute inset-0 bg-gradient-to-b from-[#b56b3a]/90 to-[#6b3e21] mix-blend-multiply z-[-1]" />
                 <span className="relative z-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] flex items-center justify-center gap-4 text-lg">
-                  Submit Specification
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6 group-hover:translate-x-2 transition-transform">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                  </svg>
+                  {submitting ? (
+                    <>
+                      <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      Submit Specification
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6 group-hover:translate-x-2 transition-transform">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                      </svg>
+                    </>
+                  )}
                 </span>
               </button>
               
@@ -197,6 +263,9 @@ export default function QuotePage() {
 
       {/* Global Footer */}
       <Footer />
+
+      {/* Toast */}
+      {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </main>
   );
 }
