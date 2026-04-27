@@ -32,7 +32,7 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
 
       {/* Navigation - Hanging Sign Style */}
       <nav
-        className={`${!isLoading ? 'animate-drop-swing' : 'opacity-0'} absolute top-8 right-6 z-50 flex items-center rounded-lg px-8 py-3 shadow-[0_15px_30px_-10px_rgba(0,0,0,0.3)] border-t border-white/20 border-b-2 border-[#8c5430]/30`}
+        className={`${!isLoading ? 'animate-drop-swing' : 'opacity-0'} absolute top-8 right-6 z-50 flex items-center rounded-lg px-6 py-2 shadow-[0_15px_30px_-10px_rgba(0,0,0,0.3)] border-t border-white/20 border-b-2 border-[#8c5430]/30`}
       >
         {/* Light Wood Background */}
         <div
@@ -54,7 +54,7 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
           <div className="w-1.5 h-1.5 rounded-full bg-[#fce8d5] shadow-sm" />
         </div>
 
-        <div className="relative z-10 flex items-center gap-7">
+        <div className="relative z-10 flex items-center gap-6">
           {[
             { name: 'Home', href: '/' },
             { name: 'About', href: '/about' },
@@ -67,14 +67,14 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
             <Link
               key={item.name}
               href={item.href}
-              className={`${pathname === item.href ? 'text-[#8c5430] border-b-2 border-[#8c5430]' : 'text-[#4a2810]'} font-bold tracking-wide hover:text-[#8c5430] transition-colors drop-shadow-sm text-[15px] uppercase`}
+              className={`${pathname === item.href ? 'text-[#8c5430] border-b-2 border-[#8c5430]' : 'text-[#4a2810]'} font-bold tracking-wide hover:text-[#8c5430] transition-colors drop-shadow-sm text-sm uppercase`}
             >
               {item.name}
             </Link>
           ))}
 
           <Link href="/quote"
-            className="relative ml-4 rounded-md px-6 py-2.5 font-bold text-white uppercase tracking-wider text-[15px] shadow-[0_4px_10px_rgba(140,84,48,0.3)] border border-[#8c5430]/30 transition-all hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(140,84,48,0.4)] active:translate-y-0.5 inline-block"
+            className="relative ml-4 rounded-md px-5 py-2 font-bold text-white uppercase tracking-wider text-sm shadow-[0_4px_10px_rgba(140,84,48,0.3)] border border-[#8c5430]/30 transition-all hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(140,84,48,0.4)] active:translate-y-0.5 inline-block"
           >
             <div
               className="absolute inset-0 rounded-md z-[-2]"
