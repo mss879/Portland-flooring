@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { createClient } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 
@@ -39,7 +40,10 @@ export default function AdminLogin() {
 
       <div className="relative z-10 w-full max-w-md px-6">
         {/* Logo / Brand */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 flex flex-col items-center">
+          <div className="w-24 h-24 rounded-full overflow-hidden shadow-2xl mb-6">
+            <Image src="/portland-logo.png" alt="Portland Flooring Logo" width={96} height={96} className="object-cover" />
+          </div>
           <h1
             className="text-3xl font-bold text-white tracking-widest uppercase mb-2"
             style={{ fontFamily: "'Tomorrow', sans-serif" }}

@@ -29,8 +29,8 @@ export default function Footer() {
           {/* Column 1: Brand */}
           <div className="flex flex-col gap-6">
             <Link href="/" className="flex items-center gap-4 group">
-              <div className="w-14 h-14 rounded-full bg-[#8c5430] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                <Image src="/logo.png" alt="Portland Flooring Logo" width={32} height={32} className="brightness-0 invert" />
+              <div className="w-14 h-14 rounded-full overflow-hidden shadow-lg group-hover:scale-110 transition-transform">
+                <Image src="/portland-logo.png" alt="Portland Flooring Logo" width={56} height={56} className="object-cover" />
               </div>
               <span className="text-[#251208] font-bold tracking-widest uppercase text-base group-hover:text-[#8c5430] transition-colors">Portland</span>
             </Link>
