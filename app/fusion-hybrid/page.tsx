@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Leaf, BadgeCheck, ShieldCheck } from "lucide-react";
 
 export default function FusionHybrid() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -62,7 +63,7 @@ export default function FusionHybrid() {
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 group-hover:opacity-70 group-hover:translate-x-[150%] -translate-x-[150%] transition-all duration-[1.5s] ease-in-out transform scale-150 rotate-45 pointer-events-none z-20" />
 
               <div className="relative z-10 w-16 h-16 bg-[#fbf5f0] border border-[#8c5430]/10 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 group-hover:bg-white transition-all duration-500">
-                <svg className="w-8 h-8 text-[#8c5430]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+                <Leaf className="w-8 h-8 text-[#8c5430]" strokeWidth={1.5} />
               </div>
               
               <h3 className="relative z-10 text-3xl font-bold text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>Eco-Friendly</h3>
@@ -76,7 +77,7 @@ export default function FusionHybrid() {
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 group-hover:opacity-70 group-hover:translate-x-[150%] -translate-x-[150%] transition-all duration-[1.5s] ease-in-out transform scale-150 rotate-45 pointer-events-none z-20" />
 
               <div className="relative z-10 w-16 h-16 bg-[#fbf5f0] border border-[#8c5430]/10 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 group-hover:bg-white transition-all duration-500">
-                <svg className="w-8 h-8 text-[#8c5430]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+                <BadgeCheck className="w-8 h-8 text-[#8c5430]" strokeWidth={1.5} />
               </div>
               
               <h3 className="relative z-10 text-3xl font-bold text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>CE Certified</h3>
@@ -90,7 +91,7 @@ export default function FusionHybrid() {
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 group-hover:opacity-70 group-hover:translate-x-[150%] -translate-x-[150%] transition-all duration-[1.5s] ease-in-out transform scale-150 rotate-45 pointer-events-none z-20" />
 
               <div className="relative z-10 w-16 h-16 bg-[#fbf5f0] border border-[#8c5430]/10 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 group-hover:bg-white transition-all duration-500">
-                <svg className="w-8 h-8 text-[#8c5430]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
+                <ShieldCheck className="w-8 h-8 text-[#8c5430]" strokeWidth={1.5} />
               </div>
               
               <h3 className="relative z-10 text-3xl font-bold text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>Floorscore Certified</h3>
@@ -154,55 +155,7 @@ export default function FusionHybrid() {
           </div>
         </section>
 
-        {/* Gallery / Our Materials Section */}
-        <section className="py-24 px-8 md:px-12 lg:px-24 bg-[#fdfaf6]">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="flex flex-col md:items-center text-center gap-4 mb-16">
-              <h2 className="text-xs font-bold tracking-widest text-[#8c5430] uppercase">Our Materials</h2>
-              <h3 className="text-4xl md:text-5xl font-bold text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
-                Choose The Best Material For Your Floor
-              </h3>
-            </div>
 
-            <div className="flex flex-col gap-4 w-full">
-              {/* Top Row */}
-              <div className="flex flex-col lg:flex-row h-[500px] lg:h-[350px] gap-2 lg:gap-4 w-full">
-                {[
-                  { name: "European Oak", img: "european_oak.png" },
-                  { name: "Spotted Gum", img: "spotted_gum.png" },
-                  { name: "Pewter Grey", img: "pewter_grey.png" },
-                ].map((item, index) => (
-                  <div key={item.name} className="group relative flex-1 hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer shadow-lg border border-[#8c5430]/10">
-                    <Image src={`/${item.img}`} alt={item.name} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-                    
-                    <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <h4 className="text-lg md:text-xl lg:text-3xl font-bold text-white mb-2 leading-tight whitespace-nowrap" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>{item.name}</h4>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Bottom Row */}
-              <div className="flex flex-col lg:flex-row h-[500px] lg:h-[350px] gap-2 lg:gap-4 w-full">
-                {[
-                  { name: "Mistral Oak", img: "mistral_oak.png" },
-                  { name: "Blackbutt", img: "blackbutt_new.png" },
-                  { name: "Pale Oak", img: "pale_oak_new.png" },
-                ].map((item, index) => (
-                  <div key={item.name} className="group relative flex-1 hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer shadow-lg border border-[#8c5430]/10">
-                    <Image src={`/${item.img}`} alt={item.name} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-                    
-                    <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <h4 className="text-lg md:text-xl lg:text-3xl font-bold text-white mb-2 leading-tight whitespace-nowrap" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>{item.name}</h4>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-8 md:px-12 lg:px-24 bg-white border-y border-[#8c5430]/10">
