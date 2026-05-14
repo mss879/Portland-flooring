@@ -112,7 +112,7 @@ export default function Contact() {
       </section>
 
       {/* Main Content Area (Bento Grid) */}
-      <section className="relative z-20 w-full max-w-[1400px] mx-auto px-8 py-16 flex flex-col lg:flex-row gap-8" id="contact-form">
+      <section className="relative z-20 w-full max-w-[1400px] mx-auto px-1 md:px-8 py-16 flex flex-col lg:flex-row gap-8" id="contact-form">
         
         {/* Left Side: Streamlined Contact Information */}
         <div className="flex-1 flex flex-col justify-center py-12 lg:pr-12 stagger-2">

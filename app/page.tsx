@@ -242,81 +242,80 @@ export default function Home() {
         </div>
 
         {/* Partners / Brands Infinite Scroll Section */}
-        <section className="w-full py-20 bg-white overflow-hidden flex flex-col items-center justify-center">
+        <section className="w-full py-12 md:py-20 bg-white overflow-hidden flex flex-col items-center justify-center">
           <div className="w-full relative">
             {/* Gradient masks for smooth fade effect at edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
             <div className="flex w-[200%] animate-infinite-scroll hover:[animation-play-state:paused]">
               {/* First Set */}
-              <div className="flex w-1/2 items-center justify-around px-16 gap-32">
-                <div className="relative w-[300px] h-[100px]">
+              <div className="flex w-1/2 items-center justify-around px-4 md:px-16 gap-8 md:gap-32 shrink-0">
+                <div className="relative w-[150px] md:w-[300px] h-[60px] md:h-[100px] shrink-0">
                   <Image
                     src="/cr=w_904,h_300.webp"
-                    alt="Brand 1"
+                    alt="Carpet Institute of Australia"
                     fill
                     className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="relative w-[400px] h-[100px]">
+                <div className="relative w-[200px] md:w-[400px] h-[60px] md:h-[100px] shrink-0">
                   <Image
                     src="/rs=w_1277,h_300,cg_true.webp"
-                    alt="Brand 2"
+                    alt="ATFA Member"
                     fill
                     className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                {/* Duplicating within the set to fill space */}
-                <div className="relative w-[300px] h-[100px]">
+                <div className="relative w-[150px] md:w-[300px] h-[60px] md:h-[100px] shrink-0">
                   <Image
                     src="/cr=w_904,h_300.webp"
-                    alt="Brand 1"
+                    alt="Carpet Institute of Australia"
                     fill
                     className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="relative w-[400px] h-[100px]">
+                <div className="relative w-[200px] md:w-[400px] h-[60px] md:h-[100px] shrink-0">
                   <Image
                     src="/rs=w_1277,h_300,cg_true.webp"
-                    alt="Brand 2"
+                    alt="ATFA Member"
                     fill
                     className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
               </div>
               {/* Second Set (Duplicate for seamless loop) */}
-              <div className="flex w-1/2 items-center justify-around px-16 gap-32">
-                <div className="relative w-[300px] h-[100px]">
+              <div className="flex w-1/2 items-center justify-around px-4 md:px-16 gap-8 md:gap-32 shrink-0">
+                <div className="relative w-[150px] md:w-[300px] h-[60px] md:h-[100px] shrink-0">
                   <Image
                     src="/cr=w_904,h_300.webp"
-                    alt="Brand 1"
+                    alt="Carpet Institute of Australia"
                     fill
                     className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="relative w-[400px] h-[100px]">
+                <div className="relative w-[200px] md:w-[400px] h-[60px] md:h-[100px] shrink-0">
                   <Image
                     src="/rs=w_1277,h_300,cg_true.webp"
-                    alt="Brand 2"
+                    alt="ATFA Member"
                     fill
                     className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="relative w-[300px] h-[100px]">
+                <div className="relative w-[150px] md:w-[300px] h-[60px] md:h-[100px] shrink-0">
                   <Image
                     src="/cr=w_904,h_300.webp"
-                    alt="Brand 1"
+                    alt="Carpet Institute of Australia"
                     fill
-                    className="object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                    className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="relative w-[400px] h-[100px]">
+                <div className="relative w-[200px] md:w-[400px] h-[60px] md:h-[100px] shrink-0">
                   <Image
                     src="/rs=w_1277,h_300,cg_true.webp"
-                    alt="Brand 2"
+                    alt="ATFA Member"
                     fill
-                    className="object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                    className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
               </div>
@@ -621,7 +620,7 @@ export default function Home() {
         </section>
 
         {/* Sample Box Lead Gen CTA */}
-        <section className="w-full py-24 bg-[#faf6f3] relative overflow-hidden flex justify-center px-8">
+        <section className="w-full py-24 bg-[#faf6f3] relative overflow-hidden flex justify-center px-1 md:px-8">
           <div className="max-w-[1200px] w-full bg-[#251208] rounded-[3rem] p-10 md:p-16 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl">
 
             {/* Decor background elements */}
