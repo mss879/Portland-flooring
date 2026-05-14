@@ -35,11 +35,42 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     notFound();
   }
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: `Read about ${post.seo_keyword} on the Portland Flooring design blog.`,
+    image: post.image ? `https://portlands.com.au${post.image}` : undefined,
+    datePublished: post.date,
+    author: {
+      "@type": "Organization",
+      name: "Portland Flooring",
+      url: "https://portlands.com.au",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Portland Flooring",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://portlands.com.au/portland-logo.webp",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://portlands.com.au/blogs/${resolvedParams.slug}`,
+    },
+  };
+
   return (
+    <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+    />
     <main className="flex flex-col min-h-screen w-full bg-[#fbf5f0] overflow-hidden selection:bg-[#8c5430]/20 selection:text-[#251208]">
       {/* Global Background Texture */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <Image src="/light-wood-texture.webp" alt="Texture" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
+        <Image src="/light-wood-texture.webp" alt="" aria-hidden="true" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
       </div>
 
       {/* Navigation - at top level for sticky behavior */}
@@ -122,5 +153,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       {/* Global Footer */}
       <Footer />
     </main>
+    </>
   );
 }

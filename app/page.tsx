@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
-  title: "Portland Flooring | Premium Hybrid Flooring in Pakenham VIC",
   description:
     "Premium hybrid flooring solutions — elegant, durable, sustainable. Expert installation, restoration & design consultation serving Pakenham, Melbourne & all of Victoria. Proudly Australian owned.",
   alternates: {

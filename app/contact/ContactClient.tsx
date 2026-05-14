@@ -88,7 +88,7 @@ export default function Contact() {
 
       {/* Global Background Texture (Light) */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <Image src="/light-wood-texture.webp" alt="Texture" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
+        <Image src="/light-wood-texture.webp" alt="" aria-hidden="true" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
       </div>
 
       {/* Navigation - pulled outside overflow-hidden for sticky behavior */}

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -5,15 +6,47 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { getSortedPostsData } from '@/lib/blogs';
 
-export const metadata = {
-  title: 'Blog & Design Insights | Portland Flooring',
+export const metadata: Metadata = {
+  title: 'Blog & Design Insights',
   description: 'Explore our latest articles, design trends, and expert tips on premium hybrid flooring for Australian homes.',
+  alternates: {
+    canonical: 'https://portlands.com.au/blogs',
+  },
 };
 
 export default async function BlogsPage() {
   const allPostsData = await getSortedPostsData();
 
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Portland Flooring Blog & Design Insights",
+    url: "https://portlands.com.au/blogs",
+    description: "Explore our latest articles, design trends, and expert tips on premium hybrid flooring for Australian homes.",
+    publisher: {
+      "@type": "Organization",
+      name: "Portland Flooring",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://portlands.com.au/portland-logo.webp",
+      },
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: allPostsData.map((post, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `https://portlands.com.au/blogs/${post.slug}`,
+      })),
+    },
+  };
+
   return (
+    <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+    />
     <main className="flex flex-col min-h-screen w-full bg-[#fbf5f0] overflow-hidden">
 
       {/* Inline keyframes for the staggered card entrance */}
@@ -26,7 +59,7 @@ export default async function BlogsPage() {
 
       {/* Global Background Texture */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <Image src="/light-wood-texture.webp" alt="Texture" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
+        <Image src="/light-wood-texture.webp" alt="" aria-hidden="true" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
       </div>
 
       {/* Navigation - pulled outside overflow-hidden for sticky behavior */}
@@ -103,5 +136,6 @@ export default async function BlogsPage() {
       {/* Global Footer */}
       <Footer />
     </main>
+    </>
   );
 }
