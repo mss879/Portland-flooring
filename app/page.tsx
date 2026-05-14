@@ -250,8 +250,8 @@ export default function Home() {
 
             <div className="flex w-[200%] animate-infinite-scroll hover:[animation-play-state:paused]">
               {/* First Set */}
-              <div className="flex w-1/2 items-center justify-around px-4 md:px-16 gap-8 md:gap-32 shrink-0">
-                <div className="relative w-[150px] md:w-[300px] h-[60px] md:h-[100px] shrink-0">
+              <div className="flex items-center gap-6 md:gap-24 px-4 md:px-16 shrink-0">
+                <div className="relative w-[120px] md:w-[300px] h-[50px] md:h-[100px] shrink-0">
                   <Image
                     src="/cr=w_904,h_300.webp"
                     alt="Carpet Institute of Australia"
@@ -259,7 +259,7 @@ export default function Home() {
                     className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="relative w-[200px] md:w-[400px] h-[60px] md:h-[100px] shrink-0">
+                <div className="relative w-[160px] md:w-[400px] h-[50px] md:h-[100px] shrink-0">
                   <Image
                     src="/rs=w_1277,h_300,cg_true.webp"
                     alt="ATFA Member"
@@ -267,7 +267,7 @@ export default function Home() {
                     className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="relative w-[150px] md:w-[300px] h-[60px] md:h-[100px] shrink-0">
+                <div className="relative w-[120px] md:w-[300px] h-[50px] md:h-[100px] shrink-0">
                   <Image
                     src="/cr=w_904,h_300.webp"
                     alt="Carpet Institute of Australia"
@@ -275,7 +275,7 @@ export default function Home() {
                     className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="relative w-[200px] md:w-[400px] h-[60px] md:h-[100px] shrink-0">
+                <div className="relative w-[160px] md:w-[400px] h-[50px] md:h-[100px] shrink-0">
                   <Image
                     src="/rs=w_1277,h_300,cg_true.webp"
                     alt="ATFA Member"
@@ -285,8 +285,8 @@ export default function Home() {
                 </div>
               </div>
               {/* Second Set (Duplicate for seamless loop) */}
-              <div className="flex w-1/2 items-center justify-around px-4 md:px-16 gap-8 md:gap-32 shrink-0">
-                <div className="relative w-[150px] md:w-[300px] h-[60px] md:h-[100px] shrink-0">
+              <div className="flex items-center gap-6 md:gap-24 px-4 md:px-16 shrink-0">
+                <div className="relative w-[120px] md:w-[300px] h-[50px] md:h-[100px] shrink-0">
                   <Image
                     src="/cr=w_904,h_300.webp"
                     alt="Carpet Institute of Australia"
@@ -294,7 +294,7 @@ export default function Home() {
                     className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="relative w-[200px] md:w-[400px] h-[60px] md:h-[100px] shrink-0">
+                <div className="relative w-[160px] md:w-[400px] h-[50px] md:h-[100px] shrink-0">
                   <Image
                     src="/rs=w_1277,h_300,cg_true.webp"
                     alt="ATFA Member"
@@ -302,7 +302,7 @@ export default function Home() {
                     className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="relative w-[150px] md:w-[300px] h-[60px] md:h-[100px] shrink-0">
+                <div className="relative w-[120px] md:w-[300px] h-[50px] md:h-[100px] shrink-0">
                   <Image
                     src="/cr=w_904,h_300.webp"
                     alt="Carpet Institute of Australia"
@@ -310,7 +310,7 @@ export default function Home() {
                     className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="relative w-[200px] md:w-[400px] h-[60px] md:h-[100px] shrink-0">
+                <div className="relative w-[160px] md:w-[400px] h-[50px] md:h-[100px] shrink-0">
                   <Image
                     src="/rs=w_1277,h_300,cg_true.webp"
                     alt="ATFA Member"
@@ -621,7 +621,7 @@ export default function Home() {
 
         {/* Sample Box Lead Gen CTA */}
         <section className="w-full py-24 bg-[#faf6f3] relative overflow-hidden flex justify-center px-1 md:px-8">
-          <div className="max-w-[1200px] w-full bg-[#251208] rounded-2xl md:rounded-[3rem] p-10 md:p-16 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl">
+          <div className="max-w-[1200px] w-full bg-[#251208] rounded-2xl md:rounded-[3rem] p-6 md:p-16 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl">
 
             {/* Decor background elements */}
             <div className="absolute top-0 left-0 w-full h-full bg-[url('/wood-texture.webp')] opacity-10 mix-blend-overlay pointer-events-none" />
