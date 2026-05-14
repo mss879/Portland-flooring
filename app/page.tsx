@@ -45,7 +45,10 @@ export default function HomePage() {
       opens: "09:00",
       closes: "17:00",
     },
-    sameAs: [],
+    sameAs: [
+      "https://www.instagram.com/portland_flooring/",
+      "https://www.facebook.com/people/Portland-Flooring/61582009910148/",
+    ],
     priceRange: "$$",
   };
 

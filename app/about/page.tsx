@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import AboutClient from "./AboutClient";
 
 export const metadata: Metadata = {
-  title: "About Us — Our Story & Craftsmanship",
+  title: "About Us — Australian-Owned Flooring Specialists",
   description:
-    "Learn about Portland Flooring's commitment to premium craftsmanship, expert flooring installation, and sustainable materials. Proudly Australian-owned, serving Pakenham, Melbourne & all of Victoria.",
+    "Learn about Portland Flooring's commitment to premium craftsmanship and sustainable materials. Family-owned and Australian-operated, delivering quality flooring solutions across Pakenham, Melbourne & Victoria.",
   alternates: {
     canonical: "https://portlands.com.au/about",
   },

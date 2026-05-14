@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import FusionHybridClient from "./FusionHybridClient";
 
 export const metadata: Metadata = {
-  title: "Premium Hybrid Flooring — Waterproof, Durable & Elegant",
+  title: "Waterproof SPC Flooring — Scratch-Resistant, Pet & Kid-Friendly",
   description:
-    "Discover Portland's Premium Hybrid flooring range — 100% waterproof SPC core, scratch-resistant, pet & kid-friendly. Built to last with authentic timber aesthetics. View colours, specs & installation info.",
+    "Discover Portland's Premium Hybrid range — 100% waterproof SPC core, scratch-resistant, pet & kid-friendly. Built to last with authentic timber aesthetics. View colours, specs & installation info.",
   alternates: {
     canonical: "https://portlands.com.au/fusion-hybrid",
   },

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ProductsClient from "./ProductsClient";
 
 export const metadata: Metadata = {
-  title: "Our Flooring Collections — Premium Hybrid & Timber",
+  title: "Timber & Hybrid Flooring Collections — European Oak, Spotted Gum & More",
   description:
-    "Browse Portland Flooring's curated collections of premium hybrid, timber, and engineered flooring. European Oak, Spotted Gum, Blackbutt, and more — all Australian-stocked and ready for your space.",
+    "Browse Portland Flooring's curated collections of timber and engineered flooring. European Oak, Spotted Gum, Blackbutt — all Australian-stocked and ready for your space.",
   alternates: {
     canonical: "https://portlands.com.au/products",
   },
