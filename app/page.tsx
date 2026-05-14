@@ -49,11 +49,70 @@ export default function HomePage() {
     priceRange: "$$",
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What makes Premium Hybrid flooring different from standard vinyl or laminate?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Premium Hybrid is the fastest-growing flooring option, combining the best of laminate and vinyl with a stunning timber look. It features the most stable and 100% waterproof core available worldwide, offering exceptional durability and clarity without splintering or warping.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is your flooring safe for my family and the environment?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely. Our Premium Hybrid SPC flooring is completely Eco-Friendly and Floorscore Certified. It contains no heavy metals, phthalates, or methanol. Furthermore, it is CE Certified, guaranteeing it meets the highest standards for health, safety, and environmental protection.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does the flooring require an additional underlay for noise reduction?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "No, it does not. Our Premium Hybrid range comes with built-in Acoustic Backing that is industry-leading and 6-Star rated for noise reduction. This built-in cushioning also makes the floor significantly softer and warmer underfoot compared to natural stone or wood.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I maintain and care for my new hybrid floors?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Maintenance is minimal thanks to our surface coating technology—no extra surface treatments are needed. Simply vacuum or sweep regularly and mop occasionally. To protect your investment, we recommend using protective pads on furniture, trimming pet claws, and minimizing direct UV sunlight exposure by covering windows during peak hours.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can the flooring be installed over my existing floors?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Our Premium Hybrid boards utilize the Uniclic 2G click system, making them quick and easy to install directly over most existing hard floors, saving you significant time and preparation costs.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I install this flooring in wet areas like bathrooms?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes! Premium Hybrid is 100% waterproof and stain-resistant. It stands up to all spills, making it the perfect seamless flooring solution for kitchens, bathrooms, and laundries.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <HomeClient />
     </>

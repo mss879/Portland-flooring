@@ -140,7 +140,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-[#251208] mb-2 tracking-wide uppercase text-sm">Showroom</h4>
-                <p className="text-[#6b3e21] leading-relaxed font-medium">2B Venture Way, Pakenham<br />VIC 3810, Australia</p>
+                <p className="text-[#6b3e21] leading-relaxed font-medium">2B Venture Way, Pakenham<br />VIC, Australia, Victoria</p>
               </div>
             </div>
 
@@ -265,7 +265,7 @@ export default function Contact() {
                   </svg>
                   Portland Flooring
                 </h4>
-                <p className="text-[#6b3e21] font-medium text-sm mb-4 leading-relaxed">2B Venture Way<br/>Pakenham VIC 3810, Australia</p>
+                <p className="text-[#6b3e21] font-medium text-sm mb-4 leading-relaxed">2B Venture Way<br/>Pakenham, VIC, Australia, Victoria</p>
                 <a href="https://maps.google.com/?q=2B+Venture+Way,+Pakenham,+VIC,+Australia" target="_blank" rel="noreferrer" className="inline-block px-5 py-2.5 bg-[#8c5430] hover:bg-[#6b3e21] transition-colors text-white text-xs font-bold uppercase tracking-widest rounded-lg shadow-md">
                   Get Directions
                 </a>
