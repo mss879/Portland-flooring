@@ -42,10 +42,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <Image src="/light-wood-texture.webp" alt="Texture" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
       </div>
 
-      {/* Hanging Navbar */}
-      <div className="absolute top-0 left-0 w-full z-50">
-        <Navbar isLoading={false} />
-      </div>
+      {/* Navigation - at top level for sticky behavior */}
+      <Navbar isLoading={false} />
 
       {/* Article Header (Hero) */}
       <article className="relative z-20 w-full max-w-[1000px] mx-auto mt-40 px-8 flex flex-col items-center animate-drop-swing">

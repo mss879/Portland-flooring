@@ -158,7 +158,7 @@ export default function Home() {
       `}</style>
 
         {/* Hero Section */}
-        <section className="relative flex h-screen w-full items-center justify-center p-[9px]">
+        <section className="relative flex h-screen w-full items-center justify-center p-0 md:p-[9px]">
           {showPreloader && (
             <div className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#1a0d07] transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0'}`}>
               {/* Flooring Planks Animation */}
@@ -174,10 +174,10 @@ export default function Home() {
             </div>
           )}
 
-          <div className="relative z-10 flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-[24px] bg-black shadow-2xl">
+          {/* Navigation - pulled outside overflow-hidden for sticky behavior */}
+          <Navbar isLoading={isLoading} />
 
-            {/* Navigation - Hanging Sign Style */}
-            <Navbar isLoading={isLoading} />
+          <div className="relative z-10 flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-none md:rounded-[24px] bg-black shadow-2xl">
 
             {/* Hero Background Video */}
             <video
@@ -476,17 +476,17 @@ export default function Home() {
             {/* Interactive Gallery */}
             <div className="flex flex-col gap-4 w-full">
               {/* Top Row */}
-              <div className="flex flex-col lg:flex-row h-[500px] lg:h-[350px] gap-2 lg:gap-4 w-full">
+              <div className="flex flex-col lg:flex-row h-auto lg:h-[350px] gap-3 lg:gap-4 w-full">
                 {[
                   { name: "European Oak", img: "european_oak.webp", desc: "Timeless elegance with rich, warm undertones. Perfect for creating expansive, inviting living spaces." },
                   { name: "Spotted Gum", img: "spotted_gum.webp", desc: "A rich mix of pale and dark brown hues with distinct wavy grain, offering a striking Australian aesthetic." },
                   { name: "Pewter Grey", img: "pewter_grey.webp", desc: "Cool weathered greyish-brown oak with subtle grain, bringing a modern, sophisticated touch to any room." },
                 ].map((item, index) => (
-                  <div key={item.name} className="group relative flex-1 hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer">
+                  <div key={item.name} className="group relative flex-1 min-h-[180px] hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer">
                     <Image src={`/${item.img}`} alt={item.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
 
-                    <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                    <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-0 lg:translate-y-8 lg:group-hover:translate-y-0 transition-transform duration-500">
                       <div className="flex items-center gap-4 mb-2">
                         <div className="w-8 h-[2px] bg-[#8c5430] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700 delay-300" />
                         <span className="text-[#fdf2e9] text-xs font-bold tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300">0{index + 1}</span>
@@ -501,17 +501,17 @@ export default function Home() {
               </div>
 
               {/* Bottom Row */}
-              <div className="flex flex-col lg:flex-row h-[500px] lg:h-[350px] gap-2 lg:gap-4 w-full">
+              <div className="flex flex-col lg:flex-row h-auto lg:h-[350px] gap-3 lg:gap-4 w-full">
                 {[
                   { name: "Mistral Oak", img: "mistral_oak.webp", desc: "Pale blond ash-like wood with soft muted grain, creating a light, airy, and contemporary feel." },
                   { name: "Blackbutt", img: "blackbutt_new.webp", desc: "Pale yellowish brown with straight even grain, providing a clean, bright, and durable surface." },
                   { name: "Pale Oak", img: "pale_oak_new.webp", desc: "Very light whitish-beige wood with delicate grain, perfect for minimalist and Scandinavian-inspired interiors." },
                 ].map((item, index) => (
-                  <div key={item.name} className="group relative flex-1 hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer">
+                  <div key={item.name} className="group relative flex-1 min-h-[180px] hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer">
                     <Image src={`/${item.img}`} alt={item.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
 
-                    <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                    <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-0 lg:translate-y-8 lg:group-hover:translate-y-0 transition-transform duration-500">
                       <div className="flex items-center gap-4 mb-2">
                         <div className="w-8 h-[2px] bg-[#8c5430] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700 delay-300" />
                         <span className="text-[#fdf2e9] text-xs font-bold tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300">0{index + 4}</span>

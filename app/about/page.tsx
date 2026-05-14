@@ -62,16 +62,16 @@ export default function AboutUs() {
         <Image src="/light-wood-texture.webp" alt="Texture" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
       </div>
 
+      {/* Navigation - pulled outside overflow-hidden for sticky behavior */}
+      <Navbar isLoading={isLoading} />
+
       {/* Hero Section */}
-      <section className="relative w-full pt-8 px-[9px] z-20">
-        <div className="relative w-full rounded-[24px] h-[400px] md:h-[500px] overflow-hidden shadow-xl flex flex-col items-center justify-center">
+      <section className="relative w-full pt-0 md:pt-8 px-0 md:px-[9px] z-20">
+        <div className="relative w-full rounded-none md:rounded-[24px] h-[400px] md:h-[500px] overflow-hidden shadow-xl flex flex-col items-center justify-center">
 
           {/* Aesthetic Hero Background */}
           <Image src="/mistral_oak.webp" alt="About Portland Flooring" fill sizes="100vw" className="object-cover object-center" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/50 z-10" />
-
-          {/* Hanging Navbar */}
-          <Navbar isLoading={isLoading} />
 
           {/* Hero Title */}
           <motion.div

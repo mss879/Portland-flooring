@@ -39,7 +39,7 @@ export default function FusionHybrid() {
         {/* Hero Section */}
         <section className="relative w-full h-[50vh] min-h-[400px] flex flex-col justify-center items-center bg-[#110804] overflow-hidden px-8">
           <div className="absolute inset-0 z-0 opacity-40">
-             <Image src="/fusion-hero.webp" alt="Fusion Hybrid Flooring" fill sizes="100vw" className="object-cover object-bottom" priority />
+             <Image src="/fusion-hero.webp" alt="Premium Hybrid Flooring" fill sizes="100vw" className="object-cover object-bottom" priority />
              <div className="absolute inset-0 bg-gradient-to-t from-[#110804] via-[#110804]/80 to-[#110804]/30" />
           </div>
           
@@ -47,7 +47,7 @@ export default function FusionHybrid() {
           <div className={`relative z-10 text-center flex flex-col items-center gap-4 ${isLoaded ? 'animate-slide-in-up' : 'opacity-0'}`}>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-wider leading-tight drop-shadow-lg" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
-              Fusion Hybrid
+              Premium Hybrid
             </h1>
           </div>
         </section>
@@ -67,7 +67,7 @@ export default function FusionHybrid() {
               </div>
               
               <h3 className="relative z-10 text-3xl font-bold text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>Eco-Friendly</h3>
-              <p className="relative z-10 text-[#6b3e21]/90 leading-relaxed font-medium">The Fusion Hybrid SPC Flooring product range does not contain heavy metals, phthalate, methanol or other harmful substances. It does no harm to the human body or the environment.</p>
+              <p className="relative z-10 text-[#6b3e21]/90 leading-relaxed font-medium">The Premium Hybrid SPC Flooring product range does not contain heavy metals, phthalate, methanol or other harmful substances. It does no harm to the human body or the environment.</p>
             </div>
 
             <div className="bg-white rounded-[2rem] p-10 flex flex-col justify-start shadow-sm hover:shadow-2xl transition-all duration-700 relative overflow-hidden group border border-[#8c5430]/10 hover:-translate-y-2 delay-100">
@@ -81,7 +81,7 @@ export default function FusionHybrid() {
               </div>
               
               <h3 className="relative z-10 text-3xl font-bold text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>CE Certified</h3>
-              <p className="relative z-10 text-[#6b3e21]/90 leading-relaxed font-medium">Fusion Hybrid SPC Flooring product range is CE certified, meeting requirements for safety, environmental protection, health and consumer protection. Quality assured.</p>
+              <p className="relative z-10 text-[#6b3e21]/90 leading-relaxed font-medium">Premium Hybrid SPC Flooring product range is CE certified, meeting requirements for safety, environmental protection, health and consumer protection. Quality assured.</p>
             </div>
 
             <div className="bg-white rounded-[2rem] p-10 flex flex-col justify-start shadow-sm hover:shadow-2xl transition-all duration-700 relative overflow-hidden group border border-[#8c5430]/10 hover:-translate-y-2 delay-200">
@@ -95,7 +95,7 @@ export default function FusionHybrid() {
               </div>
               
               <h3 className="relative z-10 text-3xl font-bold text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>Floorscore Certified</h3>
-              <p className="relative z-10 text-[#6b3e21]/90 leading-relaxed font-medium">Fusion Hybrid SPC floors are waterproof and stain resistant. It only requires regular vacuuming or sweeping and occasional mopping for a more intense clean.</p>
+              <p className="relative z-10 text-[#6b3e21]/90 leading-relaxed font-medium">Premium Hybrid SPC floors are waterproof and stain resistant. It only requires regular vacuuming or sweeping and occasional mopping for a more intense clean.</p>
             </div>
 
           </div>
@@ -105,7 +105,7 @@ export default function FusionHybrid() {
         <section className="py-20 px-8 md:px-12 lg:px-24">
           <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center gap-16">
             <div className="flex-1 space-y-6">
-              <h2 className="text-xs font-bold tracking-widest text-[#8c5430] uppercase">Fusion Hybrid</h2>
+              <h2 className="text-xs font-bold tracking-widest text-[#8c5430] uppercase">Premium Hybrid</h2>
               <h3 className="text-4xl md:text-5xl font-bold text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
                 What is Hybrid Flooring and its Benefits?
               </h3>
@@ -130,7 +130,7 @@ export default function FusionHybrid() {
                 Hybrid flooring consists of waterproof resistance coating, which is innovatively designed to keep the floors in utmost superior quality for life. Hybrid flooring decor gives laminate finishing to create an improved floor that is not only durable from outside but provides clarity, exceptional protection from everyday wear with Acoustic Backing.
               </p>
               <p className="text-[#6b3e21] text-lg leading-relaxed font-medium">
-                Our Hybrid Flooring range include Fusion Hybrid, Fusion Hybrid has the most stable and waterproof core of any flooring worldwide. A big claim which is justified by test results and the skillset of our engineers when directed to develop a waterproof, stable flooring to meet everyday needs of everyday consumers.
+                Our Hybrid Flooring range include Premium Hybrid, Premium Hybrid has the most stable and waterproof core of any flooring worldwide. A big claim which is justified by test results and the skillset of our engineers when directed to develop a waterproof, stable flooring to meet everyday needs of everyday consumers.
               </p>
             </div>
             <div className="flex-1 w-full relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
@@ -139,13 +139,13 @@ export default function FusionHybrid() {
           </div>
         </section>
 
-        {/* 3D Structure of Fusion Hybrid */}
+        {/* 3D Structure of Premium Hybrid */}
         <section className="py-24 px-8 md:px-12 lg:px-24 bg-[#1a0d07] relative overflow-hidden">
           <div className="max-w-[1400px] mx-auto flex flex-col items-center">
             <div className="text-center mb-16 space-y-4">
               <h2 className="text-xs font-bold tracking-widest text-[#fce8d5] uppercase drop-shadow-sm">The Architecture</h2>
               <h3 className="text-4xl md:text-6xl font-bold text-white" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
-                The Structure of Fusion Hybrid
+                The Structure of Premium Hybrid
               </h3>
             </div>
             
@@ -202,7 +202,7 @@ export default function FusionHybrid() {
               <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-2">
                 <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>01</div>
                 <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Water-Proof</h4>
-                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Fusion Hybrid flooring is 100% water proof and stands up to all spills and can be installed in wet areas such as bathrooms.</p>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Premium Hybrid flooring is 100% water proof and stands up to all spills and can be installed in wet areas such as bathrooms.</p>
               </div>
 
               <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-2">
@@ -227,19 +227,19 @@ export default function FusionHybrid() {
               <div className="bg-gradient-to-br from-[#251208] to-[#1a0d07] rounded-[2rem] p-8 md:p-10 shadow-md border border-[#8c5430]/20 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-3">
                 <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-white/[0.03] group-hover:text-white/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>05</div>
                 <h4 className="text-xl md:text-2xl font-bold text-white mb-4 uppercase tracking-wide group-hover:text-[#fce8d5] transition-colors duration-300 relative z-10">Durable</h4>
-                <p className="text-[#fce8d5]/80 leading-relaxed relative z-10 font-medium text-lg">Fusion Hybrid boards are extremely hard wearing and have HIGH IMPACT RESISTANCE, unlike wood or stone, Fusion Hybrid does not splinter, warp or crack. Quick and Easy to Install over most existing hard floors with the Uniclic 2G click system.</p>
+                <p className="text-[#fce8d5]/80 leading-relaxed relative z-10 font-medium text-lg">Premium Hybrid boards are extremely hard wearing and have HIGH IMPACT RESISTANCE, unlike wood or stone, Premium Hybrid does not splinter, warp or crack. Quick and Easy to Install over most existing hard floors with the Uniclic 2G click system.</p>
               </div>
 
               <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-3">
                 <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>06</div>
                 <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Comfort</h4>
-                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium text-lg">Softer and warmer under foot than natural wood or stone flooring. Additional cushioning in the backing helps make Fusion Hybrid extremely comfortable even to sensitive feet.</p>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium text-lg">Softer and warmer under foot than natural wood or stone flooring. Additional cushioning in the backing helps make Premium Hybrid extremely comfortable even to sensitive feet.</p>
               </div>
 
               <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-3">
                 <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>07</div>
                 <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Pet Friendly</h4>
-                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">From muddy paws to 'accidents' - Fusion Hybrid repels anything your pet can throw at it, making life much easier to clean.</p>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">From muddy paws to 'accidents' - Premium Hybrid repels anything your pet can throw at it, making life much easier to clean.</p>
               </div>
             </div>
           </div>

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "Victoria flooring",
     "SPC flooring",
     "timber flooring",
-    "Fusion Hybrid",
+    "Premium Hybrid",
     "Portland Flooring",
     "floor restoration",
     "waterproof flooring",

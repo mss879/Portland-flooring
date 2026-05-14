@@ -47,7 +47,7 @@ export default function Footer() {
                 { name: 'Home', href: '/' },
                 { name: 'About Us', href: '/about' },
                 { name: 'Our Services', href: '/services' },
-                { name: 'Fusion Hybrid', href: '/fusion-hybrid' },
+                { name: 'Premium Hybrid', href: '/fusion-hybrid' },
                 { name: 'Get a Quote', href: '/quote' },
               ].map((link) => (
                 <li key={link.name}>

@@ -91,16 +91,16 @@ export default function Contact() {
         <Image src="/light-wood-texture.webp" alt="Texture" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
       </div>
 
+      {/* Navigation - pulled outside overflow-hidden for sticky behavior */}
+      <Navbar isLoading={isLoading} />
+
       {/* Hero / Header Section */}
-      <section className="relative w-full pt-8 px-[9px] z-20">
-        <div className="relative w-full rounded-[24px] h-[300px] md:h-[400px] overflow-hidden shadow-xl flex items-center justify-center">
+      <section className="relative w-full pt-0 md:pt-8 px-0 md:px-[9px] z-20">
+        <div className="relative w-full rounded-none md:rounded-[24px] h-[300px] md:h-[400px] overflow-hidden shadow-xl flex items-center justify-center">
           
           {/* Keep hero video/image dark enough for white text to pop, similar to homepage */}
           <Image src="/hero-var-2.webp" alt="Contact Hero Background" fill sizes="100vw" className="object-cover" priority />
           <div className="absolute inset-0 bg-black/40 z-10" />
-
-          {/* Hanging Navbar */}
-          <Navbar isLoading={isLoading} />
 
           {/* Hero Title */}
           <div className="relative z-20 text-center mt-12">
