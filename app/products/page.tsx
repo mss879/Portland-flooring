@@ -29,16 +29,18 @@ export default function Products() {
         <Navbar isLoading={!isLoaded} />
 
         {/* Hero Section */}
-        <section className="relative w-full h-[40vh] min-h-[300px] flex flex-col justify-center items-center bg-[#110804] overflow-hidden px-8">
-          <div className="absolute inset-0 z-0 opacity-40">
-             <Image src="/mistral_oak.webp" alt="Products Hero" fill sizes="100vw" className="object-cover object-center" priority />
-             <div className="absolute inset-0 bg-gradient-to-t from-[#110804] via-[#110804]/80 to-[#110804]/30" />
-          </div>
-          
-          <div className={`relative z-10 text-center flex flex-col items-center gap-4 ${isLoaded ? 'animate-slide-in-up' : 'opacity-0'}`}>
-            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-wider leading-tight drop-shadow-lg" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
-              Our Products
-            </h1>
+        <section className="relative w-full p-0 md:p-[9px]">
+          <div className="relative w-full rounded-none md:rounded-[24px] min-h-[60vh] overflow-hidden shadow-2xl flex flex-col justify-center items-center bg-[#110804] px-8">
+            <div className="absolute inset-0 z-0 opacity-40">
+               <Image src="/mistral_oak.webp" alt="Products Hero" fill sizes="100vw" className="object-cover object-center" priority />
+               <div className="absolute inset-0 bg-gradient-to-t from-[#110804] via-[#110804]/80 to-[#110804]/30" />
+            </div>
+            
+            <div className={`relative z-10 text-center flex flex-col items-center gap-4 ${isLoaded ? 'animate-slide-in-up' : 'opacity-0'}`}>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-wider leading-tight drop-shadow-lg" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+                Our Products
+              </h1>
+            </div>
           </div>
         </section>
 

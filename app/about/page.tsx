@@ -66,8 +66,8 @@ export default function AboutUs() {
       <Navbar isLoading={isLoading} />
 
       {/* Hero Section */}
-      <section className="relative w-full pt-0 md:pt-8 px-0 md:px-[9px] z-20">
-        <div className="relative w-full rounded-none md:rounded-[24px] h-[400px] md:h-[500px] overflow-hidden shadow-xl flex flex-col items-center justify-center">
+      <section className="relative w-full p-0 md:p-[9px] z-20">
+        <div className="relative w-full rounded-none md:rounded-[24px] h-[400px] md:h-[500px] overflow-hidden shadow-2xl flex flex-col items-center justify-center">
 
           {/* Aesthetic Hero Background */}
           <Image src="/mistral_oak.webp" alt="About Portland Flooring" fill sizes="100vw" className="object-cover object-center" priority />

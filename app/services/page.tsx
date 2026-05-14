@@ -60,16 +60,7 @@ export default function ServicesPage() {
     }
   ];
 
-  if (isLoading) {
-    return (
-      <div className="flex h-screen w-full items-center justify-center bg-[#fbf5f0]">
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-12 h-12 border-4 border-[#8c5430]/20 border-t-[#8c5430] rounded-full animate-spin" />
-          <p className="text-[#8c5430] font-bold tracking-widest uppercase text-sm">Loading</p>
-        </div>
-      </div>
-    );
-  }
+
 
   return (
     <main className="flex flex-col min-h-screen w-full bg-[#fbf5f0]">
@@ -77,23 +68,25 @@ export default function ServicesPage() {
       <Navbar isLoading={isLoading} />
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[60vh] flex flex-col justify-center items-center bg-[#110804] overflow-hidden px-8 pt-24 pb-16">
-        <div className="absolute inset-0 z-0 opacity-40">
-          <Image src="/specialisms/design_consultation.webp" alt="Hero Background" fill sizes="100vw" className="object-cover object-center grayscale mix-blend-overlay" priority />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#110804]/80 via-[#110804]/50 to-[#110804]" />
+      <section className="relative w-full p-0 md:p-[9px]">
+        <div className="relative w-full rounded-none md:rounded-[24px] min-h-[60vh] overflow-hidden shadow-2xl flex flex-col justify-center items-center bg-[#110804] px-8 pt-24 pb-16">
+          <div className="absolute inset-0 z-0 opacity-40">
+            <Image src="/specialisms/design_consultation.webp" alt="Hero Background" fill sizes="100vw" className="object-cover object-center grayscale mix-blend-overlay" priority />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#110804]/80 via-[#110804]/50 to-[#110804]" />
+          </div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative z-10 text-center max-w-4xl mx-auto"
+          >
+
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white uppercase tracking-wider drop-shadow-2xl mb-8" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8c5430] to-[#b56b3a]">Services</span>
+            </h1>
+          </motion.div>
         </div>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative z-10 text-center max-w-4xl mx-auto"
-        >
-
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white uppercase tracking-wider drop-shadow-2xl mb-8" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8c5430] to-[#b56b3a]">Services</span>
-          </h1>
-        </motion.div>
       </section>
 
       {/* Alternating Layout Section */}

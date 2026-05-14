@@ -37,18 +37,18 @@ export default function FusionHybrid() {
         <Navbar isLoading={!isLoaded} />
 
         {/* Hero Section */}
-        <section className="relative w-full h-[50vh] min-h-[400px] flex flex-col justify-center items-center bg-[#110804] overflow-hidden px-8">
-          <div className="absolute inset-0 z-0 opacity-40">
-             <Image src="/fusion-hero.webp" alt="Premium Hybrid Flooring" fill sizes="100vw" className="object-cover object-bottom" priority />
-             <div className="absolute inset-0 bg-gradient-to-t from-[#110804] via-[#110804]/80 to-[#110804]/30" />
-          </div>
-          
+        <section className="relative w-full p-0 md:p-[9px]">
+          <div className="relative w-full rounded-none md:rounded-[24px] min-h-[60vh] overflow-hidden shadow-2xl flex flex-col justify-center items-center bg-[#110804] px-8">
+            <div className="absolute inset-0 z-0 opacity-40">
+               <Image src="/fusion-hero.webp" alt="Premium Hybrid Flooring" fill sizes="100vw" className="object-cover object-bottom" priority />
+               <div className="absolute inset-0 bg-gradient-to-t from-[#110804] via-[#110804]/80 to-[#110804]/30" />
+            </div>
 
-          <div className={`relative z-10 text-center flex flex-col items-center gap-4 ${isLoaded ? 'animate-slide-in-up' : 'opacity-0'}`}>
-
-            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-wider leading-tight drop-shadow-lg" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
-              Premium Hybrid
-            </h1>
+            <div className={`relative z-10 text-center flex flex-col items-center gap-4 ${isLoaded ? 'animate-slide-in-up' : 'opacity-0'}`}>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-wider leading-tight drop-shadow-lg" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+                Premium Hybrid
+              </h1>
+            </div>
           </div>
         </section>
 
@@ -200,46 +200,39 @@ export default function FusionHybrid() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 auto-rows-fr">
               {/* Row 1: 3 Items (Span 2 columns each on large screens) */}
               <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-2">
-                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>01</div>
                 <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Water-Proof</h4>
                 <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Premium Hybrid flooring is 100% water proof and stands up to all spills and can be installed in wet areas such as bathrooms.</p>
               </div>
 
               <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-2">
-                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>02</div>
                 <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Low Maintenance</h4>
                 <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Our surface coating technology ensures no need for additional surface treatments following installation.</p>
               </div>
 
               <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-2">
-                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>03</div>
                 <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Environmentally Conscious</h4>
                 <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Being 100% physically, energetically and chemically recyclable or re-usable.</p>
               </div>
 
               {/* Row 2 & 3: 4 Items (Span 3 columns each on large screens) */}
               <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-3">
-                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>04</div>
                 <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Acoustic Qualities</h4>
                 <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Excellent noise reduction properties and does not require additional underlay. Industry leading, 6 Star rated.</p>
               </div>
 
               <div className="bg-gradient-to-br from-[#251208] to-[#1a0d07] rounded-[2rem] p-8 md:p-10 shadow-md border border-[#8c5430]/20 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-3">
-                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-white/[0.03] group-hover:text-white/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>05</div>
                 <h4 className="text-xl md:text-2xl font-bold text-white mb-4 uppercase tracking-wide group-hover:text-[#fce8d5] transition-colors duration-300 relative z-10">Durable</h4>
                 <p className="text-[#fce8d5]/80 leading-relaxed relative z-10 font-medium text-lg">Premium Hybrid boards are extremely hard wearing and have HIGH IMPACT RESISTANCE, unlike wood or stone, Premium Hybrid does not splinter, warp or crack. Quick and Easy to Install over most existing hard floors with the Uniclic 2G click system.</p>
               </div>
 
               <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-3">
-                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>06</div>
                 <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Comfort</h4>
                 <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium text-lg">Softer and warmer under foot than natural wood or stone flooring. Additional cushioning in the backing helps make Premium Hybrid extremely comfortable even to sensitive feet.</p>
               </div>
 
               <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-3">
-                <div className="absolute -right-6 -bottom-8 text-9xl font-bold text-[#8c5430]/[0.03] group-hover:text-[#8c5430]/[0.08] group-hover:scale-110 transition-all duration-700 pointer-events-none" style={{ fontFamily: "'Tomorrow', sans-serif" }}>07</div>
                 <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Pet Friendly</h4>
-                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">From muddy paws to 'accidents' - Premium Hybrid repels anything your pet can throw at it, making life much easier to clean.</p>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">From muddy paws to &apos;accidents&apos; - Premium Hybrid repels anything your pet can throw at it, making life much easier to clean.</p>
               </div>
             </div>
           </div>

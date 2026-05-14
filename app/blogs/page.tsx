@@ -33,15 +33,15 @@ export default async function BlogsPage() {
       <Navbar isLoading={false} />
 
       {/* Hero / Header Section */}
-      <section className="relative w-full pt-0 md:pt-8 px-0 md:px-[9px] z-20">
-        <div className="relative w-full rounded-none md:rounded-[24px] h-[300px] md:h-[400px] overflow-hidden shadow-xl flex items-center justify-center bg-[#251208]">
+      <section className="relative w-full p-0 md:p-[9px] z-20">
+        <div className="relative w-full rounded-none md:rounded-[24px] min-h-[60vh] overflow-hidden shadow-2xl flex items-center justify-center bg-[#251208]">
           {/* Use the wood texture as a reliable hero background */}
           <Image src="/wood-texture.webp" alt="Blog Hero Background" fill sizes="100vw" className="object-cover opacity-60" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10" />
 
           {/* Hero Title */}
           <div className="relative z-20 text-center mt-12 animate-drop-swing" style={{ animationDelay: '0.2s' }}>
-            <h1 className="text-5xl md:text-7xl text-white tracking-widest leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] uppercase" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white tracking-widest leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] uppercase" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
               Design Insights
             </h1>
             <p className="text-[#fce8d5] mt-4 font-bold tracking-[0.2em] uppercase text-sm drop-shadow-md">

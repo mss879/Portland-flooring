@@ -95,8 +95,8 @@ export default function Contact() {
       <Navbar isLoading={isLoading} />
 
       {/* Hero / Header Section */}
-      <section className="relative w-full pt-0 md:pt-8 px-0 md:px-[9px] z-20">
-        <div className="relative w-full rounded-none md:rounded-[24px] h-[300px] md:h-[400px] overflow-hidden shadow-xl flex items-center justify-center">
+      <section className="relative w-full p-0 md:p-[9px] z-20">
+        <div className="relative w-full rounded-none md:rounded-[24px] min-h-[60vh] overflow-hidden shadow-2xl flex items-center justify-center">
           
           {/* Keep hero video/image dark enough for white text to pop, similar to homepage */}
           <Image src="/hero-var-2.webp" alt="Contact Hero Background" fill sizes="100vw" className="object-cover" priority />
@@ -104,7 +104,7 @@ export default function Contact() {
 
           {/* Hero Title */}
           <div className="relative z-20 text-center mt-12">
-            <h1 className="text-6xl md:text-8xl text-white tracking-widest leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] stagger-1 uppercase" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white tracking-widest leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] stagger-1 uppercase" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
               Let's Connect
             </h1>
           </div>
