@@ -5,7 +5,7 @@ date: "2026-04-27"
 seo_keyword: "hybrid vs laminate flooring australia"
 ---
 
-![Hybrid vs Laminate Flooring](/blogs/hybrid_vs_laminate_1777262547864.png)
+![Hybrid vs Laminate Flooring](/blogs/hybrid_vs_laminate_1777262547864.webp)
 
 # The Ultimate Guide: Hybrid vs. Laminate Flooring for Australian Homes
 

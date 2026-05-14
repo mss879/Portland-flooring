@@ -39,7 +39,7 @@ export default function FusionHybrid() {
         {/* Hero Section */}
         <section className="relative w-full h-[50vh] min-h-[400px] flex flex-col justify-center items-center bg-[#110804] overflow-hidden px-8">
           <div className="absolute inset-0 z-0 opacity-40">
-             <Image src="/fusion-hero.png" alt="Fusion Hybrid Flooring" fill className="object-cover object-bottom" priority />
+             <Image src="/fusion-hero.webp" alt="Fusion Hybrid Flooring" fill sizes="100vw" className="object-cover object-bottom" priority />
              <div className="absolute inset-0 bg-gradient-to-t from-[#110804] via-[#110804]/80 to-[#110804]/30" />
           </div>
           
@@ -114,7 +114,7 @@ export default function FusionHybrid() {
               </p>
             </div>
             <div className="flex-1 w-full relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/hybrid-benefits.png" alt="Hybrid Flooring Benefits" fill className="object-cover" />
+              <Image src="/hybrid-benefits.webp" alt="Hybrid Flooring Benefits" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
             </div>
           </div>
         </section>
@@ -134,7 +134,7 @@ export default function FusionHybrid() {
               </p>
             </div>
             <div className="flex-1 w-full relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/hybrid-materials.png" alt="Hybrid Flooring Materials" fill className="object-cover" />
+              <Image src="/hybrid-materials.webp" alt="Hybrid Flooring Materials" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
             </div>
           </div>
         </section>
@@ -150,7 +150,7 @@ export default function FusionHybrid() {
             </div>
             
             <div className="relative w-full max-w-5xl bg-white rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 flex items-center justify-center">
-              <Image src="/layer-img.jpg" alt="Hybrid Flooring Layers Architecture" width={1200} height={800} className="w-full h-auto object-cover" priority />
+              <Image src="/layer-img.webp" alt="Hybrid Flooring Layers Architecture" width={1200} height={800} className="w-full h-auto object-cover" priority />
             </div>
           </div>
         </section>
@@ -170,19 +170,19 @@ export default function FusionHybrid() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="flex flex-col items-center gap-6 group">
                 <div className="w-full max-w-[300px] aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden relative shadow-xl border border-[#8c5430]/10 group-hover:-translate-y-2 transition-all duration-500">
-                  <Image src="/kid-friendly.png" alt="Kid Friendly Flooring" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="/kid-friendly.webp" alt="Kid Friendly Flooring" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <h4 className="text-2xl font-bold text-[#251208] group-hover:text-[#8c5430] transition-colors duration-300">Kid Friendly</h4>
               </div>
               <div className="flex flex-col items-center gap-6 group">
                 <div className="w-full max-w-[300px] aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden relative shadow-xl border border-[#8c5430]/10 group-hover:-translate-y-2 transition-all duration-500">
-                  <Image src="/pet-friendly.png" alt="Pet Friendly Flooring" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="/pet-friendly.webp" alt="Pet Friendly Flooring" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <h4 className="text-2xl font-bold text-[#251208] group-hover:text-[#8c5430] transition-colors duration-300">Pet Friendly</h4>
               </div>
               <div className="flex flex-col items-center gap-6 group">
                 <div className="w-full max-w-[300px] aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden relative shadow-xl border border-[#8c5430]/10 group-hover:-translate-y-2 transition-all duration-500">
-                  <Image src="/waterproof.png" alt="Waterproof Flooring" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="/waterproof.webp" alt="Waterproof Flooring" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <h4 className="text-2xl font-bold text-[#251208] group-hover:text-[#8c5430] transition-colors duration-300">Waterproof (Oops!)</h4>
               </div>
@@ -259,7 +259,7 @@ export default function FusionHybrid() {
               </p>
             </div>
             <div className="flex-1 w-full relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-[#8c5430]/10">
-              <Image src="/hybrid-care.png" alt="Considerations for Hybrid Flooring" fill className="object-cover" />
+              <Image src="/hybrid-care.webp" alt="Considerations for Hybrid Flooring" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
             </div>
           </div>
         </section>

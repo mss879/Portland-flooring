@@ -182,7 +182,7 @@ export default function Home() {
             {/* Hero Background Video */}
             <video
               ref={heroVideoRef}
-              src="/House_interior_renovation_web.mp4"
+              src="/hero-bg-compressed.mp4"
               loop
               muted
               playsInline
@@ -211,7 +211,7 @@ export default function Home() {
           <div
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: 'url(/light-wood-texture.png)',
+              backgroundImage: 'url(/light-wood-texture.webp)',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
@@ -382,7 +382,7 @@ export default function Home() {
               {/* 3. Video Card (Spans 1 col, tall) */}
               <div className="rounded-3xl overflow-hidden relative shadow-sm h-[280px] md:h-auto group">
                 <video
-                  src="/her-vid-2.mp4"
+                  src="/craftsmanship-compressed.mp4"
                   autoPlay
                   loop
                   muted
@@ -478,12 +478,12 @@ export default function Home() {
               {/* Top Row */}
               <div className="flex flex-col lg:flex-row h-[500px] lg:h-[350px] gap-2 lg:gap-4 w-full">
                 {[
-                  { name: "European Oak", img: "european_oak.png", desc: "Timeless elegance with rich, warm undertones. Perfect for creating expansive, inviting living spaces." },
-                  { name: "Spotted Gum", img: "spotted_gum.png", desc: "A rich mix of pale and dark brown hues with distinct wavy grain, offering a striking Australian aesthetic." },
-                  { name: "Pewter Grey", img: "pewter_grey.png", desc: "Cool weathered greyish-brown oak with subtle grain, bringing a modern, sophisticated touch to any room." },
+                  { name: "European Oak", img: "european_oak.webp", desc: "Timeless elegance with rich, warm undertones. Perfect for creating expansive, inviting living spaces." },
+                  { name: "Spotted Gum", img: "spotted_gum.webp", desc: "A rich mix of pale and dark brown hues with distinct wavy grain, offering a striking Australian aesthetic." },
+                  { name: "Pewter Grey", img: "pewter_grey.webp", desc: "Cool weathered greyish-brown oak with subtle grain, bringing a modern, sophisticated touch to any room." },
                 ].map((item, index) => (
                   <div key={item.name} className="group relative flex-1 hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer">
-                    <Image src={`/${item.img}`} alt={item.name} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                    <Image src={`/${item.img}`} alt={item.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
 
                     <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
@@ -503,12 +503,12 @@ export default function Home() {
               {/* Bottom Row */}
               <div className="flex flex-col lg:flex-row h-[500px] lg:h-[350px] gap-2 lg:gap-4 w-full">
                 {[
-                  { name: "Mistral Oak", img: "mistral_oak.png", desc: "Pale blond ash-like wood with soft muted grain, creating a light, airy, and contemporary feel." },
-                  { name: "Blackbutt", img: "blackbutt_new.png", desc: "Pale yellowish brown with straight even grain, providing a clean, bright, and durable surface." },
-                  { name: "Pale Oak", img: "pale_oak_new.png", desc: "Very light whitish-beige wood with delicate grain, perfect for minimalist and Scandinavian-inspired interiors." },
+                  { name: "Mistral Oak", img: "mistral_oak.webp", desc: "Pale blond ash-like wood with soft muted grain, creating a light, airy, and contemporary feel." },
+                  { name: "Blackbutt", img: "blackbutt_new.webp", desc: "Pale yellowish brown with straight even grain, providing a clean, bright, and durable surface." },
+                  { name: "Pale Oak", img: "pale_oak_new.webp", desc: "Very light whitish-beige wood with delicate grain, perfect for minimalist and Scandinavian-inspired interiors." },
                 ].map((item, index) => (
                   <div key={item.name} className="group relative flex-1 hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer">
-                    <Image src={`/${item.img}`} alt={item.name} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                    <Image src={`/${item.img}`} alt={item.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
 
                     <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
@@ -531,7 +531,7 @@ export default function Home() {
         {/* Google Reviews Section */}
         <section className="w-full py-24 bg-[#fdfaf6] relative overflow-hidden flex flex-col items-center">
           {/* Subtle background decoration */}
-          <div className="absolute inset-0 bg-[url('/light-wood-texture.png')] opacity-10 mix-blend-multiply pointer-events-none" />
+          <div className="absolute inset-0 bg-[url('/light-wood-texture.webp')] opacity-10 mix-blend-multiply pointer-events-none" />
           <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white to-transparent opacity-50 pointer-events-none" />
 
           <div className="max-w-[1400px] w-full mx-auto px-8 md:px-12 lg:px-24 relative z-10 flex flex-col items-center text-center mb-16">
@@ -574,7 +574,7 @@ export default function Home() {
 
         {/* Interactive Before & After */}
         <section className="w-full py-24 bg-[#fbf5f0] relative overflow-hidden flex flex-col items-center">
-          <div className="absolute inset-0 bg-[url('/light-wood-texture.png')] opacity-20 mix-blend-multiply pointer-events-none" />
+          <div className="absolute inset-0 bg-[url('/light-wood-texture.webp')] opacity-20 mix-blend-multiply pointer-events-none" />
 
           <div className="max-w-[1200px] w-full px-8 md:px-12 flex flex-col items-center text-center mb-16 relative z-10">
             <h2 className="text-xs font-bold tracking-widest text-[#8c5430] uppercase drop-shadow-sm mb-4">The Transformation</h2>
@@ -595,14 +595,14 @@ export default function Home() {
 
             {/* After Image (Background) */}
             <div className="absolute inset-0 w-full h-full">
-              <Image src="/after-new.png" alt="After Renovation" fill className="object-cover" />
+              <Image src="/after-new.webp" alt="After Renovation" fill sizes="(max-width: 768px) 90vw, 1000px" className="object-cover" />
               <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full text-white text-xs font-bold tracking-widest uppercase">After</div>
             </div>
 
             {/* Before Image (Foreground, Clipped) */}
             <div className="absolute inset-0 w-full h-full border-r-[3px] border-white drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]"
               style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}>
-              <Image src="/before-new.jpeg" alt="Before Renovation" fill className="object-cover grayscale-[20%]" />
+              <Image src="/before-new.webp" alt="Before Renovation" fill sizes="(max-width: 768px) 90vw, 1000px" className="object-cover grayscale-[20%]" />
               <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full text-white text-xs font-bold tracking-widest uppercase">Before</div>
             </div>
 
@@ -625,7 +625,7 @@ export default function Home() {
           <div className="max-w-[1200px] w-full bg-[#251208] rounded-[3rem] p-10 md:p-16 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl">
 
             {/* Decor background elements */}
-            <div className="absolute top-0 left-0 w-full h-full bg-[url('/wood-texture.png')] opacity-10 mix-blend-overlay pointer-events-none" />
+            <div className="absolute top-0 left-0 w-full h-full bg-[url('/wood-texture.webp')] opacity-10 mix-blend-overlay pointer-events-none" />
             <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#8c5430] rounded-full blur-[100px] opacity-30 pointer-events-none" />
 
             <div className="flex flex-col gap-6 relative z-10 max-w-xl text-center lg:text-left">

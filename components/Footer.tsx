@@ -9,7 +9,7 @@ export default function Footer() {
       
       {/* Background Texture & Glow */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <Image src="/wood-texture.png" alt="Wood Texture" fill className="object-cover opacity-[0.03] mix-blend-overlay" />
+        <Image src="/wood-texture.webp" alt="Wood Texture" fill className="object-cover opacity-[0.03] mix-blend-overlay" />
         <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-[#8c5430]/5 blur-[150px] rounded-full" />
       </div>
 
@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <Link href="/" className="flex items-center gap-4 group">
               <div className="w-14 h-14 rounded-full overflow-hidden shadow-lg group-hover:scale-110 transition-transform">
-                <Image src="/portland-logo.png" alt="Portland Flooring Logo" width={56} height={56} className="object-cover" />
+                <Image src="/portland-logo.webp" alt="Portland Flooring Logo" width={56} height={56} className="object-cover" />
               </div>
               <span className="text-[#251208] font-bold tracking-widest uppercase text-base group-hover:text-[#8c5430] transition-colors">Portland</span>
             </Link>

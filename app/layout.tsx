@@ -2,19 +2,55 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portland Flooring | Premium Hybrid Flooring in Pakenham VIC",
-  description: "Premium hybrid flooring solutions — elegant, durable, sustainable. Serving Pakenham, Melbourne & all of Victoria.",
+  metadataBase: new URL("https://portlands.com.au"),
+  title: {
+    default: "Portland Flooring | Premium Hybrid Flooring in Pakenham VIC",
+    template: "%s | Portland Flooring",
+  },
+  description:
+    "Premium hybrid flooring solutions — elegant, durable, sustainable. Expert installation, restoration & design consultation serving Pakenham, Melbourne & all of Victoria.",
+  keywords: [
+    "hybrid flooring",
+    "premium flooring",
+    "flooring installation",
+    "Pakenham flooring",
+    "Melbourne flooring",
+    "Victoria flooring",
+    "SPC flooring",
+    "timber flooring",
+    "Fusion Hybrid",
+    "Portland Flooring",
+    "floor restoration",
+    "waterproof flooring",
+  ],
+  authors: [{ name: "Portland Flooring" }],
+  creator: "Portland Flooring",
+  publisher: "Portland Flooring",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Portland Flooring | Premium Hybrid Flooring",
-    description: "Premium hybrid flooring solutions — elegant, durable, sustainable. Serving Pakenham, Melbourne & all of Victoria.",
-    images: ["/opengraph-image.png"],
     type: "website",
+    locale: "en_AU",
+    url: "https://portlands.com.au",
+    siteName: "Portland Flooring",
+    title: "Portland Flooring | Premium Hybrid Flooring",
+    description:
+      "Premium hybrid flooring solutions — elegant, durable, sustainable. Serving Pakenham, Melbourne & all of Victoria.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Portland Flooring | Premium Hybrid Flooring",
-    description: "Premium hybrid flooring solutions — elegant, durable, sustainable.",
-    images: ["/opengraph-image.png"],
+    description:
+      "Premium hybrid flooring solutions — elegant, durable, sustainable. Serving Pakenham, Melbourne & Victoria.",
   },
 };
 

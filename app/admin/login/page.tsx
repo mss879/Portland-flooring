@@ -34,7 +34,7 @@ export default function AdminLogin() {
   return (
     <main className="min-h-screen w-full flex items-center justify-center bg-[#0a0a0a] relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/wood-texture.png')] opacity-[0.03] pointer-events-none" />
+      <div className="absolute inset-0 bg-[url('/wood-texture.webp')] opacity-[0.03] pointer-events-none" />
       <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#8c5430]/10 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#8c5430]/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -42,7 +42,7 @@ export default function AdminLogin() {
         {/* Logo / Brand */}
         <div className="text-center mb-10 flex flex-col items-center">
           <div className="w-24 h-24 rounded-full overflow-hidden shadow-2xl mb-6">
-            <Image src="/portland-logo.png" alt="Portland Flooring Logo" width={96} height={96} className="object-cover" />
+            <Image src="/portland-logo.webp" alt="Portland Flooring Logo" width={96} height={96} className="object-cover" />
           </div>
           <h1
             className="text-3xl font-bold text-white tracking-widest uppercase mb-2"

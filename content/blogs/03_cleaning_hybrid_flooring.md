@@ -5,7 +5,7 @@ date: "2026-04-27"
 seo_keyword: "how to clean hybrid flooring"
 ---
 
-![Cleaning Hybrid Floors](/blogs/cleaning_hybrid_floor_1777262679677.png)
+![Cleaning Hybrid Floors](/blogs/cleaning_hybrid_floor_1777262679677.webp)
 
 # How to Clean and Maintain Your Hybrid Floors: A Complete Guide
 

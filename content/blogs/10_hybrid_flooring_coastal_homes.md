@@ -5,7 +5,7 @@ date: "2026-04-27"
 seo_keyword: "hybrid flooring for coastal homes australia"
 ---
 
-![Coastal Home Flooring](/blogs/coastal_home_flooring_1777262943900.png)
+![Coastal Home Flooring](/blogs/coastal_home_flooring_1777262943900.webp)
 
 # Coastal Living: Why Hybrid Flooring is the Perfect Choice for Beachside Homes
 

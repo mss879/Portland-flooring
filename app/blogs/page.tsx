@@ -26,14 +26,14 @@ export default async function BlogsPage() {
 
       {/* Global Background Texture */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <Image src="/light-wood-texture.png" alt="Texture" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
+        <Image src="/light-wood-texture.webp" alt="Texture" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
       </div>
 
       {/* Hero / Header Section */}
       <section className="relative w-full pt-8 px-[9px] z-20">
         <div className="relative w-full rounded-[24px] h-[300px] md:h-[400px] overflow-hidden shadow-xl flex items-center justify-center bg-[#251208]">
           {/* Use the wood texture as a reliable hero background */}
-          <Image src="/wood-texture.png" alt="Blog Hero Background" fill sizes="100vw" className="object-cover opacity-60" priority />
+          <Image src="/wood-texture.webp" alt="Blog Hero Background" fill sizes="100vw" className="object-cover opacity-60" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10" />
 
           {/* Hanging Navbar */}

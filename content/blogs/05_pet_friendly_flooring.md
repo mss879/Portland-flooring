@@ -5,7 +5,7 @@ date: "2026-04-27"
 seo_keyword: "best flooring for pets and children victoria"
 ---
 
-![Pet Friendly Flooring](/blogs/pet_friendly_flooring_1777262753556.png)
+![Pet Friendly Flooring](/blogs/pet_friendly_flooring_1777262753556.webp)
 
 # Paws and Claws: The Best Pet-Friendly Flooring Options for Your Home
 

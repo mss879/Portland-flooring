@@ -232,7 +232,7 @@ export default function QuotePage() {
 
             <div className="mt-8 pt-8 border-t border-[#8c5430]/10">
               <button type="submit" disabled={submitting} className="w-full relative overflow-hidden rounded-xl py-6 font-bold text-white uppercase tracking-[0.3em] shadow-[0_8px_30px_rgba(140,84,48,0.4)] hover:shadow-[0_12px_40px_rgba(140,84,48,0.6)] transition-all hover:-translate-y-1 active:translate-y-0 group disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0">
-                <div className="absolute inset-0 z-[-2] transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/wood-texture.png)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+                <div className="absolute inset-0 z-[-2] transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/wood-texture.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
                 <div className="absolute inset-0 bg-gradient-to-b from-[#b56b3a]/90 to-[#6b3e21] mix-blend-multiply z-[-1]" />
                 <span className="relative z-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] flex items-center justify-center gap-4 text-lg">
                   {submitting ? (

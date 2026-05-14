@@ -39,7 +39,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     <main className="flex flex-col min-h-screen w-full bg-[#fbf5f0] overflow-hidden selection:bg-[#8c5430]/20 selection:text-[#251208]">
       {/* Global Background Texture */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <Image src="/light-wood-texture.png" alt="Texture" fill className="object-cover opacity-[0.15] mix-blend-multiply" />
+        <Image src="/light-wood-texture.webp" alt="Texture" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
       </div>
 
       {/* Hanging Navbar */}

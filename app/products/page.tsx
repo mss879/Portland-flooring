@@ -31,7 +31,7 @@ export default function Products() {
         {/* Hero Section */}
         <section className="relative w-full h-[40vh] min-h-[300px] flex flex-col justify-center items-center bg-[#110804] overflow-hidden px-8">
           <div className="absolute inset-0 z-0 opacity-40">
-             <Image src="/mistral_oak.png" alt="Products Hero" fill className="object-cover object-center" priority />
+             <Image src="/mistral_oak.webp" alt="Products Hero" fill sizes="100vw" className="object-cover object-center" priority />
              <div className="absolute inset-0 bg-gradient-to-t from-[#110804] via-[#110804]/80 to-[#110804]/30" />
           </div>
           
@@ -56,12 +56,12 @@ export default function Products() {
               {/* Top Row */}
               <div className="flex flex-col lg:flex-row h-[500px] lg:h-[350px] gap-2 lg:gap-4 w-full">
                 {[
-                  { name: "European Oak", img: "european_oak.png" },
-                  { name: "Spotted Gum", img: "spotted_gum.png" },
-                  { name: "Pewter Grey", img: "pewter_grey.png" },
+                  { name: "European Oak", img: "european_oak.webp" },
+                  { name: "Spotted Gum", img: "spotted_gum.webp" },
+                  { name: "Pewter Grey", img: "pewter_grey.webp" },
                 ].map((item, index) => (
                   <div key={item.name} className="group relative flex-1 hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer shadow-lg border border-[#8c5430]/10">
-                    <Image src={`/${item.img}`} alt={item.name} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                    <Image src={`/${item.img}`} alt={item.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                     
                     <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
@@ -74,12 +74,12 @@ export default function Products() {
               {/* Bottom Row */}
               <div className="flex flex-col lg:flex-row h-[500px] lg:h-[350px] gap-2 lg:gap-4 w-full">
                 {[
-                  { name: "Mistral Oak", img: "mistral_oak.png" },
-                  { name: "Blackbutt", img: "blackbutt_new.png" },
-                  { name: "Pale Oak", img: "pale_oak_new.png" },
+                  { name: "Mistral Oak", img: "mistral_oak.webp" },
+                  { name: "Blackbutt", img: "blackbutt_new.webp" },
+                  { name: "Pale Oak", img: "pale_oak_new.webp" },
                 ].map((item, index) => (
                   <div key={item.name} className="group relative flex-1 hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer shadow-lg border border-[#8c5430]/10">
-                    <Image src={`/${item.img}`} alt={item.name} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                    <Image src={`/${item.img}`} alt={item.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                     
                     <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">

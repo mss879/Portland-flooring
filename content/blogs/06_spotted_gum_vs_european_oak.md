@@ -5,7 +5,7 @@ date: "2026-04-27"
 seo_keyword: "spotted gum vs european oak flooring"
 ---
 
-![Spotted Gum vs European Oak](/blogs/spotted_gum_vs_oak_1777262822713.png)
+![Spotted Gum vs European Oak](/blogs/spotted_gum_vs_oak_1777262822713.webp)
 
 # Spotted Gum vs. European Oak: Choosing the Perfect Timber Look for Your Space
 

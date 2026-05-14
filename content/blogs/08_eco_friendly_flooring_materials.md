@@ -5,7 +5,7 @@ date: "2026-04-27"
 seo_keyword: "eco friendly flooring options australia"
 ---
 
-![Eco Friendly Flooring](/blogs/eco_friendly_flooring_1777262906486.png)
+![Eco Friendly Flooring](/blogs/eco_friendly_flooring_1777262906486.webp)
 
 # Sustainable Living: The Benefits of Eco-Friendly Flooring Materials in Australia
 

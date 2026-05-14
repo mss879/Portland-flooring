@@ -5,7 +5,7 @@ date: "2026-04-27"
 seo_keyword: "best waterproof flooring for kitchens australia"
 ---
 
-![Waterproof Kitchen Flooring](/blogs/waterproof_kitchen_flooring_1777262621055.png)
+![Waterproof Kitchen Flooring](/blogs/waterproof_kitchen_flooring_1777262621055.webp)
 
 # Top 5 Waterproof Flooring Options for Modern Australian Kitchens
 

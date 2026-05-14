@@ -5,7 +5,7 @@ date: "2026-04-27"
 seo_keyword: "how to prepare concrete subfloor for hybrid flooring"
 ---
 
-![Subfloor Preparation](/blogs/subfloor_preparation_1777262928430.png)
+![Subfloor Preparation](/blogs/subfloor_preparation_1777262928430.webp)
 
 # DIY vs. Pro: How to Prepare Your Concrete Subfloor for Hybrid Flooring
 

@@ -5,7 +5,7 @@ date: "2026-04-27"
 seo_keyword: "cost of flooring installation pakenham"
 ---
 
-![Cost of Flooring Installation](/blogs/cost_flooring_installation_1777262734952.png)
+![Cost of Flooring Installation](/blogs/cost_flooring_installation_1777262734952.webp)
 
 # Budgeting for Your Renovation: The Real Cost of Flooring Installation in Victoria
 

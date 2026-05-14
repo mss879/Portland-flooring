@@ -15,16 +15,16 @@ export default function AboutUs() {
   }, []);
 
   const specialisms = [
-    { title: "Flooring Installation", img: "/specialisms/installation.png", desc: "Masterful fitting of all flooring types with precision and care, ensuring a flawless foundation for your space." },
-    { title: "Floor Restoration", img: "/specialisms/restoration.png", desc: "Reviving the natural beauty of aged or damaged floors, bringing back their original luster and extending their lifespan." },
-    { title: "Vinyl Flooring", img: "/specialisms/vinyl.png", desc: "Providing high-quality, durable, and versatile vinyl options that beautifully mimic natural materials." },
-    { title: "Wooden Flooring", img: "/specialisms/wooden.png", desc: "Installing timeless, elegant hardwood floors that add warmth, character, and significant value to any property." },
-    { title: "Laminate Flooring", img: "/specialisms/laminate.png", desc: "Offering cost-effective, scratch-resistant laminate solutions without compromising on aesthetic appeal." },
-    { title: "Epoxy Flooring", img: "/specialisms/epoxy.png", desc: "Creating seamless, high-performance, and extremely durable epoxy surfaces ideal for garages and commercial spaces." },
-    { title: "Tile & Carpet", img: "/specialisms/tile_carpet.png", desc: "Expert laying of premium tiles and plush carpets to suit specific functional needs and design preferences." },
-    { title: "Floor Polishing", img: "/specialisms/polishing.png", desc: "Utilizing advanced techniques to polish hard floors to a brilliant, mirror-like finish that enhances the entire room." },
-    { title: "Floor Repairs", img: "/specialisms/repairs.png", desc: "Targeted, seamless repairs to fix scratches, dents, or water damage, restoring your floor's structural integrity." },
-    { title: "Customized Solutions", img: "/specialisms/custom.png", desc: "Tailoring bespoke flooring designs and materials to meet unique architectural requirements and personal tastes." },
+    { title: "Flooring Installation", img: "/specialisms/installation.webp", desc: "Masterful fitting of all flooring types with precision and care, ensuring a flawless foundation for your space." },
+    { title: "Floor Restoration", img: "/specialisms/restoration.webp", desc: "Reviving the natural beauty of aged or damaged floors, bringing back their original luster and extending their lifespan." },
+    { title: "Vinyl Flooring", img: "/specialisms/vinyl.webp", desc: "Providing high-quality, durable, and versatile vinyl options that beautifully mimic natural materials." },
+    { title: "Wooden Flooring", img: "/specialisms/wooden.webp", desc: "Installing timeless, elegant hardwood floors that add warmth, character, and significant value to any property." },
+    { title: "Laminate Flooring", img: "/specialisms/laminate.webp", desc: "Offering cost-effective, scratch-resistant laminate solutions without compromising on aesthetic appeal." },
+    { title: "Epoxy Flooring", img: "/specialisms/epoxy.webp", desc: "Creating seamless, high-performance, and extremely durable epoxy surfaces ideal for garages and commercial spaces." },
+    { title: "Tile & Carpet", img: "/specialisms/tile_carpet.webp", desc: "Expert laying of premium tiles and plush carpets to suit specific functional needs and design preferences." },
+    { title: "Floor Polishing", img: "/specialisms/polishing.webp", desc: "Utilizing advanced techniques to polish hard floors to a brilliant, mirror-like finish that enhances the entire room." },
+    { title: "Floor Repairs", img: "/specialisms/repairs.webp", desc: "Targeted, seamless repairs to fix scratches, dents, or water damage, restoring your floor's structural integrity." },
+    { title: "Customized Solutions", img: "/specialisms/custom.webp", desc: "Tailoring bespoke flooring designs and materials to meet unique architectural requirements and personal tastes." },
   ];
 
   const containerVariants = {
@@ -59,7 +59,7 @@ export default function AboutUs() {
 
       {/* Global Background Texture */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <Image src="/light-wood-texture.png" alt="Texture" fill className="object-cover opacity-[0.15] mix-blend-multiply" />
+        <Image src="/light-wood-texture.webp" alt="Texture" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
       </div>
 
       {/* Hero Section */}
@@ -67,7 +67,7 @@ export default function AboutUs() {
         <div className="relative w-full rounded-[24px] h-[400px] md:h-[500px] overflow-hidden shadow-xl flex flex-col items-center justify-center">
 
           {/* Aesthetic Hero Background */}
-          <Image src="/mistral_oak.png" alt="About Portland Flooring" fill className="object-cover object-center" priority />
+          <Image src="/mistral_oak.webp" alt="About Portland Flooring" fill sizes="100vw" className="object-cover object-center" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/50 z-10" />
 
           {/* Hanging Navbar */}
@@ -152,7 +152,7 @@ export default function AboutUs() {
                 >
                   <div className="flex justify-between items-start w-full">
                     <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl overflow-hidden shadow-md border border-[#8c5430]/20 relative">
-                      <Image src={spec.img} alt={spec.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                      <Image src={spec.img} alt={spec.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
                     </div>
                     <span className="text-[#8c5430]/30 text-3xl md:text-4xl font-bold font-mono tracking-tighter">
                       {(index + 1).toString().padStart(2, '0')}
@@ -180,7 +180,7 @@ export default function AboutUs() {
       <section className="relative z-20 w-full">
         <div className="bg-gradient-to-br from-[#251208] to-[#110804] text-center px-8 py-24 md:py-32 relative overflow-hidden">
           {/* Subtle overlay texture */}
-          <div className="absolute inset-0 bg-[url('/wood-texture.png')] opacity-10 mix-blend-overlay pointer-events-none" />
+          <div className="absolute inset-0 bg-[url('/wood-texture.webp')] opacity-10 mix-blend-overlay pointer-events-none" />
 
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -197,7 +197,7 @@ export default function AboutUs() {
             </p>
 
             <Link href="/contact" className="relative overflow-hidden rounded-xl px-10 py-5 font-bold text-white uppercase tracking-widest shadow-[0_8px_20px_rgba(140,84,48,0.4)] transition-all hover:-translate-y-1 active:translate-y-0 group">
-              <div className="absolute inset-0 z-[-2] transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/wood-texture.png)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+              <div className="absolute inset-0 z-[-2] transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/wood-texture.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
               <div className="absolute inset-0 bg-gradient-to-b from-[#b56b3a]/90 to-[#6b3e21] mix-blend-multiply z-[-1]" />
               <span className="relative z-10 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] flex items-center gap-3">
                 Start Your Project

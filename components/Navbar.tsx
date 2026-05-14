@@ -26,7 +26,7 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
       {/* Logo */}
       <div className={`absolute top-8 left-12 z-50 flex items-center transition-opacity duration-1000 ${!isLoading ? 'opacity-100' : 'opacity-0'}`}>
         <Link href="/" className="relative w-20 h-20 md:w-24 md:h-24 overflow-hidden rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-transform hover:scale-105 duration-300">
-          <Image src="/portland-logo.png" alt="Portland Flooring Logo" fill className="object-cover" priority />
+          <Image src="/portland-logo.webp" alt="Portland Flooring Logo" fill className="object-cover" priority />
         </Link>
       </div>
 
@@ -38,7 +38,7 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
         <div
           className="absolute inset-0 rounded-lg z-[-2]"
           style={{
-            backgroundImage: 'url(/light-wood-texture.png)',
+            backgroundImage: 'url(/light-wood-texture.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
@@ -79,7 +79,7 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
             <div
               className="absolute inset-0 rounded-md z-[-2]"
               style={{
-                backgroundImage: 'url(/wood-texture.png)',
+                backgroundImage: 'url(/wood-texture.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'bottom'
               }}

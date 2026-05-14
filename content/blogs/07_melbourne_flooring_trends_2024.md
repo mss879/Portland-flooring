@@ -5,7 +5,7 @@ date: "2026-04-27"
 seo_keyword: "flooring trends melbourne 2024"
 ---
 
-![Melbourne Flooring Trends](/blogs/melbourne_flooring_trends_1777262838513.png)
+![Melbourne Flooring Trends](/blogs/melbourne_flooring_trends_1777262838513.webp)
 
 # Melbourne Interior Design: Top Flooring Trends to Watch in 2024
 

@@ -88,7 +88,7 @@ export default function Contact() {
 
       {/* Global Background Texture (Light) */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <Image src="/light-wood-texture.png" alt="Texture" fill className="object-cover opacity-[0.15] mix-blend-multiply" />
+        <Image src="/light-wood-texture.webp" alt="Texture" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
       </div>
 
       {/* Hero / Header Section */}
@@ -96,7 +96,7 @@ export default function Contact() {
         <div className="relative w-full rounded-[24px] h-[300px] md:h-[400px] overflow-hidden shadow-xl flex items-center justify-center">
           
           {/* Keep hero video/image dark enough for white text to pop, similar to homepage */}
-          <Image src="/hero-var-2.jpg" alt="Contact Hero Background" fill className="object-cover" priority />
+          <Image src="/hero-var-2.webp" alt="Contact Hero Background" fill sizes="100vw" className="object-cover" priority />
           <div className="absolute inset-0 bg-black/40 z-10" />
 
           {/* Hanging Navbar */}
@@ -211,7 +211,7 @@ export default function Contact() {
                 </div>
 
                 <button type="submit" disabled={submitting} className="w-full relative overflow-hidden rounded-xl py-5 font-bold text-white uppercase tracking-widest shadow-md hover:shadow-xl transition-all hover:-translate-y-1 active:translate-y-0 mt-6 group disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0">
-                  <div className="absolute inset-0 z-[-2] transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/wood-texture.png)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+                  <div className="absolute inset-0 z-[-2] transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/wood-texture.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
                   <div className="absolute inset-0 bg-gradient-to-b from-[#b56b3a]/90 to-[#6b3e21] mix-blend-multiply z-[-1]" />
                   <span className="relative z-10 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] flex items-center justify-center gap-3">
                     {submitting ? (

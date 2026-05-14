@@ -18,43 +18,43 @@ export default function ServicesPage() {
   const services = [
     {
       title: "Residential & Commercial",
-      img: "/specialisms/residential_commercial.png",
+      img: "/specialisms/residential_commercial.webp",
       desc: "We offer comprehensive flooring services tailored perfectly for both cozy homes and demanding high-traffic commercial environments. From luxurious living rooms to high-performance office floors, we deliver excellence across the board.",
       features: ["Custom tailored for any space", "High traffic durability", "Seamless aesthetics"]
     },
     {
       title: "Design Consultation",
-      img: "/specialisms/design_consultation.png",
+      img: "/specialisms/design_consultation.webp",
       desc: "Our professional guidance helps you select the ideal materials, colors, and patterns that match your interior vision. We work closely with you to understand your lifestyle and aesthetic preferences before any physical work begins.",
       features: ["Expert material selection", "Color palette matching", "Lifestyle-focused design"]
     },
     {
       title: "Measurement & Estimation",
-      img: "/specialisms/measurement_estimation.png",
+      img: "/specialisms/measurement_estimation.webp",
       desc: "Precise on-site assessments utilizing cutting-edge laser technology. We provide accurate material quotes and ensure maximum efficiency to minimize waste and optimize your budget.",
       features: ["Laser-precise accuracy", "Transparent quoting", "Waste minimization"]
     },
     {
       title: "On-site Installation",
-      img: "/specialisms/onsite_installation.png",
+      img: "/specialisms/onsite_installation.webp",
       desc: "Expert installation carried out by our highly skilled craftsmen directly at your location. We guarantee a seamless finish, adhering to the highest industry standards of quality and safety.",
       features: ["Master craftsmen", "Strict quality control", "Timely execution"]
     },
     {
       title: "Aftercare & Maintenance",
-      img: "/specialisms/aftercare_maintenance.png",
+      img: "/specialisms/aftercare_maintenance.webp",
       desc: "Our relationship doesn't end after installation. We provide dedicated support and specialized maintenance services to ensure your new floors remain pristine and durable for decades to come.",
       features: ["Specialized cleaning", "Longevity treatments", "Ongoing support"]
     },
     {
       title: "Waterproofing & Coating",
-      img: "/specialisms/waterproofing_coating.png",
+      img: "/specialisms/waterproofing_coating.webp",
       desc: "Applying advanced, industrial-grade protective layers to safeguard your surfaces against moisture, harsh chemical spills, and heavy daily wear. Perfect for high-risk zones.",
       features: ["Industrial-grade sealants", "Moisture barrier tech", "Spill resistance"]
     },
     {
       title: "Re-flooring & Removal",
-      img: "/specialisms/reflooring_removal.png",
+      img: "/specialisms/reflooring_removal.webp",
       desc: "Careful, systematic extraction and responsible disposal of your old flooring. We meticulously prepare a perfectly clean and level subfloor, setting the stage for a flawless new installation.",
       features: ["Safe extraction", "Eco-friendly disposal", "Subfloor leveling"]
     }
@@ -79,7 +79,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative w-full min-h-[60vh] flex flex-col justify-center items-center bg-[#110804] overflow-hidden px-8 pt-24 pb-16">
         <div className="absolute inset-0 z-0 opacity-40">
-          <Image src="/specialisms/design_consultation.png" alt="Hero Background" fill className="object-cover object-center grayscale mix-blend-overlay" priority />
+          <Image src="/specialisms/design_consultation.webp" alt="Hero Background" fill sizes="100vw" className="object-cover object-center grayscale mix-blend-overlay" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-[#110804]/80 via-[#110804]/50 to-[#110804]" />
         </div>
 
@@ -168,7 +168,7 @@ export default function ServicesPage() {
       {/* Outro CTA */}
       <section className="relative z-20 w-full">
         <div className="bg-gradient-to-br from-[#251208] to-[#110804] text-center px-8 py-24 md:py-32 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/wood-texture.png')] opacity-10 mix-blend-overlay pointer-events-none" />
+          <div className="absolute inset-0 bg-[url('/wood-texture.webp')] opacity-10 mix-blend-overlay pointer-events-none" />
 
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -182,7 +182,7 @@ export default function ServicesPage() {
             </h3>
             
             <Link href="/quote" className="relative mt-8 overflow-hidden rounded-xl px-12 py-5 font-bold text-white uppercase tracking-widest shadow-[0_8px_20px_rgba(140,84,48,0.4)] transition-all hover:-translate-y-1 active:translate-y-0 group">
-              <div className="absolute inset-0 z-[-2] transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/wood-texture.png)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+              <div className="absolute inset-0 z-[-2] transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/wood-texture.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
               <div className="absolute inset-0 bg-gradient-to-b from-[#b56b3a]/90 to-[#6b3e21] mix-blend-multiply z-[-1]" />
               <span className="relative z-10 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] flex items-center gap-3">
                 Get a Quote
