@@ -621,7 +621,7 @@ export default function Home() {
 
         {/* Sample Box Lead Gen CTA */}
         <section className="w-full py-24 bg-[#faf6f3] relative overflow-hidden flex justify-center px-1 md:px-8">
-          <div className="max-w-[1200px] w-full bg-[#251208] rounded-[3rem] p-10 md:p-16 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl">
+          <div className="max-w-[1200px] w-full bg-[#251208] rounded-2xl md:rounded-[3rem] p-10 md:p-16 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl">
 
             {/* Decor background elements */}
             <div className="absolute top-0 left-0 w-full h-full bg-[url('/wood-texture.webp')] opacity-10 mix-blend-overlay pointer-events-none" />

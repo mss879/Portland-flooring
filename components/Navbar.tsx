@@ -80,7 +80,7 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
 
         {/* Logo */}
         <div className={`pointer-events-auto transition-all duration-500 ease-in-out ${isScrolled
-            ? 'relative w-10 h-10 md:w-16 md:h-16 opacity-100'
+            ? 'relative w-[52px] h-[52px] md:w-16 md:h-16 opacity-100'
             : `relative w-14 h-14 md:w-24 md:h-24 ${!isLoading ? 'opacity-100' : 'opacity-0'}`
           }`}>
           <Link href="/" className="block w-full h-full overflow-hidden rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-transform hover:scale-105 duration-300">
