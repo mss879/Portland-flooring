@@ -1,0 +1,266 @@
+"use client";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { Leaf, BadgeCheck, ShieldCheck } from "lucide-react";
+
+export default function FusionHybrid() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+  return (
+    <>
+      <main className="flex flex-col min-h-screen w-full bg-[#faf6f3]">
+        <style>{`
+        @font-face {
+          font-family: 'Signwood';
+          src: url('/Signwood-Regular.ttf') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+        @keyframes slideInUp {
+          0% { transform: translateY(30px); opacity: 0; }
+          100% { transform: translateY(0); opacity: 1; }
+        }
+        .animate-slide-in-up {
+          animation: slideInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+        `}</style>
+
+        {/* Global Navigation */}
+        <Navbar isLoading={!isLoaded} />
+
+        {/* Hero Section */}
+        <section className="relative w-full p-0 md:p-[9px]">
+          <div className="relative w-full rounded-none md:rounded-[24px] min-h-[60vh] overflow-hidden shadow-2xl flex flex-col justify-center items-center bg-[#110804] px-8">
+            <div className="absolute inset-0 z-0 opacity-40">
+               <Image src="/fusion-hero.webp" alt="Premium Hybrid Flooring" fill sizes="100vw" className="object-cover object-bottom" priority />
+               <div className="absolute inset-0 bg-gradient-to-t from-[#110804] via-[#110804]/80 to-[#110804]/30" />
+            </div>
+
+            <div className={`relative z-10 text-center flex flex-col items-center gap-4 ${isLoaded ? 'animate-slide-in-up' : 'opacity-0'}`}>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-wider leading-tight drop-shadow-lg" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+                Premium Hybrid
+              </h1>
+            </div>
+          </div>
+        </section>
+
+        {/* Features (Eco-Friendly, etc.) */}
+        <section className="relative w-full -mt-16 z-20 px-8 md:px-12 lg:px-24 mb-20">
+          <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div className="bg-white rounded-[2rem] p-10 flex flex-col justify-start shadow-sm hover:shadow-2xl transition-all duration-700 relative overflow-hidden group border border-[#8c5430]/10 hover:-translate-y-2">
+              {/* Soft warm glow that shifts on hover */}
+              <div className="absolute right-0 top-0 w-64 h-64 bg-gradient-to-bl from-[#fdf2e9] to-transparent rounded-full blur-3xl opacity-40 group-hover:opacity-80 group-hover:scale-125 transition-all duration-1000 ease-out pointer-events-none" />
+              {/* Shine Hover Effect */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 group-hover:opacity-70 group-hover:translate-x-[150%] -translate-x-[150%] transition-all duration-[1.5s] ease-in-out transform scale-150 rotate-45 pointer-events-none z-20" />
+
+              <div className="relative z-10 w-16 h-16 bg-[#fbf5f0] border border-[#8c5430]/10 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 group-hover:bg-white transition-all duration-500">
+                <Leaf className="w-8 h-8 text-[#8c5430]" strokeWidth={1.5} />
+              </div>
+              
+              <h3 className="relative z-10 text-3xl font-bold text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>Eco-Friendly</h3>
+              <p className="relative z-10 text-[#6b3e21]/90 leading-relaxed font-medium">The Premium Hybrid SPC Flooring product range does not contain heavy metals, phthalate, methanol or other harmful substances. It does no harm to the human body or the environment.</p>
+            </div>
+
+            <div className="bg-white rounded-[2rem] p-10 flex flex-col justify-start shadow-sm hover:shadow-2xl transition-all duration-700 relative overflow-hidden group border border-[#8c5430]/10 hover:-translate-y-2 delay-100">
+              {/* Soft warm glow that shifts on hover */}
+              <div className="absolute right-0 top-0 w-64 h-64 bg-gradient-to-bl from-[#fdf2e9] to-transparent rounded-full blur-3xl opacity-40 group-hover:opacity-80 group-hover:scale-125 transition-all duration-1000 ease-out pointer-events-none" />
+              {/* Shine Hover Effect */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 group-hover:opacity-70 group-hover:translate-x-[150%] -translate-x-[150%] transition-all duration-[1.5s] ease-in-out transform scale-150 rotate-45 pointer-events-none z-20" />
+
+              <div className="relative z-10 w-16 h-16 bg-[#fbf5f0] border border-[#8c5430]/10 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 group-hover:bg-white transition-all duration-500">
+                <BadgeCheck className="w-8 h-8 text-[#8c5430]" strokeWidth={1.5} />
+              </div>
+              
+              <h3 className="relative z-10 text-3xl font-bold text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>CE Certified</h3>
+              <p className="relative z-10 text-[#6b3e21]/90 leading-relaxed font-medium">Premium Hybrid SPC Flooring product range is CE certified, meeting requirements for safety, environmental protection, health and consumer protection. Quality assured.</p>
+            </div>
+
+            <div className="bg-white rounded-[2rem] p-10 flex flex-col justify-start shadow-sm hover:shadow-2xl transition-all duration-700 relative overflow-hidden group border border-[#8c5430]/10 hover:-translate-y-2 delay-200">
+              {/* Soft warm glow that shifts on hover */}
+              <div className="absolute right-0 top-0 w-64 h-64 bg-gradient-to-bl from-[#fdf2e9] to-transparent rounded-full blur-3xl opacity-40 group-hover:opacity-80 group-hover:scale-125 transition-all duration-1000 ease-out pointer-events-none" />
+              {/* Shine Hover Effect */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 group-hover:opacity-70 group-hover:translate-x-[150%] -translate-x-[150%] transition-all duration-[1.5s] ease-in-out transform scale-150 rotate-45 pointer-events-none z-20" />
+
+              <div className="relative z-10 w-16 h-16 bg-[#fbf5f0] border border-[#8c5430]/10 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 group-hover:bg-white transition-all duration-500">
+                <ShieldCheck className="w-8 h-8 text-[#8c5430]" strokeWidth={1.5} />
+              </div>
+              
+              <h3 className="relative z-10 text-3xl font-bold text-[#251208] mb-4 tracking-wider group-hover:text-[#4a2810] transition-colors duration-500" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>Floorscore Certified</h3>
+              <p className="relative z-10 text-[#6b3e21]/90 leading-relaxed font-medium">Premium Hybrid SPC floors are waterproof and stain resistant. It only requires regular vacuuming or sweeping and occasional mopping for a more intense clean.</p>
+            </div>
+
+          </div>
+        </section>
+
+        {/* Content Section 1 */}
+        <section className="py-20 px-8 md:px-12 lg:px-24">
+          <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div className="flex-1 space-y-6">
+              <h2 className="text-xs font-bold tracking-widest text-[#8c5430] uppercase">Premium Hybrid</h2>
+              <h3 className="text-4xl md:text-5xl font-bold text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+                What is Hybrid Flooring and its Benefits?
+              </h3>
+              <p className="text-[#6b3e21] text-lg leading-relaxed font-medium">
+                Hybrid flooring is the fastest growing flooring options in Australia whether it is to be used for homes or at commercial premises. The choice and options of Hybrid Timber flooring are immense and is also dictated by the market trends and practicality of use. As the name suggests hybrid, it demonstrates quite well about how it consists of several mixes of diverse elements that helps to make it exceptional from other types of flooring.
+              </p>
+            </div>
+            <div className="flex-1 w-full relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+              <Image src="/hybrid-benefits.webp" alt="Hybrid Flooring Benefits" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+            </div>
+          </div>
+        </section>
+
+        {/* Content Section 2 */}
+        <section className="py-20 px-8 md:px-12 lg:px-24 bg-white">
+          <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row-reverse items-center gap-16">
+            <div className="flex-1 space-y-6">
+              <h3 className="text-4xl md:text-5xl font-bold text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+                What are they made of?
+              </h3>
+              <p className="text-[#6b3e21] text-lg leading-relaxed font-medium">
+                Hybrid flooring consists of waterproof resistance coating, which is innovatively designed to keep the floors in utmost superior quality for life. Hybrid flooring decor gives laminate finishing to create an improved floor that is not only durable from outside but provides clarity, exceptional protection from everyday wear with Acoustic Backing.
+              </p>
+              <p className="text-[#6b3e21] text-lg leading-relaxed font-medium">
+                Our Hybrid Flooring range include Premium Hybrid, Premium Hybrid has the most stable and waterproof core of any flooring worldwide. A big claim which is justified by test results and the skillset of our engineers when directed to develop a waterproof, stable flooring to meet everyday needs of everyday consumers.
+              </p>
+            </div>
+            <div className="flex-1 w-full relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+              <Image src="/hybrid-materials.webp" alt="Hybrid Flooring Materials" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+            </div>
+          </div>
+        </section>
+
+        {/* 3D Structure of Premium Hybrid */}
+        <section className="py-24 px-8 md:px-12 lg:px-24 bg-[#1a0d07] relative overflow-hidden">
+          <div className="max-w-[1400px] mx-auto flex flex-col items-center">
+            <div className="text-center mb-16 space-y-4">
+              <h2 className="text-xs font-bold tracking-widest text-[#fce8d5] uppercase drop-shadow-sm">The Architecture</h2>
+              <h3 className="text-4xl md:text-6xl font-bold text-white" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+                The Structure of Premium Hybrid
+              </h3>
+            </div>
+            
+            <div className="relative w-full max-w-5xl bg-white rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 flex items-center justify-center">
+              <Image src="/layer-img.webp" alt="Hybrid Flooring Layers Architecture" width={1200} height={800} className="w-full h-auto object-cover" priority />
+            </div>
+          </div>
+        </section>
+
+
+
+        {/* Benefits Section */}
+        <section className="py-20 px-8 md:px-12 lg:px-24 bg-white border-y border-[#8c5430]/10">
+          <div className="max-w-[1400px] mx-auto text-center">
+            <h3 className="text-3xl md:text-4xl font-bold text-[#251208] mb-6" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+              Hybrid flooring mimics the look and feel of real timber
+            </h3>
+            <p className="text-[#6b3e21] text-lg max-w-2xl mx-auto mb-16">
+              Hybrid flooring, which is a combination of laminate and vinyl flooring with a timber look printed on it, has many benefits.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center gap-6 group">
+                <div className="w-full max-w-[300px] aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden relative shadow-xl border border-[#8c5430]/10 group-hover:-translate-y-2 transition-all duration-500">
+                  <Image src="/kid-friendly.webp" alt="Kid Friendly Flooring" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                </div>
+                <h4 className="text-2xl font-bold text-[#251208] group-hover:text-[#8c5430] transition-colors duration-300">Kid Friendly</h4>
+              </div>
+              <div className="flex flex-col items-center gap-6 group">
+                <div className="w-full max-w-[300px] aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden relative shadow-xl border border-[#8c5430]/10 group-hover:-translate-y-2 transition-all duration-500">
+                  <Image src="/pet-friendly.webp" alt="Pet Friendly Flooring" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                </div>
+                <h4 className="text-2xl font-bold text-[#251208] group-hover:text-[#8c5430] transition-colors duration-300">Pet Friendly</h4>
+              </div>
+              <div className="flex flex-col items-center gap-6 group">
+                <div className="w-full max-w-[300px] aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden relative shadow-xl border border-[#8c5430]/10 group-hover:-translate-y-2 transition-all duration-500">
+                  <Image src="/waterproof.webp" alt="Waterproof Flooring" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                </div>
+                <h4 className="text-2xl font-bold text-[#251208] group-hover:text-[#8c5430] transition-colors duration-300">Waterproof (Oops!)</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Hybrid Flooring Details */}
+        <section className="py-24 px-8 md:px-12 lg:px-24 bg-[#faf6f3]">
+          <div className="max-w-[1400px] mx-auto">
+            <h3 className="text-4xl md:text-5xl font-bold text-[#251208] text-center mb-16" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+              Why Hybrid flooring?
+            </h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 auto-rows-fr">
+              {/* Row 1: 3 Items (Span 2 columns each on large screens) */}
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-2">
+                <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Water-Proof</h4>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Premium Hybrid flooring is 100% water proof and stands up to all spills and can be installed in wet areas such as bathrooms.</p>
+              </div>
+
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-2">
+                <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Low Maintenance</h4>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Our surface coating technology ensures no need for additional surface treatments following installation.</p>
+              </div>
+
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-2">
+                <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Environmentally Conscious</h4>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Being 100% physically, energetically and chemically recyclable or re-usable.</p>
+              </div>
+
+              {/* Row 2 & 3: 4 Items (Span 3 columns each on large screens) */}
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-3">
+                <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Acoustic Qualities</h4>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">Excellent noise reduction properties and does not require additional underlay. Industry leading, 6 Star rated.</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#251208] to-[#1a0d07] rounded-[2rem] p-8 md:p-10 shadow-md border border-[#8c5430]/20 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-3">
+                <h4 className="text-xl md:text-2xl font-bold text-white mb-4 uppercase tracking-wide group-hover:text-[#fce8d5] transition-colors duration-300 relative z-10">Durable</h4>
+                <p className="text-[#fce8d5]/80 leading-relaxed relative z-10 font-medium text-lg">Premium Hybrid boards are extremely hard wearing and have HIGH IMPACT RESISTANCE, unlike wood or stone, Premium Hybrid does not splinter, warp or crack. Quick and Easy to Install over most existing hard floors with the Uniclic 2G click system.</p>
+              </div>
+
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center lg:col-span-3">
+                <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Comfort</h4>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium text-lg">Softer and warmer under foot than natural wood or stone flooring. Additional cushioning in the backing helps make Premium Hybrid extremely comfortable even to sensitive feet.</p>
+              </div>
+
+              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-[#8c5430]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group relative overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-3">
+                <h4 className="text-xl md:text-2xl font-bold text-[#251208] mb-4 uppercase tracking-wide group-hover:text-[#8c5430] transition-colors duration-300 relative z-10">Pet Friendly</h4>
+                <p className="text-[#6b3e21] leading-relaxed relative z-10 font-medium">From muddy paws to &apos;accidents&apos; - Premium Hybrid repels anything your pet can throw at it, making life much easier to clean.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        {/* What to be aware of */}
+        <section className="py-24 px-8 md:px-12 lg:px-24 bg-[#fbf5f0]">
+          <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div className="flex-1 space-y-6">
+              <h3 className="text-4xl font-bold text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+                What you should be aware of when considering hybrid flooring?
+              </h3>
+              <p className="text-[#6b3e21] text-lg leading-relaxed font-medium">
+                Although Hybrid flooring is cheaper than Timber flooring, it is still expensive than Vinyl or Laminate flooring. UV sunlight fading or damage can occur and hence it is recommended to cover the windows so sunlight does not fall directly on to flooring. It is recommended to have protective pads fitted to all furniture and avoid dragging heavy furniture or equipment across flooring. Pets claws should be kept trimmed to avoid excessive scratching.
+              </p>
+            </div>
+            <div className="flex-1 w-full relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-[#8c5430]/10">
+              <Image src="/hybrid-care.webp" alt="Considerations for Hybrid Flooring" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      {/* Global Footer */}
+      <Footer />
+    </>
+  );
+}
