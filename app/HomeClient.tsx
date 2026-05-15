@@ -526,6 +526,47 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* Gallery Preview Carousel Section */}
+        <section className="w-full py-24 bg-white relative overflow-hidden flex flex-col items-center">
+          <div className="max-w-[1400px] w-full px-8 md:px-12 lg:px-24 mb-16 flex flex-col md:flex-row items-end justify-between gap-6 relative z-10">
+            <div>
+              <h2 className="text-xs font-bold tracking-widest text-[#8c5430] uppercase drop-shadow-sm mb-4">Our Work</h2>
+              <h3 className="text-4xl md:text-6xl font-bold text-[#251208] leading-tight" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+                Recent Installations
+              </h3>
+            </div>
+            <Link href="/gallery" className="text-[#8c5430] hover:text-[#6b3e21] font-bold uppercase tracking-widest text-sm flex items-center gap-2 border-b border-[#8c5430] pb-1 transition-all hover:gap-3">
+              View Gallery
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </Link>
+          </div>
+
+          <div className="w-full relative">
+            <div className="absolute left-0 top-0 bottom-0 w-16 md:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            
+            <div className="flex w-[200%] animate-infinite-scroll hover:[animation-play-state:paused]">
+              {/* First Set */}
+              <div className="flex items-center gap-6 px-3 shrink-0">
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                  <div key={`gal1-${num}`} className="relative w-[280px] md:w-[400px] aspect-[4/3] rounded-2xl overflow-hidden shrink-0 shadow-sm border border-[#8c5430]/10 cursor-pointer group">
+                    <Image src={`/Gallery/img-${num}.webp`} alt={`Installation ${num}`} fill sizes="(max-width: 768px) 280px, 400px" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                ))}
+              </div>
+              {/* Second Set */}
+              <div className="flex items-center gap-6 px-3 shrink-0">
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                  <div key={`gal2-${num}`} className="relative w-[280px] md:w-[400px] aspect-[4/3] rounded-2xl overflow-hidden shrink-0 shadow-sm border border-[#8c5430]/10 cursor-pointer group">
+                    <Image src={`/Gallery/img-${num}.webp`} alt={`Installation ${num}`} fill sizes="(max-width: 768px) 280px, 400px" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Google Reviews Section */}
         <section className="w-full py-24 bg-[#fdfaf6] relative overflow-hidden flex flex-col items-center">

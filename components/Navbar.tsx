@@ -44,6 +44,7 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
     { name: 'Services', href: '/services' },
     { name: 'Products', href: '/products' },
     { name: 'Premium Hybrid', href: '/fusion-hybrid' },
+    { name: 'Gallery', href: '/gallery' },
     { name: 'Blogs', href: '/blogs' },
     { name: 'Contact Us', href: '/contact' }
   ];

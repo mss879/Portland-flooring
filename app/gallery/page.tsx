@@ -1,0 +1,75 @@
+import type { Metadata } from "next";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Gallery | Portland Flooring",
+  description: "Explore our portfolio of premium hybrid flooring transformations.",
+};
+
+const images = [
+  "img-1.webp",
+  "img-2.webp",
+  "img-3.webp",
+  "img-4.webp",
+  "img-5.webp",
+  "img-6.webp",
+  "img-7.webp",
+  "img-8.webp",
+];
+
+export default function GalleryPage() {
+  return (
+    <>
+      <main className="flex flex-col min-h-screen w-full bg-[#fdfaf6]">
+        <Navbar isLoading={false} />
+        
+        {/* Hero Section */}
+        <section className="relative w-full p-0 md:p-[9px] z-20">
+          <div className="relative w-full rounded-none md:rounded-[24px] h-[400px] md:h-[500px] overflow-hidden shadow-2xl flex flex-col items-center justify-center">
+            
+            {/* Aesthetic Hero Background */}
+            <div className="absolute inset-0 bg-[#1a0d07]">
+              <div className="absolute inset-0 bg-[url('/wood-texture.webp')] opacity-20 mix-blend-overlay" />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/50 z-10" />
+
+            {/* Hero Title */}
+            <div className="relative z-20 text-center mt-12 px-4">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl text-white tracking-widest leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] uppercase" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
+                Our Gallery
+              </h1>
+              <p className="mt-4 text-sm md:text-lg text-white/90 font-bold tracking-[0.2em] uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+                Recent Premium Flooring Installations
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery Grid */}
+        <section className="w-full py-24 px-4 md:px-8 lg:px-12 relative">
+          <div className="max-w-[1600px] mx-auto columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+            {images.map((img, i) => (
+              <div key={i} className="break-inside-avoid relative group overflow-hidden rounded-2xl shadow-md cursor-pointer border border-[#8c5430]/10">
+                <div className="relative w-full aspect-auto h-auto bg-white">
+                  <Image
+                    src={`/Gallery/${img}`}
+                    alt={`Gallery Image ${i + 1}`}
+                    width={800}
+                    height={600}
+                    className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-white font-bold tracking-widest uppercase text-sm border border-white/50 px-6 py-3 rounded-full backdrop-blur-sm shadow-lg">View Details</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
