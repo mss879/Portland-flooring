@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
@@ -96,7 +96,7 @@ export default function QuotePage() {
             </div>
 
             <div className="relative z-10 flex-1 flex flex-col">
-              <span className="text-[#b56b3a] text-sm font-bold tracking-[0.3em] uppercase mb-4 block">// Estimate</span>
+              <span className="text-[#b56b3a] text-sm font-bold tracking-[0.3em] uppercase mb-4 block">{/* // */} Estimate</span>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 uppercase tracking-wider" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
                 Request A <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8c5430] to-[#b56b3a]">Quote</span>
               </h1>
@@ -220,7 +220,7 @@ export default function QuotePage() {
                       transition={{ duration: 0.3 }}
                       className="w-full flex flex-col flex-1"
                     >
-                      <h2 className="text-3xl md:text-4xl font-bold text-[#251208] mb-2" style={{ fontFamily: "'Tomorrow', sans-serif" }}>Let's get started</h2>
+                      <h2 className="text-3xl md:text-4xl font-bold text-[#251208] mb-2" style={{ fontFamily: "'Tomorrow', sans-serif" }}>Let&apos;s get started</h2>
                       <p className="text-[#6b3e21] mb-8">Who are we preparing this estimate for?</p>
                       
                       <div className="flex flex-col gap-5 mt-auto mb-auto">
@@ -289,7 +289,7 @@ export default function QuotePage() {
                       className="w-full flex flex-col flex-1"
                     >
                       <h2 className="text-3xl md:text-4xl font-bold text-[#251208] mb-2" style={{ fontFamily: "'Tomorrow', sans-serif" }}>What service do you require?</h2>
-                      <p className="text-[#6b3e21] mb-8">Choose the primary service you're looking for.</p>
+                      <p className="text-[#6b3e21] mb-8">Choose the primary service you&apos;re looking for.</p>
                       
                       <div className="flex flex-col gap-3 mt-auto mb-auto">
                         {['New Installation', 'Restoration / Refinishing', 'Repairs', 'Waterproofing & Coating', 'Other'].map((service) => (

@@ -7,6 +7,9 @@ import { createServerSupabaseClient } from "@/lib/supabase-server";
 export const metadata: Metadata = {
   title: "Gallery | Portland Flooring",
   description: "Explore our portfolio of premium hybrid flooring transformations.",
+  alternates: {
+    canonical: "https://portlands.com.au/gallery",
+  },
 };
 
 // Static fallback images in case Supabase hasn't been seeded yet

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -61,7 +61,7 @@ export default function Products() {
                   { name: "European Oak", img: "european_oak.webp" },
                   { name: "Spotted Gum", img: "spotted_gum.webp" },
                   { name: "Pewter Grey", img: "pewter_grey.webp" },
-                ].map((item, index) => (
+                ].map((item) => (
                   <div key={item.name} className="group relative flex-1 hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer shadow-lg border border-[#8c5430]/10">
                     <Image src={`/${item.img}`} alt={item.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
@@ -79,7 +79,7 @@ export default function Products() {
                   { name: "Mistral Oak", img: "mistral_oak.webp" },
                   { name: "Blackbutt", img: "blackbutt_new.webp" },
                   { name: "Pale Oak", img: "pale_oak_new.webp" },
-                ].map((item, index) => (
+                ].map((item) => (
                   <div key={item.name} className="group relative flex-1 hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer shadow-lg border border-[#8c5430]/10">
                     <Image src={`/${item.img}`} alt={item.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
