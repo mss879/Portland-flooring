@@ -194,12 +194,12 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/20 z-10" />
 
             {/* Hero Text */}
-            <div className={`absolute bottom-32 md:bottom-52 w-full md:w-auto left-0 md:left-12 px-6 md:px-0 z-20 flex flex-col items-center md:items-start text-center md:text-left ${!isLoading ? 'animate-slide-in-left' : 'opacity-0'}`}>
+            <div className={`absolute bottom-44 md:bottom-52 w-full md:w-auto left-0 md:left-12 px-6 md:px-0 z-20 flex flex-col items-center md:items-start text-center md:text-left ${!isLoading ? 'animate-slide-in-left' : 'opacity-0'}`}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl text-white tracking-wider leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
                 The Art of Hybrid <br /> Flooring
               </h1>
               <div className="mt-6 md:mt-8 flex flex-row items-center justify-center md:justify-start gap-2 md:gap-4">
-                <p className="text-xs sm:text-sm md:text-2xl text-white font-medium tracking-widest drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] uppercase whitespace-nowrap" style={{ wordSpacing: '0.2em' }}>
+                <p className="text-sm sm:text-base md:text-2xl text-white font-medium tracking-widest drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] uppercase whitespace-nowrap" style={{ wordSpacing: '0.2em' }}>
                   Elegant. Durable. Sustainable.
                 </p>
               </div>
