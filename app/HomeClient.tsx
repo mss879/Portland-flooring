@@ -484,7 +484,7 @@ export default function Home() {
                   { name: "Pewter Grey", img: "pewter_grey.webp", desc: "Cool weathered greyish-brown oak with subtle grain, bringing a modern, sophisticated touch to any room." },
                 ].map((item, index) => (
                   <div key={item.name} className="group relative flex-1 min-h-[180px] hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer">
-                    <Image src={`/${item.img}`} alt={item.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                    <Image src={`/${item.img}`} alt={item.name} fill sizes="(max-width: 768px) 100vw, 33vw" unoptimized className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
 
                     <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-0 lg:translate-y-8 lg:group-hover:translate-y-0 transition-transform duration-500">
@@ -509,7 +509,7 @@ export default function Home() {
                   { name: "Pale Oak", img: "pale_oak_new.webp", desc: "Very light whitish-beige wood with delicate grain, perfect for minimalist and Scandinavian-inspired interiors." },
                 ].map((item, index) => (
                   <div key={item.name} className="group relative flex-1 min-h-[180px] hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-2xl lg:rounded-3xl cursor-pointer">
-                    <Image src={`/${item.img}`} alt={item.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                    <Image src={`/${item.img}`} alt={item.name} fill sizes="(max-width: 768px) 100vw, 33vw" unoptimized className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
 
                     <div className="absolute bottom-0 left-0 p-4 lg:p-8 w-full transform translate-y-0 lg:translate-y-8 lg:group-hover:translate-y-0 transition-transform duration-500">
