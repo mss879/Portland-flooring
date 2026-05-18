@@ -81,8 +81,8 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
 
         {/* Logo */}
         <div className={`pointer-events-auto transition-all duration-500 ease-in-out ${isScrolled
-            ? 'relative w-[52px] h-[52px] md:w-16 md:h-16 opacity-100'
-            : `relative w-14 h-14 md:w-24 md:h-24 ${!isLoading ? 'opacity-100' : 'opacity-0'}`
+            ? 'relative w-[60px] h-[60px] md:w-16 md:h-16 opacity-100'
+            : `relative w-[76px] h-[76px] md:w-24 md:h-24 ${!isLoading ? 'opacity-100' : 'opacity-0'}`
           }`}>
           <Link href="/" className="block w-full h-full overflow-hidden rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-transform hover:scale-105 duration-300">
             <Image src="/portland-logo.webp" alt="Portland Flooring Logo" fill className="object-cover" priority />
@@ -110,12 +110,12 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
           </div>
 
           {/* Nav Links */}
-          <div className="relative z-10 flex items-center gap-7">
+          <div className="relative z-10 flex items-center gap-3 xl:gap-7">
             {navLinks.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`${pathname === item.href ? 'text-[#8c5430] border-b-2 border-[#8c5430]' : 'text-[#4a2810]'} font-bold tracking-wide hover:text-[#8c5430] transition-colors drop-shadow-sm text-[15px] uppercase`}
+                className={`${pathname === item.href ? 'text-[#8c5430] border-b-2 border-[#8c5430]' : 'text-[#4a2810]'} font-bold tracking-wide hover:text-[#8c5430] transition-colors drop-shadow-sm text-[12px] xl:text-[15px] uppercase whitespace-nowrap`}
               >
                 {item.name}
               </Link>
@@ -123,9 +123,9 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
 
             {/* Get a Quote Button */}
             <Link href="/quote"
-              className={`relative ml-4 rounded-md font-bold uppercase tracking-wider text-[15px] transition-all hover:-translate-y-0.5 active:translate-y-0.5 inline-block overflow-hidden ${isScrolled
-                  ? 'px-5 py-2.5 bg-[#8c5430] text-white shadow-sm hover:bg-[#6b3e21]'
-                  : 'px-6 py-2.5 text-white shadow-[0_4px_10px_rgba(140,84,48,0.3)] hover:shadow-[0_6px_15px_rgba(140,84,48,0.4)] border border-[#8c5430]/30'
+              className={`relative ml-2 xl:ml-4 rounded-md font-bold uppercase tracking-wider text-[12px] xl:text-[15px] whitespace-nowrap transition-all hover:-translate-y-0.5 active:translate-y-0.5 inline-block overflow-hidden ${isScrolled
+                  ? 'px-3 xl:px-5 py-2 xl:py-2.5 bg-[#8c5430] text-white shadow-sm hover:bg-[#6b3e21]'
+                  : 'px-4 xl:px-6 py-2 xl:py-2.5 text-white shadow-[0_4px_10px_rgba(140,84,48,0.3)] hover:shadow-[0_6px_15px_rgba(140,84,48,0.4)] border border-[#8c5430]/30'
                 }`}
             >
               <div className={`absolute inset-0 z-[-2] transition-opacity duration-500 ${isScrolled ? 'opacity-0' : 'opacity-100'}`}
@@ -139,7 +139,7 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
         {/* ─── MOBILE HAMBURGER ─── */}
         <button
           onClick={toggleMobile}
-          className={`pointer-events-auto lg:hidden relative z-[1001] w-11 h-11 rounded-xl flex flex-col items-center justify-center gap-[5px] transition-all duration-300 ${mobileOpen
+          className={`pointer-events-auto lg:hidden relative z-[1001] w-14 h-14 rounded-xl flex flex-col items-center justify-center gap-[6px] transition-all duration-300 ${mobileOpen
               ? 'bg-transparent'
               : isScrolled
                 ? 'bg-[#251208] shadow-md'
@@ -147,11 +147,11 @@ export default function Navbar({ isLoading }: { isLoading: boolean }) {
             } ${!isLoading ? 'opacity-100' : 'opacity-0'}`}
           aria-label="Toggle navigation menu"
         >
-          <span className={`block w-5 h-[2px] rounded-full transition-all duration-300 ${mobileOpen ? 'bg-white rotate-45 translate-y-[7px]' : 'bg-white'
+          <span className={`block w-6 h-[2.5px] rounded-full transition-all duration-300 ${mobileOpen ? 'bg-white rotate-45 translate-y-[8.5px]' : 'bg-white'
             }`} />
-          <span className={`block w-5 h-[2px] rounded-full bg-white transition-all duration-300 ${mobileOpen ? 'opacity-0 scale-0' : 'opacity-100'
+          <span className={`block w-6 h-[2.5px] rounded-full bg-white transition-all duration-300 ${mobileOpen ? 'opacity-0 scale-0' : 'opacity-100'
             }`} />
-          <span className={`block w-5 h-[2px] rounded-full transition-all duration-300 ${mobileOpen ? 'bg-white -rotate-45 -translate-y-[7px]' : 'bg-white'
+          <span className={`block w-6 h-[2.5px] rounded-full transition-all duration-300 ${mobileOpen ? 'bg-white -rotate-45 -translate-y-[8.5px]' : 'bg-white'
             }`} />
         </button>
       </header>
