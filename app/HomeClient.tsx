@@ -126,7 +126,12 @@ export default function Home() {
           100% { transform: translateX(-50%); }
         }
         .animate-infinite-scroll {
-          animation: infinite-scroll 35s linear infinite;
+          animation: infinite-scroll 20s linear infinite;
+        }
+        @media (min-width: 768px) {
+          .animate-infinite-scroll {
+            animation: infinite-scroll 35s linear infinite;
+          }
         }
         .animate-infinite-scroll-text {
           animation: infinite-scroll 100s linear infinite;
