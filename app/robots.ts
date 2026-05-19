@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/admin/", "/api/"],
       },
     ],
-    sitemap: "https://portlands.com.au/sitemap.xml",
+    sitemap: "https://www.portlands.com.au/sitemap.xml",
   };
 }

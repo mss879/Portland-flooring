@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Gallery | Portland Flooring",
   description: "Explore our portfolio of premium hybrid flooring transformations.",
   alternates: {
-    canonical: "https://portlands.com.au/gallery",
+    canonical: "https://www.portlands.com.au/gallery",
   },
 };
 

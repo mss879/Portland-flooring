@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portlands.com.au"),
+  metadataBase: new URL("https://www.portlands.com.au"),
   title: {
     default: "Portland Flooring | Premium Hybrid Flooring in Pakenham VIC",
     template: "%s | Portland Flooring",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_AU",
-    url: "https://portlands.com.au",
+    url: "https://www.portlands.com.au",
     siteName: "Portland Flooring",
     title: "Portland Flooring | Premium Hybrid Flooring",
     description:

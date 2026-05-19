@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Browse Portland Flooring's curated collections of timber and engineered flooring. European Oak, Spotted Gum, Blackbutt — all Australian-stocked and ready for your space.",
   alternates: {
-    canonical: "https://portlands.com.au/products",
+    canonical: "https://www.portlands.com.au/products",
   },
 };
 
@@ -15,7 +15,7 @@ export default function ProductsPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Portland Flooring Collections",
-    url: "https://portlands.com.au/products",
+    url: "https://www.portlands.com.au/products",
     description:
       "Curated collections of premium hybrid and timber flooring available in Australia.",
     mainEntity: {

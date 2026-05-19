@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getSortedPostsData } from "@/lib/blogs";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://portlands.com.au";
+  const baseUrl = "https://www.portlands.com.au";
 
   // Static pages with priority and change frequency
   const staticPages: MetadataRoute.Sitemap = [

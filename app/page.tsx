@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Premium hybrid flooring solutions — elegant, durable, sustainable. Expert installation, restoration & design consultation serving Pakenham, Melbourne & all of Victoria. Proudly Australian owned.",
   alternates: {
-    canonical: "https://portlands.com.au",
+    canonical: "https://www.portlands.com.au",
   },
 };
 
@@ -14,9 +14,9 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "FlooringStore",
     name: "Portland Flooring",
-    url: "https://portlands.com.au",
-    logo: "https://portlands.com.au/portland-logo.webp",
-    image: "https://portlands.com.au/hero-img.webp",
+    url: "https://www.portlands.com.au",
+    logo: "https://www.portlands.com.au/portland-logo.webp",
+    image: "https://www.portlands.com.au/hero-img.webp",
     description:
       "Premium hybrid flooring solutions — elegant, durable, sustainable. Expert installation, restoration & design consultation serving Pakenham, Melbourne & all of Victoria.",
     telephone: "+61420608608",

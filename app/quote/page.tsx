@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Request a free, no-obligation flooring quote from Portland Flooring. Tell us about your project and our specialists will provide a tailored proposal within 24 hours. Serving Pakenham, Melbourne & Victoria.",
   alternates: {
-    canonical: "https://portlands.com.au/quote",
+    canonical: "https://www.portlands.com.au/quote",
   },
 };
 
@@ -15,7 +15,7 @@ export default function QuotePage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Get a Free Flooring Quote",
-    url: "https://portlands.com.au/quote",
+    url: "https://www.portlands.com.au/quote",
     description:
       "Request a free, no-obligation flooring quote from Portland Flooring. Tailored proposals within 24 hours.",
     provider: {
@@ -34,7 +34,7 @@ export default function QuotePage() {
     },
     potentialAction: {
       "@type": "QuoteAction",
-      target: "https://portlands.com.au/quote",
+      target: "https://www.portlands.com.au/quote",
       name: "Request a Free Quote",
     },
   };

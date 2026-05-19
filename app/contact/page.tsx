@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Get in touch with Portland Flooring. Visit our showroom at 2B Venture Way, Pakenham VIC 3810. Call +61 420 608 608 or email sales@portlands.com.au for a free consultation.",
   alternates: {
-    canonical: "https://portlands.com.au/contact",
+    canonical: "https://www.portlands.com.au/contact",
   },
 };
 
@@ -15,13 +15,13 @@ export default function ContactPage() {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     name: "Contact Portland Flooring",
-    url: "https://portlands.com.au/contact",
+    url: "https://www.portlands.com.au/contact",
     mainEntity: {
       "@type": "LocalBusiness",
       name: "Portland Flooring",
       telephone: "+61420608608",
       email: "sales@portlands.com.au",
-      url: "https://portlands.com.au",
+      url: "https://www.portlands.com.au",
       address: {
         "@type": "PostalAddress",
         streetAddress: "2B Venture Way",

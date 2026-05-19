@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: `Read about ${post.seo_keyword} on the Portland Flooring design blog.`,
     keywords: post.seo_keyword,
     alternates: {
-      canonical: `https://portlands.com.au/blogs/${resolvedParams.slug}`,
+      canonical: `https://www.portlands.com.au/blogs/${resolvedParams.slug}`,
     },
   };
 }
@@ -43,24 +43,24 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     "@type": "Article",
     headline: post.title,
     description: `Read about ${post.seo_keyword} on the Portland Flooring design blog.`,
-    image: post.image ? `https://portlands.com.au${post.image}` : undefined,
+    image: post.image ? `https://www.portlands.com.au${post.image}` : undefined,
     datePublished: post.date,
     author: {
       "@type": "Organization",
       name: "Portland Flooring",
-      url: "https://portlands.com.au",
+      url: "https://www.portlands.com.au",
     },
     publisher: {
       "@type": "Organization",
       name: "Portland Flooring",
       logo: {
         "@type": "ImageObject",
-        url: "https://portlands.com.au/portland-logo.webp",
+        url: "https://www.portlands.com.au/portland-logo.webp",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://portlands.com.au/blogs/${resolvedParams.slug}`,
+      "@id": `https://www.portlands.com.au/blogs/${resolvedParams.slug}`,
     },
   };
 

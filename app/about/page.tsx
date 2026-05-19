@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Learn about Portland Flooring's commitment to premium craftsmanship and sustainable materials. Family-owned and Australian-operated, delivering quality flooring solutions across Pakenham, Melbourne & Victoria.",
   alternates: {
-    canonical: "https://portlands.com.au/about",
+    canonical: "https://www.portlands.com.au/about",
   },
 };
 
@@ -15,14 +15,14 @@ export default function AboutPage() {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     name: "About Portland Flooring",
-    url: "https://portlands.com.au/about",
+    url: "https://www.portlands.com.au/about",
     description:
       "Learn about Portland Flooring's commitment to premium craftsmanship, expert flooring installation, and sustainable materials.",
     mainEntity: {
       "@type": "Organization",
       name: "Portland Flooring",
-      url: "https://portlands.com.au",
-      logo: "https://portlands.com.au/portland-logo.webp",
+      url: "https://www.portlands.com.au",
+      logo: "https://www.portlands.com.au/portland-logo.webp",
       foundingLocation: {
         "@type": "Place",
         name: "Pakenham, Victoria, Australia",

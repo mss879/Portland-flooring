@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Blog & Design Insights',
   description: 'Explore our latest articles, design trends, and expert tips on premium hybrid flooring for Australian homes.',
   alternates: {
-    canonical: 'https://portlands.com.au/blogs',
+    canonical: 'https://www.portlands.com.au/blogs',
   },
 };
 
@@ -21,14 +21,14 @@ export default async function BlogsPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Portland Flooring Blog & Design Insights",
-    url: "https://portlands.com.au/blogs",
+    url: "https://www.portlands.com.au/blogs",
     description: "Explore our latest articles, design trends, and expert tips on premium hybrid flooring for Australian homes.",
     publisher: {
       "@type": "Organization",
       name: "Portland Flooring",
       logo: {
         "@type": "ImageObject",
-        url: "https://portlands.com.au/portland-logo.webp",
+        url: "https://www.portlands.com.au/portland-logo.webp",
       },
     },
     mainEntity: {
@@ -36,7 +36,7 @@ export default async function BlogsPage() {
       itemListElement: allPostsData.map((post, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `https://portlands.com.au/blogs/${post.slug}`,
+        url: `https://www.portlands.com.au/blogs/${post.slug}`,
       })),
     },
   };

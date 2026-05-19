@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Discover Portland's Premium Hybrid range — 100% waterproof SPC core, scratch-resistant, pet & kid-friendly. Built to last with authentic timber aesthetics. View colours, specs & installation info.",
   alternates: {
-    canonical: "https://portlands.com.au/fusion-hybrid",
+    canonical: "https://www.portlands.com.au/fusion-hybrid",
   },
 };
 
@@ -15,8 +15,8 @@ export default function FusionHybridPage() {
     "@context": "https://schema.org",
     "@type": "Product",
     name: "Portland Premium Hybrid Flooring",
-    url: "https://portlands.com.au/fusion-hybrid",
-    image: "https://portlands.com.au/fusion-hero.webp",
+    url: "https://www.portlands.com.au/fusion-hybrid",
+    image: "https://www.portlands.com.au/fusion-hero.webp",
     description:
       "Premium hybrid flooring with SPC stone-polymer composite core — 100% waterproof, scratch-resistant, pet & kid-friendly with authentic timber aesthetics.",
     brand: {

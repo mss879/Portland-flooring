@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Explore Portland Flooring's full range of services including hybrid flooring installation, floor restoration, vinyl, timber, laminate, epoxy flooring, polishing, and custom solutions across Melbourne & Victoria.",
   alternates: {
-    canonical: "https://portlands.com.au/services",
+    canonical: "https://www.portlands.com.au/services",
   },
 };
 
@@ -17,7 +17,7 @@ export default function ServicesPage() {
     provider: {
       "@type": "LocalBusiness",
       name: "Portland Flooring",
-      url: "https://portlands.com.au",
+      url: "https://www.portlands.com.au",
       telephone: "+61420608608",
       address: {
         "@type": "PostalAddress",
