@@ -21,10 +21,10 @@ export default function ServicesPage() {
       telephone: "+61420608608",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "2B Venture Way",
-        addressLocality: "Pakenham",
+        streetAddress: "112 Boundary Rd",
+        addressLocality: "Braeside",
         addressRegion: "VIC",
-        postalCode: "3810",
+        postalCode: "3195",
         addressCountry: "AU",
       },
     },

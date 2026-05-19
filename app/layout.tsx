@@ -4,16 +4,16 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.portlands.com.au"),
   title: {
-    default: "Portland Flooring | Premium Hybrid Flooring in Pakenham VIC",
+    default: "Portland Flooring | Premium Hybrid Flooring in Braeside VIC",
     template: "%s | Portland Flooring",
   },
   description:
-    "Premium hybrid flooring solutions — elegant, durable, sustainable. Expert installation, restoration & design consultation serving Pakenham, Melbourne & all of Victoria.",
+    "Premium hybrid flooring solutions — elegant, durable, sustainable. Expert installation, restoration & design consultation serving Braeside, Melbourne & all of Victoria.",
   keywords: [
     "hybrid flooring",
     "premium flooring",
     "flooring installation",
-    "Pakenham flooring",
+    "Braeside flooring",
     "Melbourne flooring",
     "Victoria flooring",
     "SPC flooring",
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     siteName: "Portland Flooring",
     title: "Portland Flooring | Premium Hybrid Flooring",
     description:
-      "Premium hybrid flooring solutions — elegant, durable, sustainable. Serving Pakenham, Melbourne & all of Victoria.",
+      "Premium hybrid flooring solutions — elegant, durable, sustainable. Serving Braeside, Melbourne & all of Victoria.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Portland Flooring | Premium Hybrid Flooring",
     description:
-      "Premium hybrid flooring solutions — elegant, durable, sustainable. Serving Pakenham, Melbourne & Victoria.",
+      "Premium hybrid flooring solutions — elegant, durable, sustainable. Serving Braeside, Melbourne & Victoria.",
   },
 };
 

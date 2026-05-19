@@ -67,8 +67,8 @@ export default function Footer() {
               <li className="flex flex-col gap-2">
                 <span className="text-[#8c5430] text-xs font-bold uppercase tracking-widest">Showroom</span>
                 <span className="text-[#6b3e21] text-base font-bold leading-relaxed">
-                  2B Venture Way, Pakenham<br />
-                  VIC, Australia, Victoria
+                  112 Boundary Rd, Braeside<br />
+                  VIC 3195, Australia
                 </span>
               </li>
               <li className="flex flex-col gap-2">

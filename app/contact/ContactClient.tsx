@@ -140,7 +140,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-[#251208] mb-2 tracking-wide uppercase text-sm">Showroom</h4>
-                <p className="text-[#6b3e21] leading-relaxed font-medium">2B Venture Way, Pakenham<br />VIC, Australia, Victoria</p>
+                <p className="text-[#6b3e21] leading-relaxed font-medium">112 Boundary Rd, Braeside<br />VIC 3195, Australia</p>
               </div>
             </div>
 
@@ -247,14 +247,14 @@ export default function Contact() {
             {/* Interactive Map Embed (Clean, un-filtered for light theme) */}
             <div className="w-full h-full rounded-[1.5rem] overflow-hidden relative">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142.127433246288!2d145.4674721!3d-38.0441611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad61a5b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2s2B%20Venture%20Way%2C%20Pakenham%20VIC%203810%2C%20Australia!5e0!3m2!1sen!2sus!4v1690000000000!5m2!1sen!2sus" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.5!2d145.0635!3d-37.9635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s112%20Boundary%20Rd%2C%20Braeside%20VIC%203195%2C%20Australia!5e0!3m2!1sen!2sau!4v1690000000000!5m2!1sen!2sau" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
                 allowFullScreen={false} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Portland Flooring showroom location at 2B Venture Way, Pakenham VIC 3810"
+                title="Portland Flooring showroom location at 112 Boundary Rd, Braeside VIC 3195"
                 className="absolute inset-0"
               />
               
@@ -266,8 +266,8 @@ export default function Contact() {
                   </svg>
                   Portland Flooring
                 </h4>
-                <p className="text-[#6b3e21] font-medium text-sm mb-4 leading-relaxed">2B Venture Way<br/>Pakenham, VIC, Australia, Victoria</p>
-                <a href="https://maps.google.com/?q=2B+Venture+Way,+Pakenham,+VIC,+Australia" target="_blank" rel="noopener noreferrer" title="Get directions to Portland Flooring showroom in Pakenham" className="inline-block px-5 py-2.5 bg-[#8c5430] hover:bg-[#6b3e21] transition-colors text-white text-xs font-bold uppercase tracking-widest rounded-lg shadow-md">
+                <p className="text-[#6b3e21] font-medium text-sm mb-4 leading-relaxed">112 Boundary Rd<br/>Braeside, VIC 3195, Australia</p>
+                <a href="https://maps.google.com/?q=112+Boundary+Rd,+Braeside,+VIC+3195,+Australia" target="_blank" rel="noopener noreferrer" title="Get directions to Portland Flooring showroom in Braeside" className="inline-block px-5 py-2.5 bg-[#8c5430] hover:bg-[#6b3e21] transition-colors text-white text-xs font-bold uppercase tracking-widest rounded-lg shadow-md">
                   Get Directions
                 </a>
               </div>

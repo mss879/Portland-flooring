@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Visit Our Pakenham Showroom",
+  title: "Contact Us — Visit Our Braeside Showroom",
   description:
-    "Get in touch with Portland Flooring. Visit our showroom at 2B Venture Way, Pakenham VIC 3810. Call +61 420 608 608 or email sales@portlands.com.au for a free consultation.",
+    "Get in touch with Portland Flooring. Visit our showroom at 112 Boundary Rd, Braeside VIC 3195. Call +61 420 608 608 or email sales@portlands.com.au for a free consultation.",
   alternates: {
     canonical: "https://www.portlands.com.au/contact",
   },
@@ -24,16 +24,16 @@ export default function ContactPage() {
       url: "https://www.portlands.com.au",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "2B Venture Way",
-        addressLocality: "Pakenham",
+        streetAddress: "112 Boundary Rd",
+        addressLocality: "Braeside",
         addressRegion: "VIC",
-        postalCode: "3810",
+        postalCode: "3195",
         addressCountry: "AU",
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: -38.0442,
-        longitude: 145.4675,
+        latitude: -37.9635,
+        longitude: 145.0635,
       },
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",

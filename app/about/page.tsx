@@ -4,7 +4,7 @@ import AboutClient from "./AboutClient";
 export const metadata: Metadata = {
   title: "About Us — Australian-Owned Flooring Specialists",
   description:
-    "Learn about Portland Flooring's commitment to premium craftsmanship and sustainable materials. Family-owned and Australian-operated, delivering quality flooring solutions across Pakenham, Melbourne & Victoria.",
+    "Learn about Portland Flooring's commitment to premium craftsmanship and sustainable materials. Family-owned and Australian-operated, delivering quality flooring solutions across Braeside, Melbourne & Victoria.",
   alternates: {
     canonical: "https://www.portlands.com.au/about",
   },
@@ -25,7 +25,7 @@ export default function AboutPage() {
       logo: "https://www.portlands.com.au/portland-logo.webp",
       foundingLocation: {
         "@type": "Place",
-        name: "Pakenham, Victoria, Australia",
+        name: "Braeside, Victoria, Australia",
       },
       areaServed: {
         "@type": "State",

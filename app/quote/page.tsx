@@ -4,7 +4,7 @@ import QuoteClient from "./QuoteClient";
 export const metadata: Metadata = {
   title: "Get a Free Quote — Custom Flooring Estimate",
   description:
-    "Request a free, no-obligation flooring quote from Portland Flooring. Tell us about your project and our specialists will provide a tailored proposal within 24 hours. Serving Pakenham, Melbourne & Victoria.",
+    "Request a free, no-obligation flooring quote from Portland Flooring. Tell us about your project and our specialists will provide a tailored proposal within 24 hours. Serving Braeside, Melbourne & Victoria.",
   alternates: {
     canonical: "https://www.portlands.com.au/quote",
   },
@@ -25,10 +25,10 @@ export default function QuotePage() {
       email: "sales@portlands.com.au",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "2B Venture Way",
-        addressLocality: "Pakenham",
+        streetAddress: "112 Boundary Rd",
+        addressLocality: "Braeside",
         addressRegion: "VIC",
-        postalCode: "3810",
+        postalCode: "3195",
         addressCountry: "AU",
       },
     },
