@@ -137,15 +137,52 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Copyright */}
-        <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-[#8c5430]/20 gap-4">
-           <p className="text-[#251208] text-sm font-bold uppercase tracking-widest">
-             &copy; {new Date().getFullYear()} Portland Flooring. All rights reserved.
-           </p>
-           <div className="flex gap-6">
-             <a href="#" className="text-[#251208] hover:text-[#8c5430] text-sm font-bold uppercase tracking-widest transition-colors">Privacy Policy</a>
-             <a href="#" className="text-[#251208] hover:text-[#8c5430] text-sm font-bold uppercase tracking-widest transition-colors">Terms of Service</a>
-           </div>
+        {/* Bottom Copyright & Credits */}
+        <div className="flex flex-col gap-6 pt-8 border-t border-[#8c5430]/20">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+             <p className="text-[#251208] text-sm font-bold uppercase tracking-widest text-center md:text-left">
+               &copy; {new Date().getFullYear()} Portland Flooring. All rights reserved.
+             </p>
+             <div className="flex gap-6">
+               <a href="#" className="text-[#251208] hover:text-[#8c5430] text-sm font-bold uppercase tracking-widest transition-colors">Privacy Policy</a>
+               <a href="#" className="text-[#251208] hover:text-[#8c5430] text-sm font-bold uppercase tracking-widest transition-colors">Terms of Service</a>
+             </div>
+          </div>
+          
+          {/* Agency Credits */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 text-[#6b3e21] text-xs font-bold uppercase tracking-widest mt-2 md:mt-0">
+            <span className="opacity-70">Designed & Built By</span>
+            <div className="flex items-center gap-4">
+              {/* ARC AI - Primary Creator (Visually hidden for layout, kept for SEO) */}
+              <a 
+                href="https://www.arcai.agency" 
+                target="_blank" 
+                rel="author creator designer external noopener noreferrer"
+                className="sr-only"
+                title="ARC AI - Lead Creator & Engineer"
+                itemProp="author"
+                itemScope
+                itemType="https://schema.org/Organization"
+              >
+                <span itemProp="name">ARC AI</span>
+              </a>
+              
+              {/* Core Craft */}
+              <a 
+                href="https://www.corecraft.agency" 
+                target="_blank" 
+                rel="designer external noopener noreferrer"
+                className="flex items-center gap-2 hover:opacity-70 transition-opacity"
+                title="Core Craft - Digital Agency"
+                itemProp="contributor"
+                itemScope
+                itemType="https://schema.org/Organization"
+              >
+                <Image src="/corecraft-logo.png" alt="Core Craft" width={80} height={24} className="object-contain h-5 md:h-6 w-auto" />
+                <span className="sr-only" itemProp="name">Core Craft</span>
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>
