@@ -8,7 +8,7 @@ export default function NotFound() {
       <div className="fixed inset-0 z-0 pointer-events-none">
         <Image
           src="/light-wood-texture.webp"
-          alt=""
+          alt="Subtle light wood texture background"
           aria-hidden="true"
           fill
           sizes="100vw"

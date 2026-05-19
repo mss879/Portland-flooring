@@ -192,6 +192,7 @@ export default function Home() {
               muted
               playsInline
               suppressHydrationWarning
+              aria-label="Portland Flooring premium hybrid flooring showcase video"
               className="absolute inset-0 w-full h-full object-cover"
             />
 
@@ -393,6 +394,7 @@ export default function Home() {
                   loop
                   muted
                   playsInline
+                  aria-label="Portland Flooring expert craftsmanship and flooring installation process"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
@@ -557,19 +559,43 @@ export default function Home() {
             <div className="flex w-[200%] animate-infinite-scroll hover:[animation-play-state:paused]">
               {/* First Set */}
               <div className="flex items-center gap-6 px-3 shrink-0">
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => {
+                  const galleryAlts = [
+                    "Premium hybrid flooring installation in a modern living room",
+                    "European Oak flooring transformation in an open-plan kitchen",
+                    "Spotted Gum hybrid flooring installation in a Melbourne home",
+                    "Seamless hybrid flooring across a contemporary dining area",
+                    "Blackbutt flooring installation in a Pakenham residential project",
+                    "Pale Oak hybrid flooring in a minimalist bedroom design",
+                    "Pewter Grey flooring installation for a commercial office space",
+                    "Mistral Oak hybrid flooring in a modern Australian home"
+                  ];
+                  return (
                   <div key={`gal1-${num}`} className="relative w-[280px] md:w-[400px] aspect-[4/3] rounded-2xl overflow-hidden shrink-0 shadow-sm border border-[#8c5430]/10 cursor-pointer group">
-                    <Image src={`/Gallery/img-${num}.webp`} alt={`Installation ${num}`} fill sizes="(max-width: 768px) 280px, 400px" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <Image src={`/Gallery/img-${num}.webp`} alt={galleryAlts[num - 1]} fill sizes="(max-width: 768px) 280px, 400px" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   </div>
-                ))}
+                  );
+                })}
               </div>
               {/* Second Set */}
               <div className="flex items-center gap-6 px-3 shrink-0">
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => {
+                  const galleryAlts = [
+                    "Premium hybrid flooring installation in a modern living room",
+                    "European Oak flooring transformation in an open-plan kitchen",
+                    "Spotted Gum hybrid flooring installation in a Melbourne home",
+                    "Seamless hybrid flooring across a contemporary dining area",
+                    "Blackbutt flooring installation in a Pakenham residential project",
+                    "Pale Oak hybrid flooring in a minimalist bedroom design",
+                    "Pewter Grey flooring installation for a commercial office space",
+                    "Mistral Oak hybrid flooring in a modern Australian home"
+                  ];
+                  return (
                   <div key={`gal2-${num}`} className="relative w-[280px] md:w-[400px] aspect-[4/3] rounded-2xl overflow-hidden shrink-0 shadow-sm border border-[#8c5430]/10 cursor-pointer group">
-                    <Image src={`/Gallery/img-${num}.webp`} alt={`Installation ${num}`} fill sizes="(max-width: 768px) 280px, 400px" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <Image src={`/Gallery/img-${num}.webp`} alt={galleryAlts[num - 1]} fill sizes="(max-width: 768px) 280px, 400px" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>

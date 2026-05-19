@@ -109,12 +109,23 @@ export default async function GalleryPage() {
               })
             ) : (
               // Fallback: render static images if DB is empty
-              staticImages.map((img, i) => (
+              staticImages.map((img, i) => {
+                const galleryAlts = [
+                  "Premium hybrid flooring installation in a modern living room by Portland Flooring",
+                  "European Oak flooring transformation in an open-plan kitchen",
+                  "Spotted Gum hybrid flooring installed in a Melbourne residential home",
+                  "Seamless hybrid flooring across a contemporary dining and living area",
+                  "Blackbutt hybrid flooring installation in a Pakenham residential project",
+                  "Pale Oak hybrid flooring in a minimalist bedroom design",
+                  "Pewter Grey flooring installation for a modern commercial office space",
+                  "Mistral Oak hybrid flooring in a contemporary Australian home"
+                ];
+                return (
                 <div key={i} className="break-inside-avoid relative group overflow-hidden rounded-2xl shadow-md cursor-pointer border border-[#8c5430]/10">
                   <div className="relative w-full aspect-auto h-auto bg-white">
                     <Image
                       src={`/Gallery/${img}`}
-                      alt={`Gallery Image ${i + 1}`}
+                      alt={galleryAlts[i] || `Portland Flooring premium hybrid installation project ${i + 1}`}
                       width={800}
                       height={600}
                       className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
@@ -124,7 +135,8 @@ export default async function GalleryPage() {
                     </div>
                   </div>
                 </div>
-              ))
+                );
+              })
             )}
           </div>
         </section>

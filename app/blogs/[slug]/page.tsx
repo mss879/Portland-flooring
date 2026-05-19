@@ -24,6 +24,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${post.title} | Portland Flooring`,
     description: `Read about ${post.seo_keyword} on the Portland Flooring design blog.`,
     keywords: post.seo_keyword,
+    alternates: {
+      canonical: `https://portlands.com.au/blogs/${resolvedParams.slug}`,
+    },
   };
 }
 
@@ -70,7 +73,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     <main className="flex flex-col min-h-screen w-full bg-[#fbf5f0] overflow-hidden selection:bg-[#8c5430]/20 selection:text-[#251208]">
       {/* Global Background Texture */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <Image src="/light-wood-texture.webp" alt="" aria-hidden="true" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
+        <Image src="/light-wood-texture.webp" alt="Subtle light wood texture background" aria-hidden="true" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
       </div>
 
       {/* Navigation - at top level for sticky behavior */}

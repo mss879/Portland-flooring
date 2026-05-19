@@ -88,7 +88,7 @@ export default function Contact() {
 
       {/* Global Background Texture (Light) */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <Image src="/light-wood-texture.webp" alt="" aria-hidden="true" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
+        <Image src="/light-wood-texture.webp" alt="Subtle light wood texture background" aria-hidden="true" fill sizes="100vw" className="object-cover opacity-[0.15] mix-blend-multiply" />
       </div>
 
       {/* Navigation - pulled outside overflow-hidden for sticky behavior */}
@@ -153,7 +153,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-[#251208] mb-2 tracking-wide uppercase text-sm">Direct Line</h4>
-                <p className="text-[#8c5430] text-lg font-bold hover:text-[#6b3e21] transition-colors cursor-pointer">+61 420 608 608</p>
+                <a href="tel:+61420608608" className="text-[#8c5430] text-lg font-bold hover:text-[#6b3e21] transition-colors block">+61 420 608 608</a>
               </div>
             </div>
 
@@ -166,7 +166,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-[#251208] mb-2 tracking-wide uppercase text-sm">Email Inquiries</h4>
-                <p className="text-[#8c5430] text-lg font-bold hover:text-[#6b3e21] transition-colors cursor-pointer">sales@portlands.com.au</p>
+                <a href="mailto:sales@portlands.com.au" className="text-[#8c5430] text-lg font-bold hover:text-[#6b3e21] transition-colors block">sales@portlands.com.au</a>
               </div>
             </div>
           </div>
@@ -254,6 +254,7 @@ export default function Contact() {
                 allowFullScreen={false} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
+                title="Portland Flooring showroom location at 2B Venture Way, Pakenham VIC 3810"
                 className="absolute inset-0"
               />
               
@@ -266,7 +267,7 @@ export default function Contact() {
                   Portland Flooring
                 </h4>
                 <p className="text-[#6b3e21] font-medium text-sm mb-4 leading-relaxed">2B Venture Way<br/>Pakenham, VIC, Australia, Victoria</p>
-                <a href="https://maps.google.com/?q=2B+Venture+Way,+Pakenham,+VIC,+Australia" target="_blank" rel="noreferrer" className="inline-block px-5 py-2.5 bg-[#8c5430] hover:bg-[#6b3e21] transition-colors text-white text-xs font-bold uppercase tracking-widest rounded-lg shadow-md">
+                <a href="https://maps.google.com/?q=2B+Venture+Way,+Pakenham,+VIC,+Australia" target="_blank" rel="noopener noreferrer" title="Get directions to Portland Flooring showroom in Pakenham" className="inline-block px-5 py-2.5 bg-[#8c5430] hover:bg-[#6b3e21] transition-colors text-white text-xs font-bold uppercase tracking-widest rounded-lg shadow-md">
                   Get Directions
                 </a>
               </div>
