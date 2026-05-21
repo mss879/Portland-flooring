@@ -17,25 +17,61 @@ export async function POST(request: NextRequest) {
     const formData = await request.formData();
     const file = formData.get("file") as File | null;
     const altText = (formData.get("alt_text") as string) || "Gallery Image";
+    const projectId = formData.get("project_id") as string | null;
 
     if (!file) {
       return NextResponse.json({ error: "No file provided" }, { status: 400 });
     }
 
-    // Read file buffer
+    // If project_id is provided, check if the project already has 10 images
+    if (projectId) {
+      const { count, error: countError } = await supabase
+        .from("gallery_images")
+        .select("*", { count: "exact", head: true })
+        .eq("project_id", projectId);
+
+      if (countError) {
+        return NextResponse.json(
+          { error: "Failed to verify project image limit: " + countError.message },
+          { status: 500 }
+        );
+      }
+
+      if (count !== null && count >= 10) {
+        return NextResponse.json(
+          { error: "Maximum limit of 10 images reached for this project." },
+          { status: 400 }
+        );
+      }
+    }
+
+    // Read file into buffer
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
+    const originalSize = buffer.length;
 
-    // Compress with sharp: resize to max 1200px width, convert to WebP at 80% quality
-    const compressed = await sharp(buffer)
-      .resize({ width: 1200, withoutEnlargement: true })
-      .webp({ quality: 80 })
-      .toBuffer();
+    // Compress with Sharp: resize to max 1200px width, convert to WebP at quality 80
+    let compressed: Buffer;
+    try {
+      compressed = await sharp(buffer)
+        .resize({
+          width: 1200,
+          withoutEnlargement: true, // don't upscale small images
+        })
+        .webp({ quality: 80 })
+        .toBuffer();
+    } catch (sharpErr) {
+      console.error("Sharp compression error:", sharpErr);
+      const detail = sharpErr instanceof Error ? sharpErr.message : String(sharpErr);
+      return NextResponse.json(
+        { error: "Image compression failed: " + detail },
+        { status: 500 }
+      );
+    }
 
-    // Generate unique filename
-    const timestamp = Date.now();
-    const random = Math.random().toString(36).substring(2, 8);
-    const fileName = `gallery_${timestamp}_${random}.webp`;
+    // Generate unique filename for storage
+    const uniqueId = `${Date.now()}_${Math.random().toString(36).substring(2, 8)}`;
+    const fileName = `gallery_${uniqueId}.webp`;
 
     // Upload to Supabase Storage
     const { error: uploadError } = await supabase.storage
@@ -78,6 +114,7 @@ export async function POST(request: NextRequest) {
         alt_text: altText,
         sort_order: nextSortOrder,
         is_static: false,
+        project_id: projectId || null,
       })
       .select()
       .single();
@@ -92,7 +129,6 @@ export async function POST(request: NextRequest) {
     }
 
     // Calculate compression stats
-    const originalSize = buffer.length;
     const compressedSize = compressed.length;
     const savedPercent = Math.round(
       ((originalSize - compressedSize) / originalSize) * 100
