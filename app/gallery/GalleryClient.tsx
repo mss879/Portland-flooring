@@ -223,19 +223,7 @@ export default function GalleryClient({ initialProjects, initialImages }: Galler
                 </div>
               </div>
 
-              {/* Folder Capacity Indicator Meter */}
-              <div className="bg-white border border-[#8c5430]/15 rounded-2xl p-4 flex flex-col justify-center min-w-[200px] shadow-sm">
-                <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider mb-2">
-                  <span className="text-stone-400">Folder Capacity</span>
-                  <span className="text-[#8c5430]">{activeProjectImages.length} / 10 Images</span>
-                </div>
-                <div className="w-full h-2 bg-stone-100 rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-gradient-to-r from-[#d4a574] to-[#8c5430] rounded-full transition-all duration-500" 
-                    style={{ width: `${(activeProjectImages.length / 10) * 100}%` }}
-                  />
-                </div>
-              </div>
+
             </div>
 
             {/* Empty Folder State */}
