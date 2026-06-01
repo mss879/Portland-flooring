@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import FAQ from "../components/FAQ";
@@ -9,7 +9,6 @@ import Toast from "../components/Toast";
 import { createClient } from "@/lib/supabase";
 
 export default function Contact() {
-  const [isLoading, setIsLoading] = useState(true);
   const supabase = createClient();
 
   // Form state
@@ -20,11 +19,6 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [toast, setToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 500);
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,6 +38,26 @@ export default function Contact() {
       });
 
       if (error) throw error;
+
+      // Send email notification via Resend endpoint (non-blocking, logged if error)
+      try {
+        await fetch("/api/send-notification", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            formType: "inquiry",
+            firstName: firstName.trim(),
+            lastName: lastName.trim(),
+            email: email.trim(),
+            phone: phone.trim(),
+            message: message.trim(),
+          }),
+        });
+      } catch (emailErr) {
+        console.error("Failed to send email notification:", emailErr);
+      }
 
       setToast({ message: "Inquiry submitted successfully! We'll get back to you within 24 hours.", type: "success" });
       setFirstName("");
@@ -80,10 +94,10 @@ export default function Contact() {
           to { opacity: 1; transform: translateY(0); }
         }
         
-        .stagger-1 { animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; opacity: 0; }
-        .stagger-2 { animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; opacity: 0; }
-        .stagger-3 { animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards; opacity: 0; }
-        .stagger-4 { animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards; opacity: 0; }
+        .stagger-1 { animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
+        .stagger-2 { animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+        .stagger-3 { animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both; }
+        .stagger-4 { animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both; }
       `}</style>
 
       {/* Global Background Texture (Light) */}
@@ -92,7 +106,7 @@ export default function Contact() {
       </div>
 
       {/* Navigation - pulled outside overflow-hidden for sticky behavior */}
-      <Navbar isLoading={isLoading} />
+      <Navbar isLoading={false} />
 
       {/* Hero / Header Section */}
       <section className="relative w-full p-0 md:p-[9px] z-20">
@@ -140,7 +154,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-[#251208] mb-2 tracking-wide uppercase text-sm">Showroom</h4>
-                <p className="text-[#6b3e21] leading-relaxed font-medium">112 Boundary Rd, Braeside<br />VIC 3195, Australia</p>
+                <p className="text-[#6b3e21] leading-relaxed font-medium">1-19 Industrial Drive, Braeside<br />VIC 3195, Australia</p>
               </div>
             </div>
 
@@ -166,7 +180,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-[#251208] mb-2 tracking-wide uppercase text-sm">Email Inquiries</h4>
-                <a href="mailto:sales@portlands.com.au" className="text-[#8c5430] text-lg font-bold hover:text-[#6b3e21] transition-colors block">sales@portlands.com.au</a>
+                <a href="mailto:info@portlands.com.au" className="text-[#8c5430] text-lg font-bold hover:text-[#6b3e21] transition-colors block">info@portlands.com.au</a>
               </div>
             </div>
           </div>
@@ -247,14 +261,14 @@ export default function Contact() {
             {/* Interactive Map Embed (Clean, un-filtered for light theme) */}
             <div className="w-full h-full rounded-[1.5rem] overflow-hidden relative">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.5!2d145.0635!3d-37.9635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s112%20Boundary%20Rd%2C%20Braeside%20VIC%203195%2C%20Australia!5e0!3m2!1sen!2sau!4v1690000000000!5m2!1sen!2sau" 
+                src="https://maps.google.com/maps?q=1-19%20Industrial%20Drive,%20Braeside%20VIC%203195&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
                 allowFullScreen={false} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Portland Flooring showroom location at 112 Boundary Rd, Braeside VIC 3195"
+                title="Portland Flooring showroom showroom location at 1-19 Industrial Drive, Braeside VIC 3195"
                 className="absolute inset-0"
               />
               
@@ -266,8 +280,8 @@ export default function Contact() {
                   </svg>
                   Portland Flooring
                 </h4>
-                <p className="text-[#6b3e21] font-medium text-sm mb-4 leading-relaxed">112 Boundary Rd<br/>Braeside, VIC 3195, Australia</p>
-                <a href="https://maps.google.com/?q=112+Boundary+Rd,+Braeside,+VIC+3195,+Australia" target="_blank" rel="noopener noreferrer" title="Get directions to Portland Flooring showroom in Braeside" className="inline-block px-5 py-2.5 bg-[#8c5430] hover:bg-[#6b3e21] transition-colors text-white text-xs font-bold uppercase tracking-widest rounded-lg shadow-md">
+                <p className="text-[#6b3e21] font-medium text-sm mb-4 leading-relaxed">1-19 Industrial Drive<br/>Braeside, VIC 3195, Australia</p>
+                <a href="https://maps.google.com/?q=1-19+Industrial+Drive,+Braeside,+VIC+3195,+Australia" target="_blank" rel="noopener noreferrer" title="Get directions to Portland Flooring showroom in Braeside" className="inline-block px-5 py-2.5 bg-[#8c5430] hover:bg-[#6b3e21] transition-colors text-white text-xs font-bold uppercase tracking-widest rounded-lg shadow-md">
                   Get Directions
                 </a>
               </div>

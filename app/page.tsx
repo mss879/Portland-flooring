@@ -20,10 +20,10 @@ export default function HomePage() {
     description:
       "Premium hybrid flooring solutions — elegant, durable, sustainable. Expert installation, restoration & design consultation serving Braeside, Melbourne & all of Victoria.",
     telephone: "+61420608608",
-    email: "sales@portlands.com.au",
+    email: "info@portlands.com.au",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "112 Boundary Rd",
+      streetAddress: "1-19 Industrial Drive",
       addressLocality: "Braeside",
       addressRegion: "VIC",
       postalCode: "3195",

@@ -1,9 +1,46 @@
 "use client";
 
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Toast from "@/app/components/Toast";
 
 export default function Footer() {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterSubmitting, setNewsletterSubmitting] = useState(false);
+  const [toast, setToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newsletterEmail.trim()) {
+      setToast({ message: "Please enter your email address.", type: "error" });
+      return;
+    }
+
+    setNewsletterSubmitting(true);
+    try {
+      const res = await fetch("/api/send-notification", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formType: "newsletter",
+          email: newsletterEmail.trim(),
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to subscribe");
+
+      setToast({ message: "Subscribed successfully! Thank you for subscribing.", type: "success" });
+      setNewsletterEmail("");
+    } catch (err) {
+      console.error("Error subscribing to newsletter:", err);
+      setToast({ message: "Something went wrong. Please try again.", type: "error" });
+    } finally {
+      setNewsletterSubmitting(false);
+    }
+  };
   return (
     <footer className="relative w-full bg-[#fdfaf6] pt-24 pb-8 overflow-hidden border-t border-[#8c5430]/10">
       
@@ -67,7 +104,7 @@ export default function Footer() {
               <li className="flex flex-col gap-2">
                 <span className="text-[#8c5430] text-xs font-bold uppercase tracking-widest">Showroom</span>
                 <span className="text-[#6b3e21] text-base font-bold leading-relaxed">
-                  112 Boundary Rd, Braeside<br />
+                  1-19 Industrial Drive, Braeside<br />
                   VIC 3195, Australia
                 </span>
               </li>
@@ -79,8 +116,8 @@ export default function Footer() {
               </li>
               <li className="flex flex-col gap-2">
                 <span className="text-[#8c5430] text-xs font-bold uppercase tracking-widest">Email</span>
-                <a href="mailto:sales@portlands.com.au" className="text-[#6b3e21] hover:text-[#8c5430] text-base font-bold transition-colors">
-                  sales@portlands.com.au
+                <a href="mailto:info@portlands.com.au" className="text-[#6b3e21] hover:text-[#8c5430] text-base font-bold transition-colors">
+                  info@portlands.com.au
                 </a>
               </li>
             </ul>
@@ -91,14 +128,27 @@ export default function Footer() {
             <h4 className="text-[#251208] font-bold tracking-widest uppercase text-base border-l-2 border-[#8c5430] pl-3">Connect</h4>
             <p className="text-[#6b3e21] text-base font-medium">Subscribe for exclusive architectural insights and material updates.</p>
             
-            <form className="relative group mt-2" onSubmit={(e) => e.preventDefault()}>
+            <form className="relative group mt-2" onSubmit={handleNewsletterSubmit}>
               <input 
                 type="email" 
                 placeholder="Email Address" 
-                className="w-full px-5 py-4 bg-white border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:shadow-md transition-all font-bold text-[#251208] placeholder-[#6b3e21]/40 text-base shadow-sm"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                required
+                disabled={newsletterSubmitting}
+                className="w-full px-5 py-4 bg-white border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:shadow-md transition-all font-bold text-[#251208] placeholder-[#6b3e21]/40 text-base shadow-sm disabled:opacity-60"
               />
-              <button className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-lg bg-[#8c5430] flex items-center justify-center text-white hover:bg-[#251208] transition-colors shadow-md">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+              <button 
+                type="submit"
+                disabled={newsletterSubmitting}
+                className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-lg bg-[#8c5430] flex items-center justify-center text-white hover:bg-[#251208] transition-colors shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
+                aria-label="Subscribe to newsletter"
+              >
+                {newsletterSubmitting ? (
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+                )}
               </button>
             </form>
 
@@ -186,8 +236,10 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
       </div>
+      
+      {/* Toast */}
+      {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </footer>
   );
 }

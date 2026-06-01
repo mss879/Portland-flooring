@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -7,12 +7,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function AboutUs() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 500);
-    return () => clearTimeout(timer);
-  }, []);
 
   const specialisms = [
     { title: "Flooring Installation", img: "/specialisms/installation.webp", desc: "Masterful fitting of all flooring types with precision and care, ensuring a flawless foundation for your space." },
@@ -63,7 +57,7 @@ export default function AboutUs() {
       </div>
 
       {/* Navigation - pulled outside overflow-hidden for sticky behavior */}
-      <Navbar isLoading={isLoading} />
+      <Navbar isLoading={false} />
 
       {/* Hero Section */}
       <section className="relative w-full p-0 md:p-[9px] z-20">

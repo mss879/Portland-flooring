@@ -88,7 +88,7 @@ export default async function BlogsPage() {
       <section className="relative z-20 w-full max-w-[1400px] mx-auto px-8 py-20 flex flex-col items-center">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allPostsData.map((post, index) => (
-            <Link href={`/blogs/${post.slug}`} key={post.slug} className="group flex flex-col bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border border-[#8c5430]/10 transform hover:-translate-y-2" style={{ animation: `slideUpFade 0.8s ease-out ${index * 0.1}s forwards`, opacity: 0 }}>
+            <Link href={`/blogs/${post.slug}`} key={post.slug} className="group flex flex-col bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border border-[#8c5430]/10 transform hover:-translate-y-2" style={{ animation: `slideUpFade 0.8s ease-out ${index * 0.1}s both` }}>
               
               {/* Image Container */}
               <div className="relative w-full h-64 overflow-hidden">

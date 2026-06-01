@@ -3,18 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function ServicesPage() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
   const services = [
     {
       title: "Residential & Commercial",
@@ -65,7 +57,7 @@ export default function ServicesPage() {
   return (
     <main className="flex flex-col min-h-screen w-full bg-[#fbf5f0]">
       {/* Navigation */}
-      <Navbar isLoading={isLoading} />
+      <Navbar isLoading={false} />
 
       {/* Hero Section */}
       <section className="relative w-full p-0 md:p-[9px]">

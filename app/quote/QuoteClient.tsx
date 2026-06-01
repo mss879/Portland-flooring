@@ -3,14 +3,13 @@
 import Image from "next/image";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Toast from "../components/Toast";
 import { createClient } from "@/lib/supabase";
 
 export default function QuotePage() {
-  const [isLoading, setIsLoading] = useState(true);
   const supabase = createClient();
 
   // Form state
@@ -34,10 +33,6 @@ export default function QuotePage() {
   const nextStep = () => setCurrentStep((prev) => Math.min(prev + 1, totalSteps));
   const prevStep = () => setCurrentStep((prev) => Math.max(prev - 1, 1));
 
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 500);
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -62,6 +57,30 @@ export default function QuotePage() {
 
       if (error) throw error;
 
+      // Send email notification via Resend endpoint (non-blocking, logged if error)
+      try {
+        await fetch("/api/send-notification", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            formType: "quote_request",
+            name: fullName.trim(),
+            email: email.trim(),
+            phone: phone.trim(),
+            projectType,
+            serviceRequired,
+            materialPreference,
+            estimatedArea: estimatedArea.trim(),
+            projectTimeline,
+            additionalRequirements: additionalRequirements.trim(),
+          }),
+        });
+      } catch (emailErr) {
+        console.error("Failed to send email notification for quote request:", emailErr);
+      }
+
       setIsSubmitted(true);
     } catch (err) {
       console.error("Error submitting quote:", err);
@@ -75,7 +94,7 @@ export default function QuotePage() {
   return (
     <main className="flex flex-col min-h-screen w-full bg-[#fbf5f0]">
       {/* Navigation */}
-      <Navbar isLoading={isLoading} />
+      <Navbar isLoading={false} />
 
       {/* Split Layout */}
       <section className="relative w-full min-h-screen pt-36 md:pt-48 pb-24 px-0 md:px-[9px]">
@@ -113,9 +132,9 @@ export default function QuotePage() {
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.08-7.074-6.974l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
                       +61 420 608 608
                     </a>
-                    <a href="mailto:sales@portlands.com.au" className="text-[#fce8d5] hover:text-white transition-colors flex items-center gap-3 font-medium">
+                    <a href="mailto:info@portlands.com.au" className="text-[#fce8d5] hover:text-white transition-colors flex items-center gap-3 font-medium">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
-                      sales@portlands.com.au
+                      info@portlands.com.au
                     </a>
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -7,12 +7,6 @@ import Footer from "@/components/Footer";
 import { Leaf, BadgeCheck, ShieldCheck } from "lucide-react";
 
 export default function FusionHybrid() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
   return (
     <>
       <main className="flex flex-col min-h-screen w-full bg-[#faf6f3]">
@@ -34,7 +28,7 @@ export default function FusionHybrid() {
         `}</style>
 
         {/* Global Navigation */}
-        <Navbar isLoading={!isLoaded} />
+        <Navbar isLoading={false} />
 
         {/* Hero Section */}
         <section className="relative w-full p-0 md:p-[9px]">
@@ -44,7 +38,7 @@ export default function FusionHybrid() {
                <div className="absolute inset-0 bg-gradient-to-t from-[#110804] via-[#110804]/80 to-[#110804]/30" />
             </div>
 
-            <div className={`relative z-10 text-center flex flex-col items-center gap-4 ${isLoaded ? 'animate-slide-in-up' : 'opacity-0'}`}>
+            <div className={`relative z-10 text-center flex flex-col items-center gap-4 animate-slide-in-up`}>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-wider leading-tight drop-shadow-lg" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
                 Premium Hybrid
               </h1>

@@ -4,7 +4,7 @@ import ContactClient from "./ContactClient";
 export const metadata: Metadata = {
   title: "Contact Us — Visit Our Braeside Showroom",
   description:
-    "Get in touch with Portland Flooring. Visit our showroom at 112 Boundary Rd, Braeside VIC 3195. Call +61 420 608 608 or email sales@portlands.com.au for a free consultation.",
+    "Get in touch with Portland Flooring. Visit our showroom at 1-19 Industrial Drive, Braeside VIC 3195. Call +61 420 608 608 or email info@portlands.com.au for a free consultation.",
   alternates: {
     canonical: "https://www.portlands.com.au/contact",
   },
@@ -20,11 +20,11 @@ export default function ContactPage() {
       "@type": "LocalBusiness",
       name: "Portland Flooring",
       telephone: "+61420608608",
-      email: "sales@portlands.com.au",
+      email: "info@portlands.com.au",
       url: "https://www.portlands.com.au",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "112 Boundary Rd",
+        streetAddress: "1-19 Industrial Drive",
         addressLocality: "Braeside",
         addressRegion: "VIC",
         postalCode: "3195",

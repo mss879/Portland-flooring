@@ -21,7 +21,7 @@ export default function ServicesPage() {
       telephone: "+61420608608",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "112 Boundary Rd",
+        streetAddress: "1-19 Industrial Drive",
         addressLocality: "Braeside",
         addressRegion: "VIC",
         postalCode: "3195",

@@ -5,11 +5,52 @@ import Link from "next/link";
 import FAQ from "./components/FAQ";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Toast from "./components/Toast";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [showPreloader, setShowPreloader] = useState(true);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
+
+  // Sample Request Form State
+  const [sampleName, setSampleName] = useState("");
+  const [sampleEmail, setSampleEmail] = useState("");
+  const [sampleSubmitting, setSampleSubmitting] = useState(false);
+  const [toast, setToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
+
+  const handleSampleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!sampleName.trim() || !sampleEmail.trim()) {
+      setToast({ message: "Please fill in all fields.", type: "error" });
+      return;
+    }
+
+    setSampleSubmitting(true);
+    try {
+      const res = await fetch("/api/send-notification", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formType: "sample_request",
+          name: sampleName.trim(),
+          email: sampleEmail.trim(),
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to submit request");
+
+      setToast({ message: "Sample request submitted successfully! We will contact you soon.", type: "success" });
+      setSampleName("");
+      setSampleEmail("");
+    } catch (err) {
+      console.error("Error submitting sample request:", err);
+      setToast({ message: "Something went wrong. Please try again.", type: "error" });
+    } finally {
+      setSampleSubmitting(false);
+    }
+  };
 
   // Before & After Slider State
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -165,7 +206,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative flex h-screen w-full items-center justify-center p-0 md:p-[9px]">
           {showPreloader && (
-            <div className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#1a0d07] transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#1a0d07] transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} aria-hidden="true">
               {/* Flooring Planks Animation */}
               <div className="flex flex-col gap-1.5 mb-8 w-48 overflow-hidden py-2">
                 <div className="h-5 w-36 bg-[#b56b3a] rounded-sm ml-auto shadow-md" style={{ animation: 'slideInRight 0.4s ease-out 0.1s forwards', opacity: 0 }} />
@@ -200,7 +241,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/20 z-10" />
 
             {/* Hero Text */}
-            <div className={`absolute bottom-44 md:bottom-52 w-full md:w-auto left-0 md:left-12 px-6 md:px-0 z-20 flex flex-col items-center md:items-start text-center md:text-left ${!isLoading ? 'animate-slide-in-left' : 'opacity-0'}`}>
+            <div className={`absolute bottom-44 md:bottom-52 w-full md:w-auto left-0 md:left-12 px-6 md:px-0 z-20 flex flex-col items-center md:items-start text-center md:text-left ${!isLoading ? 'animate-slide-in-left' : ''}`}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl text-white tracking-wider leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]" style={{ fontFamily: "'Tomorrow', sans-serif", fontWeight: 700 }}>
                 The Art of Hybrid <br /> Flooring
               </h1>
@@ -712,11 +753,36 @@ export default function Home() {
 
             <div className="w-full max-w-md bg-white rounded-3xl p-8 shadow-xl relative z-10">
               <h4 className="text-xl font-bold text-[#251208] mb-6 text-center">Request Free Samples</h4>
-              <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
-                <input type="text" placeholder="Full Name" className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208]" />
-                <input type="email" placeholder="Email Address" className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208]" />
-                <button className="w-full bg-[#8c5430] hover:bg-[#6b3e21] text-white font-bold uppercase tracking-widest py-4 rounded-xl shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 active:translate-y-0">
-                  Send My Box
+              <form className="flex flex-col gap-4" onSubmit={handleSampleSubmit}>
+                <input 
+                  type="text" 
+                  placeholder="Full Name" 
+                  value={sampleName} 
+                  onChange={(e) => setSampleName(e.target.value)} 
+                  required 
+                  className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208]" 
+                />
+                <input 
+                  type="email" 
+                  placeholder="Email Address" 
+                  value={sampleEmail} 
+                  onChange={(e) => setSampleEmail(e.target.value)} 
+                  required 
+                  className="w-full px-5 py-4 bg-[#fdfaf6] border border-[#8c5430]/20 rounded-xl outline-none focus:border-[#8c5430] focus:ring-2 focus:ring-[#8c5430]/20 transition-all font-medium text-[#251208]" 
+                />
+                <button 
+                  type="submit" 
+                  disabled={sampleSubmitting} 
+                  className="w-full bg-[#8c5430] hover:bg-[#6b3e21] text-white font-bold uppercase tracking-widest py-4 rounded-xl shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                >
+                  {sampleSubmitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send My Box"
+                  )}
                 </button>
               </form>
               <p className="text-center text-xs text-[#8c5430] font-bold tracking-widest uppercase mt-4 opacity-70">Limit 1 per household</p>
@@ -732,6 +798,9 @@ export default function Home() {
 
       {/* Global Footer */}
       <Footer />
+
+      {/* Toast */}
+      {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </>
   );
 }
